@@ -1,15 +1,19 @@
-import {useState} from 'react'
 import {Dialog, Popover} from '@headlessui/react'
 import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 
+import { useState,  } from "react";
+import Headroom from "react-headroom/src";
+
 
 export default function Nav() {
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
+        <Headroom>
         <header className="bg-white">
             <nav className="sticky mx-auto flex max-w-7xl  p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:hidden">
@@ -90,5 +94,6 @@ export default function Nav() {
                 </Dialog.Panel>
             </Dialog>
         </header>
+            </Headroom>
     )
 }
