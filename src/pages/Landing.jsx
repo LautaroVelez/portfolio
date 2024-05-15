@@ -2,6 +2,7 @@ import {Col, Container, Row} from 'react-bootstrap';
 import '../assets/styles/LandingPage.css';
 import {motion} from "framer-motion";
 import {FaReact} from "react-icons/fa";
+import me from '../assets/images/me.jpg';
 
 const LandingPage = () => {
     return (
@@ -19,7 +20,7 @@ const LandingPage = () => {
             </Container>
 
 
-            <section className="firstSection">
+            <section className="firstSection" id={'About'}>
                 <Container>
                     <Row>
                         <Col md={6}>
@@ -31,7 +32,19 @@ const LandingPage = () => {
                             <h1 className="AboutMe text-end">Me</h1>
                         </Col>
                     </Row>
-
+                    <Row>
+                        <Col md={6}>
+                            <img src={me} className={'MePhoto'}/>
+                        </Col>
+                        <Col md={6} className={'MeTextContainer'}>
+                            <h1 className="MeText">I’m Lautaro Velez, a web developer.</h1>
+                            <h1 className="MeText">I have a solid knowledge about React, JavaScript, HTML, CSS, and
+                                more. </h1>
+                            <h1 className="MeText">I consider myself someone who is highly creative and very into
+                                design, whether it's fashion, cars, buildings, web pages, i always try to think outside
+                                the box.</h1>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
         </>

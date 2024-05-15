@@ -28,7 +28,7 @@ export default function Nav() {
                         <a href="#" className=" font-bold leading-6 text-gray-900">
                             Home
                         </a>
-                        <a href="#" className="font-bold leading-6 text-gray-900">
+                        <a href="#About" className="font-bold leading-6 text-gray-900">
                             About
                         </a>
                         <a href="#" className="font-bold leading-6 text-gray-900">

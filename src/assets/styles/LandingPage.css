@@ -35,3 +35,26 @@
     width: 5vh;
     margin: 2vh;
 }
+
+.MePhoto{
+    margin-top: -10vh;
+    border-radius: 10vh;
+    height: 100%;
+    margin-left: 5vw;
+}
+
+.MeTextContainer{
+    width: 35vw;
+    font-family: "Kaisei Decol";
+    background-color: #222C17;
+    color: #FBF4EA;
+    padding: 10vh;
+    border-radius: 5vh;
+    max-height: 60vh;
+    margin-top: 10vh !important;
+}
+
+.MeText{
+    margin: 5vh;
+    font-size: 3vh;
+}
