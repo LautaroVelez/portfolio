@@ -45,7 +45,6 @@
 
 .MeTextContainer{
     width: 35vw;
-    font-family: "Kaisei Decol";
     background-color: #222C17;
     color: #FBF4EA;
     padding: 10vh;
@@ -60,6 +59,30 @@
 
 }
 
-.FontRoboto{
+.FontRobotoBold{
     font-family: "Roboto bold";
+}
+
+.FontRoboto{
+    font-family: Roboto;
+}
+
+.FontKaisei{
+    font-family: "Kaisei Decol";
+}
+.FontEmbed{
+    font-family: "Radio Canada Big", sans-serif;
+}
+
+.square {
+    margin: 10vh !important;
+  width: 80vw !important; /* Puedes ajustar el tamaño según tu preferencia */
+  height: 80vh;
+  background-color: #CCCCCC; /* Color gris */
+    border-radius: 20vh;
+}
+
+.LastIcons{
+    height: 5vh !important;
+    width: 5vw;
 }
