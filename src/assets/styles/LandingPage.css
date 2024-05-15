@@ -57,4 +57,9 @@
 .MeText{
     margin: 5vh;
     font-size: 3vh;
+
+}
+
+.FontRoboto{
+    font-family: "Roboto bold";
 }
