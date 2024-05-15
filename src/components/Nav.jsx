@@ -11,7 +11,7 @@ export default function Nav() {
 
     return (
         <header className="bg-white">
-            <nav className="mx-auto flex max-w-7xl  p-6 lg:px-8" aria-label="Global">
+            <nav className="sticky mx-auto flex max-w-7xl  p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:hidden">
                     <button
                         type="button"
@@ -25,15 +25,15 @@ export default function Nav() {
 
                 <div className="items-center justify-center mx-auto flex">
                     <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                        <a href="#" className="text-sm font-bold leading-6 text-gray-900">
+                        <a href="#" className=" font-bold leading-6 text-gray-900">
                             Home
                         </a>
-                        <a href="#" className="text-sm font-bold leading-6 text-gray-900">
+                        <a href="#" className="font-bold leading-6 text-gray-900">
                             About
                         </a>
-                        <a href="#" className="text-sm font-bold leading-6 text-gray-900">
+                        <a href="#" className="font-bold leading-6 text-gray-900">
                             Contact
-                        </a><a href="#" className="text-sm font-bold leading-6 text-gray-900">
+                        </a><a href="#" className="font-bold leading-6 text-gray-900">
                         Projects
                     </a>
                     </Popover.Group>

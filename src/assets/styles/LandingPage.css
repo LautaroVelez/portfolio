@@ -1,0 +1,37 @@
+
+.WelcomeText {
+    color: #636363;
+    font-weight: bolder;
+}
+
+.TitleLanding {
+    font-size: 18vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: "Poppins";
+    font-weight: lighter;
+}
+
+.HorizontalLine {
+    border: 1px solid #D9D9D9;
+    margin-left: 25vw;
+    margin-bottom: 5vh;
+    width: 50vw;
+}
+
+.firstSection{
+    background-color: #FBF4EA;
+    margin-top: 10vh;
+}
+
+.AboutMe{
+    font-family: "Italiana";
+    color: #222C17;
+    font-size: 40vh;
+}
+
+.IconReact{
+    height: 5vh;
+    width: 5vh;
+    margin: 2vh;
+}
