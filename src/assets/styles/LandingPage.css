@@ -1,12 +1,41 @@
-.WelcomeH1{
+.LoaderContainer{
+    overflow: hidden !important;
+}
+
+.LoaderContainer h3{
+    color: black;
+    font-weight: bold;
+}
+
+.WelcomeH1 {
     font-size: 30vh;
     color: black;
 }
 
-.WelcomeText {
-    color: #636363;
-    font-weight: bolder;
+
+.sliderText {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+
 }
+
+.sliderText h3 {
+    font-size: 6vh;
+    margin: 3vh;
+
+}
+
+.sliderText h3:nth-of-type(3) {
+    position: absolute;
+    left: 100%;
+}
+
+.SliderContainer {
+    position: absolute;
+}
+
 
 .TitleLanding {
     font-size: 18vh;
@@ -23,31 +52,31 @@
     width: 50vw;
 }
 
-.firstSection{
+.firstSection {
     background-color: #FBF4EA;
     margin-top: 10vh;
 }
 
-.AboutMe{
+.AboutMe {
     font-family: "Italiana";
     color: #222C17;
     font-size: 40vh;
 }
 
-.IconReact{
+.IconReact {
     height: 5vh;
     width: 5vh;
     margin: 2vh;
 }
 
-.MePhoto{
+.MePhoto {
     margin-top: -10vh;
     border-radius: 10vh;
     height: 100%;
     margin-left: 5vw;
 }
 
-.MeTextContainer{
+.MeTextContainer {
     width: 35vw;
     background-color: #222C17;
     color: #FBF4EA;
@@ -57,36 +86,37 @@
     margin-top: 10vh !important;
 }
 
-.MeText{
+.MeText {
     margin: 5vh;
     font-size: 3vh;
 
 }
 
-.FontRobotoBold{
+.FontRobotoBold {
     font-family: "Roboto bold";
 }
 
-.FontRoboto{
+.FontRoboto {
     font-family: Roboto;
 }
 
-.FontKaisei{
+.FontKaisei {
     font-family: "Kaisei Decol";
 }
-.FontEmbed{
+
+.FontEmbed {
     font-family: "Radio Canada Big", sans-serif;
 }
 
 .square {
     margin: 10vh !important;
-  width: 80vw !important; /* Puedes ajustar el tamaño según tu preferencia */
-  height: 80vh;
-  background-color: #CCCCCC; /* Color gris */
+    width: 80vw !important; /* Puedes ajustar el tamaño según tu preferencia */
+    height: 80vh;
+    background-color: #CCCCCC; /* Color gris */
     border-radius: 20vh;
 }
 
-.LastIcons{
+.LastIcons {
     height: 5vh !important;
     width: 5vw;
 }

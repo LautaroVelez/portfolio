@@ -9,6 +9,7 @@ import {FaLinkedin} from "react-icons/fa";
 const LandingPage = () => {
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
+
     return (
         <>
             <Container fluid className={'justify-center items-center justify-content-center text-center'}>
