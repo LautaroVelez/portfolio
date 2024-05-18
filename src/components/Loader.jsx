@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "react-bootstrap";
-import '../assets/styles/LandingPage.css';
+import '../assets/styles/Loader.css';
 import gsap from 'gsap';
 import {useEffect, useRef} from "react";
 import SplitType from "split-type";
@@ -16,9 +16,9 @@ const Loader = () => {
         const animateTextReveal = (elementId) => {
             const splitText = new SplitType(elementId, {types: 'words, chars'});
 
-            gsap.set(splitText.chars, {y: 0, opacity: 0});
+            gsap.set(splitText.chars, {y: 10, opacity: 0});
             gsap.to(splitText.chars, {
-                y: 0,
+                y: 1,
                 opacity: 1,
                 stagger: 0.05,
                 duration: 1,
@@ -37,7 +37,7 @@ const Loader = () => {
             gsap.set(firstText.current, {xPercent: xPercent});
             gsap.set(secondText.current, {xPercent: xPercent});
             gsap.set(thirdText.current, {xPercent: xPercent});
-            xPercent += 0.20 * direction;
+            xPercent += 0.50 * direction;
             requestAnimationFrame(animation);
         };
 
@@ -45,19 +45,29 @@ const Loader = () => {
     }, []);
 
     return (
-        <Container fluid className={'LoaderContainer'}>
-            <h3 className={' text-3xl text-center mt-3 '} id={'WelcomeText'} ref={welcomeTextRef}>Welcome</h3>
-            <Row className={'WelcomeH1 font-bold text-start FontRoboto ml-20'}>
-                <h1>I'M</h1>
-                <h1>LAUTARO</h1>
-            </Row>
-            <h3 className={'mr-20  text-3xl text-end'} id={'BasedInText'} ref={basedInTextRef}>BASED IN</h3>
+        <Container fluid className="text-black">
+            <div className="h-screen flex flex-col justify-between">
+                <h3 className={'WelcomeLittleText  text-start font-bold '} id={'WelcomeText'}
+                    ref={welcomeTextRef}>WELCOME</h3>
 
-            <div className={'SliderContainer'}>
-                <div className={'sliderText'}>
-                    <h3 ref={firstText}>CÓRDOBA, ARGENTINA</h3>
-                    <h3 ref={secondText}>CÓRDOBA, ARGENTINA</h3>
-                    <h3 ref={thirdText}>CÓRDOBA, ARGENTINA</h3>
+                <div className="flex flex-col  justify-center flex-grow">
+                    <h1 className="ImLautaroText font-roboto text-start font-bold">
+                        I'M
+                    </h1>
+                    <h1 className="ImLautaroText font-roboto text-start font-bold">
+                       LAUTARO.
+                    </h1>
+                    <h3 className="BasedInLittleText text-end font-bold mr-5" id="BasedInText" ref={basedInTextRef}>
+                        BASED IN
+                    </h3>
+                </div>
+
+                <div className={'SliderContainer bottom-0 overflow-hidden absolute'}>
+                    <div className="sliderText flex justify-center relative whitespace-nowrap">
+                        <h3 ref={firstText} className={'mx-10'}>CÓRDOBA, ARGENTINA</h3>
+                        <h3 ref={secondText} className={'mx-10'}>CÓRDOBA, ARGENTINA</h3>
+                        <h3 ref={thirdText} className={'absolute left-full mx-10'}>CÓRDOBA, ARGENTINA</h3>
+                    </div>
                 </div>
             </div>
         </Container>
