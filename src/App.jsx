@@ -1,21 +1,20 @@
-import Nav from "./components/Nav.jsx";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import LandingPage from "./pages/Landing.jsx";
+import LandingPage from "./pages/landing/Landing.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useEffect, useState} from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 import Loader from "./components/Loader.jsx";
 
 
-
-function App() {
+export default function App() {
     return (
-        <AnimatePresence>
-            <Loader/>
+        <div className='main'>
+            <AnimatePresence mode='wait'>
+                <Loader key={Loader}></Loader>
+                <LandingPage key={LandingPage}  />
 
+            </AnimatePresence>
+        </div>
 
-        </AnimatePresence>
     );
 }
 
-export default App
+

@@ -1,22 +1,47 @@
 .WelcomeLittleText {
-    font-size: 8vh;
-    margin-bottom: 6vh;
-
+    font-size: 3vh;
+    color: black;
 }
 
 .ImLautaroText {
     font-size: 25vh;
+    font-family: "Italiana";
+    color: #222C17;
 }
 
-.BasedInLittleText{
-     font-size: 8vh;
-    margin-top: 6vh;
-    margin-right: 5vh;
+.BasedInLittleText {
+    font-size: 3vh;
+    margin-top: 10vh;
+    color: black;
 }
 
-.sliderText h3 {
-    font-size: 8vh;
-    font-weight: bold;
-    overflow: hidden;
+.LoaderContainer {
+    background-color: #F1EFEB;
+    overflow-x: hidden !important;
+
 }
+
+.sliderContainer {
+    position: absolute;
+    top: calc(100vh - 15vh);
+    overflow-x: hidden;
+}
+
+.slider {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slider p {
+    font-family: "Italiana";
+     position: relative;
+     margin: 0px;
+    color: #222C17;
+    font-size: 7vh;
+    overflow-x: hidden;
+}
+
+
 

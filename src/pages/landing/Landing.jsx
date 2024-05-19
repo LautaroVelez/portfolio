@@ -1,17 +1,20 @@
 import {Col, Container, Row} from 'react-bootstrap';
-import '../assets/styles/LandingPage.css';
+import '../../assets/styles/LandingPage.css';
 import {motion} from "framer-motion";
 import {FaGithub, FaReact} from "react-icons/fa";
-import me from '../assets/images/me.jpg';
+import me from '../../assets/images/me.jpg';
 import {FaLinkedin} from "react-icons/fa";
-
+import Stairs from "../../assets/utils/Stairs.jsx";
 
 const LandingPage = () => {
+
+
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
 
     return (
         <>
+
             <Container fluid className={'justify-center items-center justify-content-center text-center'}>
                 <Row className={'justify-center'}>
                     <FaReact className={'IconReact'}/>
@@ -152,6 +155,7 @@ const LandingPage = () => {
                     <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>
                 </Row>
             </Container>
+
         </>
     )
         ;
