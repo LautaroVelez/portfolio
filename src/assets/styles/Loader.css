@@ -1,22 +1,25 @@
 .WelcomeLittleText {
     font-size: 3vh;
     color: black;
+    font-family: "Jomolhari", serif;
 }
 
 .ImLautaroText {
     font-size: 25vh;
     font-family: "Italiana";
-    color: #222C17;
+    color: #3c4c2b;
 }
 
 .BasedInLittleText {
     font-size: 3vh;
     margin-top: 10vh;
     color: black;
+     font-family: "Jomolhari", serif;
 }
 
 .LoaderContainer {
-    background-color: #F1EFEB;
+    /*background-color: #F1EFEB;*/
+    background-color: #f8ebd2;
     overflow-x: hidden !important;
 
 }
@@ -38,7 +41,7 @@
     font-family: "Italiana";
      position: relative;
      margin: 0px;
-    color: #222C17;
+    color: black;
     font-size: 7vh;
     overflow-x: hidden;
 }

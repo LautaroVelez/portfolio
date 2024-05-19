@@ -57,49 +57,63 @@ const Loader = () => {
         <Stairs>
             <Container fluid className={'LoaderContainer'}>
                 <div className="h-screen align-middle flex-col justify-items-center">
-                    <motion.div
-                        animate={{opacity: 1, y: 0}}
-                        transition={{delay: 1, duration: 0.5}}
-                        initial={{opacity: 0, y: -30}}
-                        exit={{opacity: 0, y: 200}}
-                    >
-                        <h3 className={'WelcomeLittleText font-bold text-center '}>
-                            WELCOME, I'M</h3>
-                    </motion.div>
-
+                    <Row>
+                        <Col md={3}>
+                            <motion.div
+                                animate={{opacity: 1, x: 0}}
+                                transition={{delay: 1.2, duration: 0.7}}
+                                initial={{opacity: 0, x: -30}}
+                                exit={{opacity: 0, x: 200}}
+                            >
+                                <h3 className={'WelcomeLittleText font-bold text-end mt-12'}>
+                                    Welcome to my portfolio. I'm</h3>
+                            </motion.div>
+                        </Col>
+                    </Row>
                     <Container>
-                        <motion.div
-                            animate={{opacity: 1, y: 0}}
-                            transition={{delay: 1, duration: 0.5}}
-                            initial={{opacity: 0, y: -30}}
-                            exit={{opacity: 0, y: 200}}
-                        >
-                            <h1 className="ImLautaroText text-center overflow-hidden ">
-                                Lautaro
-                            </h1>
-                        </motion.div>
-
-                        <motion.div
-                            animate={{opacity: 1, y: 0}}
-                            transition={{delay: 1, duration: 0.5}}
-                            initial={{opacity: 0, y: 30}}
-                            exit={{opacity: 0, y: -200}}
-                        >
-                            <h1 className="ImLautaroText font-roboto text-center overflow-hidden">
-                                Velez
-                            </h1>
-                        </motion.div>
+                        <Row>
+                            <Col md={7}>
+                                <motion.div
+                                    animate={{opacity: 1, x: 0}}
+                                    transition={{delay: 1.9, duration: 0.5}}
+                                    initial={{opacity: 0, x: -30}}
+                                    exit={{opacity: 0, x: 200}}
+                                >
+                                    <h1 className="ImLautaroText text-end">
+                                        Lautaro
+                                    </h1>
+                                </motion.div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={10}>
+                                <motion.div
+                                    animate={{opacity: 1, x: 0}}
+                                    transition={{delay: 2.3, duration: 0.5}}
+                                    initial={{opacity: 0, x: 30}}
+                                    exit={{opacity: 0, x: 0}}
+                                >
+                                    <h1 className="ImLautaroText text-end">
+                                        Velez
+                                    </h1>
+                                </motion.div>
+                            </Col>
+                        </Row>
                     </Container>
-                    <motion.div
-                        animate={{opacity: 1, y: 0}}
-                        transition={{delay: 1, duration: 0.5}}
-                        initial={{opacity: 0, y: 30}}
-                        exit={{opacity: 0, y: -200}}
-                    >
-                        <h3 className="BasedInLittleText  text-center font-bold" id="BasedInText">
-                            BASED IN:
-                        </h3>
-                    </motion.div>
+                    <Row>
+                        <Col md={11}>
+                            <motion.div
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 2.5, duration: 0.5}}
+                                initial={{opacity: 0, y: 30}}
+                                exit={{opacity: 0, y: -2000}}
+                            >
+                                <h3 className="BasedInLittleText text-end font-bold" id="BasedInText">
+                                    Based in:
+                                </h3>
+                            </motion.div>
+                        </Col>
+                    </Row>
 
 
                     <div className="sliderContainer bottom-0">

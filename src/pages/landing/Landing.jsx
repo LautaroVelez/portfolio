@@ -15,15 +15,15 @@ const LandingPage = () => {
     return (
         <>
 
-            <Container fluid className={'justify-center items-center justify-content-center text-center'}>
+            <Container fluid className={'h-screen'}>
                 <Row className={'justify-center'}>
                     <FaReact className={'IconReact'}/>
                 </Row>
 
-                <h6 className={'WelcomeText'}>Welcome, I'm Lautaro.</h6>
-                <h1 className={'TitleLanding'}>A Front-end React Developer and UI/UX Designer </h1>
+                <h6 className={'WelcomeText text-center'}>Welcome, I'm Lautaro.</h6>
+                <h1 className={'TitleLanding text-center'}>A Front-end React Developer and UI/UX Designer </h1>
                 <hr className="HorizontalLine"/>
-                <h6 className={'WelcomeText'}>Based in Córdoba, Argentina.</h6>
+                <h6 className={'WelcomeText text-center'}>Based in Córdoba, Argentina.</h6>
             </Container>
 
 
