@@ -1,42 +1,47 @@
 import {Col, Container, Row} from 'react-bootstrap';
 import '../../assets/styles/LandingPage.css';
-import {motion} from "framer-motion";
 import {FaGithub, FaReact} from "react-icons/fa";
 import me from '../../assets/images/me.jpg';
 import {FaLinkedin} from "react-icons/fa";
-import Stairs from "../../assets/utils/Stairs.jsx";
+import {motion, useTransform, useScroll} from "framer-motion";
+import {useRef} from "react";
 
 const LandingPage = () => {
 
+    const targetRef = useRef(HTMLDivElement | null > (null));
+
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+    })
+
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
 
     return (
         <>
+            <section className={'FrontEndSection h-[300vh] relative bg-neutral-900'}>
+                <div className={'sticky top-0 h-screen flex  items-center overflow-hidden '}>
+                    <motion.div style={{x}} className={'flex gap-4'}>
 
-            <Container fluid className={'h-screen'}>
-                <Row className={'justify-center'}>
-                    <FaReact className={'IconReact'}/>
-                </Row>
-
-                <h6 className={'WelcomeText text-center'}>Welcome, I'm Lautaro.</h6>
-                <h1 className={'TitleLanding text-center'}>A Front-end React Developer and UI/UX Designer </h1>
-                <hr className="HorizontalLine"/>
-                <h6 className={'WelcomeText text-center'}>Based in Córdoba, Argentina.</h6>
-            </Container>
+                        <h6 className={'FronteEndWelcome text-center'}>Hello! I'm Lautaro.</h6>
+                    </motion.div>
+                    <h1 className={'FrontEndTitle text-center'}>A Front-end React Developer and UI/UX Designer </h1>
+                </div>
+            </section>
 
 
             <section className="firstSection" id={'About'}>
                 <Container>
                     <Row>
                         <Col md={6}>
-                            <h1 className="AboutMe text-start">About</h1>
+                            <h1 className="AboutMeText text-start">About</h1>
                         </Col>
                     </Row>
                     <Row>
                         <Col md={10}>
-                            <h1 className="AboutMe text-end">Me</h1>
+                            <h1 className="AboutMeText text-end">Me</h1>
                         </Col>
                     </Row>
                     <Row>
@@ -55,52 +60,7 @@ const LandingPage = () => {
                     </Row>
                 </Container>
             </section>
-            <section id={'Technologies'}>
-                <span>
-                    <h1 className={'m-20 text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
-                </span>
 
-                <Container fluid className={'font-bold text-2xl black'}>
-                    <Row className={'FontRobotoBold'}>
-                        <Col>
-                            <h1 className={'text-start'}>TECHNOLOGIES</h1>
-                        </Col>
-                        <Col>
-                            <h1 className={'text-center'}>&</h1>
-                        </Col>
-                        <Col>
-                            <h1 className={'text-end'}>TOOLS</h1>
-                        </Col>
-                    </Row>
-
-
-                    <Row className={'text-center'}>
-                        <Col md={6} sm={6}>
-                            <h1 className={'text-end'}>JAVASCRIPT</h1>
-                            <h1 className={'text-end'}>HMLT5</h1>
-                            <h1 className={'text-end'}>REACT</h1>
-
-                            <h1 className={'text-end'}>CSS</h1>
-
-                            <h1 className={'text-end'}>PYTHON</h1>
-                            <h1 className={'text-end'}>FRAMER MOTION</h1>
-                            <h1 className={'text-end'}>RESPONSIVE DESIGN</h1>
-
-
-                        </Col>
-                        <Col md={6} sm={6}>
-                            <h1 className={'text-start'}>BOOSTRAP</h1>
-                            <h1 className={'text-start'}>TAILWIND</h1>
-                            <h1 className={'text-start'}>FIGMA</h1>
-                            <h1 className={'text-start'}>MUI</h1>
-                            <h1 className={'text-start'}>NEXTUI</h1>
-                            <h1 className={'text-start'}>PHOTOSHOP</h1>
-                            <h1 className={'text-start'}>MATERIAL DESIGN</h1>
-
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
 
             <section id={'Projects'}>
                 <h1 className={'mt-20 text-9xl FontRoboto font-bold ml-10 text-black'}>MY WORK</h1>
@@ -131,8 +91,12 @@ const LandingPage = () => {
                             <p className={'mt-11'}>There’s no greater joy than seeing an idea come to life.</p>
                             <p> This is your baby.</p>
                             <p>I’d love to help you raise it.</p>
+                            <hr className="HorizontalLine"/>
                         </h1>
                     </Col>
+                </Row>
+                <Row className={'justify-center'}>
+                    <FaReact className={'IconReact'}/>
                 </Row>
                 <section id={'Contact'}>
                     <Row className={'justify-center text-center mt-20'}>
@@ -151,6 +115,53 @@ const LandingPage = () => {
                         </Col>
                     </Row>
                 </section>
+                <section id={'Technologies'}>
+                <span>
+                    <h1 className={'m-20 text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
+                </span>
+
+                    <Container fluid className={'font-bold text-2xl black'}>
+                        <Row className={'FontRobotoBold'}>
+                            <Col>
+                                <h1 className={'text-start'}>TECHNOLOGIES</h1>
+                            </Col>
+                            <Col>
+                                <h1 className={'text-center'}>&</h1>
+                            </Col>
+                            <Col>
+                                <h1 className={'text-end'}>TOOLS</h1>
+                            </Col>
+                        </Row>
+
+
+                        <Row className={'text-center'}>
+                            <Col md={6} sm={6}>
+                                <h1 className={'text-end'}>JAVASCRIPT</h1>
+                                <h1 className={'text-end'}>HMLT5</h1>
+                                <h1 className={'text-end'}>REACT</h1>
+
+                                <h1 className={'text-end'}>CSS</h1>
+
+                                <h1 className={'text-end'}>PYTHON</h1>
+                                <h1 className={'text-end'}>FRAMER MOTION</h1>
+                                <h1 className={'text-end'}>RESPONSIVE DESIGN</h1>
+
+
+                            </Col>
+                            <Col md={6} sm={6}>
+                                <h1 className={'text-start'}>BOOSTRAP</h1>
+                                <h1 className={'text-start'}>TAILWIND</h1>
+                                <h1 className={'text-start'}>FIGMA</h1>
+                                <h1 className={'text-start'}>MUI</h1>
+                                <h1 className={'text-start'}>NEXTUI</h1>
+                                <h1 className={'text-start'}>PHOTOSHOP</h1>
+                                <h1 className={'text-start'}>MATERIAL DESIGN</h1>
+
+                            </Col>
+                        </Row>
+                    </Container>
+                </section>
+
                 <Row className={'justify-center text-center mt-10'}>
                     <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>
                 </Row>

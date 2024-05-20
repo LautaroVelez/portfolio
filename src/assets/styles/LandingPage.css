@@ -1,9 +1,16 @@
-.TitleLanding {
-    font-size: 18vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+.FrontEndSection {
+    background-color: black;
+}
+
+.FronteEndWelcome {
+    color: #f8ebd2;
+}
+
+.FrontEndTitle {
+    font-size: 50vh;
     font-family: "Poppins";
-    font-weight: lighter;
+    font-weight: lighter;;
+    color: #5b5750;
 }
 
 .HorizontalLine {
@@ -15,13 +22,12 @@
 
 .firstSection {
     background-color: #FBF4EA;
-    margin-top: 10vh;
 }
 
-.AboutMe {
+.AboutMeText {
     font-family: "Italiana";
     color: #222C17;
-    font-size: 40vh;
+    font-size: 30vh;
 }
 
 .IconReact {
