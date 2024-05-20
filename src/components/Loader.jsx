@@ -1,6 +1,6 @@
 import {Col, Container, Row} from "react-bootstrap";
 import '../assets/styles/Loader.css';
-import {useEffect, useRef} from "react";
+import {useLayoutEffect, useRef} from "react";
 import {motion} from "framer-motion"
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -10,48 +10,47 @@ const Loader = () => {
 
     const firstText = useRef(null);
     const secondText = useRef(null);
-    const ThirdText = useRef(null);
-    const FourthText = useRef(null);
-    const FifthText = useRef(null);
+    const thirdText = useRef(null);
+    const fourthText = useRef(null);
+    const fifthText = useRef(null);
     const slider = useRef(null);
-
 
     let xPercent = 0;
     let direction = -1;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
+
+        const animation = () => {
+            if (xPercent <= -100) {
+                xPercent = 0;
+            }
+            if (xPercent > 0) {
+                xPercent = -100;
+            }
+
+            if (firstText.current && secondText.current && thirdText.current && fourthText.current && fifthText.current) {
+                gsap.set([firstText.current, secondText.current, thirdText.current, fourthText.current, fifthText.current], { xPercent: xPercent });
+            }
+            xPercent += 0.25 * direction;
+            requestAnimationFrame(animation);
+        };
+
+        if (slider.current) {
+            gsap.to(slider.current, {
+                scrollTrigger: {
+                    trigger: document.documentElement,
+                    start: 0,
+                    end: window.innerHeight,
+                    scrub: 0.25,
+                    onUpdate: e => direction = e.direction * -1
+                },
+                x: "-=300px"
+            });
+        }
+
         requestAnimationFrame(animation);
-
-        gsap.to(slider.current, {
-            scrollTrigger: {
-                trigger: document.documentElement,
-                start: 0,
-                end: window.innerHeight,
-                scrub: 0.25,
-                onUpdate: e => direction = e.direction * -1
-            },
-            x: "-=300px"
-
-        })
     }, []);
-
-    const animation = () => {
-        if (xPercent <= -100) {
-            xPercent = 0;
-        }
-        if (xPercent > 0) {
-            xPercent = -100;
-        }
-        gsap.set(firstText.current, {xPercent: xPercent})
-        gsap.set(secondText.current, {xPercent: xPercent})
-        gsap.set(ThirdText.current, {xPercent: xPercent})
-        gsap.set(FourthText.current, {xPercent: xPercent})
-        gsap.set(FifthText.current, {xPercent: xPercent})
-        xPercent += 0.25 * direction;
-        requestAnimationFrame(animation);
-    }
-
 
     return (
         <Stairs>
@@ -114,24 +113,19 @@ const Loader = () => {
                             </motion.div>
                         </Col>
                     </Row>
-
-
                     <div className="sliderContainer bottom-0">
                         <div className="slider" ref={slider}>
                             <p ref={firstText}>Córdoba, Argentina - </p>
                             <p ref={secondText}>Córdoba, Argentina - </p>
-                            <p ref={ThirdText}>Córdoba, Argentina - </p>
-                            <p ref={FourthText}>Córdoba, Argentina - </p>
-                            <p ref={FifthText}>Córdoba, Argentina - </p>
+                            <p ref={thirdText}>Córdoba, Argentina - </p>
+                            <p ref={fourthText}>Córdoba, Argentina - </p>
+                            <p ref={fifthText}>Córdoba, Argentina - </p>
                         </div>
                     </div>
-
-
                 </div>
             </Container>
         </Stairs>
-    )
-        ;
+    );
 }
 
 export default Loader;
