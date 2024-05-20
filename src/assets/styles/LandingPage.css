@@ -1,4 +1,3 @@
-
 .FronteEndWelcome {
     color: #f8ebd2;
 }
@@ -9,7 +8,6 @@
     font-weight: lighter;;
     color: #9b937e;
 }
-
 
 
 .HorizontalLine {
@@ -55,7 +53,6 @@
 .MeText {
     margin: 5vh;
     font-size: 3vh;
-
 }
 
 .FontRobotoBold {
@@ -80,6 +77,25 @@
     height: 80vh;
     background-color: #CCCCCC;
     border-radius: 20vh;
+}
+
+.WhyMeTitle{
+    font-size: 20vh;
+    color: #7b5e43;
+    font-family: "Raleway", sans-serif;
+}
+
+.MiniTitleWhyMe{
+    font-size: 8vh;
+    color: darkgoldenrod;
+    font-family: Italiana;
+    margin-top: 5vh;
+}
+
+.paragraphWhyMe{
+    font-size: 4vh;
+    color: #666659;
+    margin-top: 2vh;
 }
 
 .LastIcons {

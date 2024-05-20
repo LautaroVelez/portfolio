@@ -4,9 +4,12 @@ import {FaGithub, FaReact} from "react-icons/fa";
 import me from '../../assets/images/me.jpg';
 import {FaLinkedin} from "react-icons/fa";
 import {motion, useTransform, useScroll} from "framer-motion";
-import {useRef} from "react";
+import React, {useRef} from "react";
+import Word from "../../components/Word.jsx";
+import Paragraph from "../../components/Word.jsx";
 
 const LandingPage = () => {
+    //Horizontal Scroll
     const targetRef = useRef(null);
     const targetRef2 = useRef(null);
     const targetRef3 = useRef(null);
@@ -26,10 +29,18 @@ const LandingPage = () => {
     const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-100%"]);
     const x2 = useTransform(scrollYProgress2, [0, 1], ["0%", "-100%"]);
     const x3 = useTransform(scrollYProgress3, [0, 1], ["0%", "-100%"]);
+    //Horizontal Scroll
 
 
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
+
+    const MiniTitleWhyMe = "I THINK THAT MY WORK CAN SPEAK FOR ME."
+    const firstParagraph = "I’m a disciplined person, who number one interest is the productivity and creative development of me and the brand im working with."
+    const secondParagraph = "I think i act like a connector, problem-solver and forward-thinker, able to impact every step of the process with excellence."
+    const thirdParagraph = "There’s no greater joy than seeing an idea come to life."
+    const fourthParagraph = "This is your baby."
+    const fifthParagraph = "I’d love to help you raise it."
 
     return (
         <>
@@ -64,6 +75,8 @@ const LandingPage = () => {
                     </div>
                 </section>
             </div>
+
+
             <section className="firstSection" id={'About'}>
                 <Container>
                     <Row>
@@ -99,92 +112,90 @@ const LandingPage = () => {
                 </Row>
             </section>
 
-            <h1 className={'mt-20 text-8xl FontRoboto font-bold ml-5 text-black '}>¿WHY ME?</h1>
-            <Container>
-                <Row className={'text-center justify-center'}>
-                    <Col md={8}>
-                        <h1 className={'mt-20 text-3xl FontRoboto font-bold ml-5 text-black'}>
-                            I THINK THAT MY WORK SPEAKS FOR ME.
+            <section className={' bg-neutral-900 h-[120vh] pt-20'}>
+                <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
+                <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
+                <Container>
+                    <Row className={'justify-center'}>
+                        <Col md={8}>
+                            <p className={'paragraphWhyMe text-center'}>{firstParagraph}</p>
+                            <p className={'paragraphWhyMe text-center'}>{secondParagraph}</p>
+                            <p className={'paragraphWhyMe text-center'}>{thirdParagraph}</p>
+                            <p className={'paragraphWhyMe text-center'}>{fourthParagraph}</p>
+                            <p className={'paragraphWhyMe text-center'}>{fifthParagraph}</p>
+                        </Col>
+                    </Row>
+                </Container>
+                <hr className="HorizontalLine mt-6"/>
 
-                            <p className={'mt-11'}>I’m a disciplined person, whose number one interest is the
-                                productivity and creative development of me and the brand I'm working with.</p>
-
-                            <p className={'mt-11'}>I think I act like a connector, problem-solver and forward-thinker,
-                                able to impact every step of the process with excellence.</p>
-
-                            <p className={'mt-11'}>There’s no greater joy than seeing an idea come to life.</p>
-                            <p>This is your baby.</p>
-                            <p>I’d love to help you raise it.</p>
-                            <hr className="HorizontalLine"/>
-                        </h1>
-                    </Col>
-                </Row>
                 <Row className={'justify-center'}>
                     <FaReact className={'IconReact'}/>
                 </Row>
+            </section>
+            <section id={'Contact'}>
+                <Row className={'justify-center text-center'}>
+                    <Col md={2}>
+                        <Row>
+                            <p className={'text-1xl font-bold text-gray-500'}>You can reach me in:</p>
+                        </Row>
+                        <Row className={'mt-3'}>
+                            <Col md={6} sm={6}>
+                                <a href={Linkedin}><FaLinkedin className={'LastIcons'}/></a>
+                            </Col>
+                            <Col md={6} sm={6}>
+                                <a href={Github}><FaGithub className={'LastIcons'}/></a>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </section>
 
-                <section id={'Contact'}>
-                    <Row className={'justify-center text-center mt-20'}>
-                        <Col md={2}>
-                            <Row>
-                                <p className={'text-1xl font-bold text-gray-500'}>You can reach me in:</p>
-                            </Row>
-                            <Row className={'mt-3'}>
-                                <Col md={6} sm={6}>
-                                    <a href={Linkedin}><FaLinkedin className={'LastIcons'}/></a>
-                                </Col>
-                                <Col md={6} sm={6}>
-                                    <a href={Github}><FaGithub className={'LastIcons'}/></a>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </section>
-
-                <section id={'Technologies'}>
+            <section id={'Technologies'}>
                     <span>
                         <h1 className={'m-20 text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
                     </span>
-                    <Container fluid className={'font-bold text-2xl black'}>
-                        <Row className={'FontRobotoBold'}>
-                            <Col>
-                                <h1 className={'text-start'}>TECHNOLOGIES</h1>
-                            </Col>
-                            <Col>
-                                <h1 className={'text-center'}>&</h1>
-                            </Col>
-                            <Col>
-                                <h1 className={'text-end'}>TOOLS</h1>
-                            </Col>
-                        </Row>
-                        <Row className={'text-center'}>
-                            <Col md={6} sm={6}>
-                                <h1 className={'text-end'}>JAVASCRIPT</h1>
-                                <h1 className={'text-end'}>HTML5</h1>
-                                <h1 className={'text-end'}>REACT</h1>
-                                <h1 className={'text-end'}>CSS</h1>
-                                <h1 className={'text-end'}>PYTHON</h1>
-                                <h1 className={'text-end'}>FRAMER MOTION</h1>
-                                <h1 className={'text-end'}>RESPONSIVE DESIGN</h1>
-                            </Col>
-                            <Col md={6} sm={6}>
-                                <h1 className={'text-start'}>BOOTSTRAP</h1>
-                                <h1 className={'text-start'}>TAILWIND</h1>
-                                <h1 className={'text-start'}>FIGMA</h1>
-                                <h1 className={'text-start'}>MUI</h1>
-                                <h1 className={'text-start'}>NEXTUI</h1>
-                                <h1 className={'text-start'}>PHOTOSHOP</h1>
-                                <h1 className={'text-start'}>MATERIAL DESIGN</h1>
-                            </Col>
-                        </Row>
-                    </Container>
-                </section>
-                <Row className={'justify-center text-center mt-10'}>
-                    <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>
-                </Row>
-            </Container>
+                <Container fluid className={'font-bold text-2xl black'}>
+                    <Row className={'FontRobotoBold'}>
+                        <Col>
+                            <h1 className={'text-start'}>TECHNOLOGIES</h1>
+                        </Col>
+                        <Col>
+                            <h1 className={'text-center'}>&</h1>
+                        </Col>
+                        <Col>
+                            <h1 className={'text-end'}>TOOLS</h1>
+                        </Col>
+                    </Row>
+                    <Row className={'text-center'}>
+                        <Col md={6} sm={6}>
+                            <h1 className={'text-end'}>JAVASCRIPT</h1>
+                            <h1 className={'text-end'}>HTML5</h1>
+                            <h1 className={'text-end'}>REACT</h1>
+                            <h1 className={'text-end'}>CSS</h1>
+                            <h1 className={'text-end'}>PYTHON</h1>
+                            <h1 className={'text-end'}>FRAMER MOTION</h1>
+                            <h1 className={'text-end'}>RESPONSIVE DESIGN</h1>
+                        </Col>
+                        <Col md={6} sm={6}>
+                            <h1 className={'text-start'}>BOOTSTRAP</h1>
+                            <h1 className={'text-start'}>TAILWIND</h1>
+                            <h1 className={'text-start'}>FIGMA</h1>
+                            <h1 className={'text-start'}>MUI</h1>
+                            <h1 className={'text-start'}>NEXTUI</h1>
+                            <h1 className={'text-start'}>PHOTOSHOP</h1>
+                            <h1 className={'text-start'}>MATERIAL DESIGN</h1>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <Row className={'justify-center text-center mt-10'}>
+                <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>
+            </Row>
+
+
         </>
-    );
+    )
+        ;
 };
 
 export default LandingPage;
