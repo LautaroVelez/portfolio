@@ -5,11 +5,12 @@ import Loader from "./components/Loader.jsx";
 
 
 export default function App() {
+
     return (
         <div className='main'>
             <AnimatePresence mode='wait'>
                 <Loader key={Loader}></Loader>
-                <LandingPage key={LandingPage}  />
+                <LandingPage key={LandingPage}/>
 
             </AnimatePresence>
         </div>
