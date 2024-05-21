@@ -6,41 +6,25 @@ import {FaLinkedin} from "react-icons/fa";
 import {motion, useTransform, useScroll} from "framer-motion";
 import React, {useEffect, useRef} from "react";
 import Lenis from "lenis";
+import HorizontalScrollSection from "../../components/HorizontalScrollSection.jsx";
+import AboutMeSection from "../../components/AboutMeSection.jsx";
+import WorkSection from "../../components/WorkSection.jsx";
+import WhyMeSection from "../../components/WhyMeSection.jsx";
 
 
 const LandingPage = () => {
     useEffect(() => {
         //Use Lenis for smooth scroll
         const lenis = new Lenis()
+
         function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
+
         requestAnimationFrame(raf)
     }, []);
 
-    //Horizontal Scroll
-    const targetRef = useRef(null);
-    const targetRef2 = useRef(null);
-    const targetRef3 = useRef(null);
-
-
-    const {scrollYProgress: scrollYProgress1} = useScroll({
-        target: targetRef,
-    });
-
-    const {scrollYProgress: scrollYProgress2} = useScroll({
-        target: targetRef2,
-    });
-
-    const {scrollYProgress: scrollYProgress3} = useScroll({
-        target: targetRef3,
-    });
-
-    const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-100%"]);
-    const x2 = useTransform(scrollYProgress2, [0, 1], ["0%", "-100%"]);
-    const x3 = useTransform(scrollYProgress3, [0, 1], ["0%", "-100%"]);
-    //Horizontal Scroll
 
     //Parallax Scroll to every section
     const sectionRef1 = useRef(null);
@@ -60,10 +44,10 @@ const LandingPage = () => {
         offset: ["start end", "end start"],
     })
 
-
     const y = useTransform(Parallax, [0, 1], ["-20%", "10%"]);
     const y2 = useTransform(Parallax2, [0, 1], ["-20%", "10%"]);
     const y3 = useTransform(Parallax3, [0, 1], ["-20%", "10%"]);
+
 //Parallax Scroll to every section
 
 
@@ -71,68 +55,17 @@ const LandingPage = () => {
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
 
-    const MiniTitleWhyMe = "I THINK THAT MY WORK CAN SPEAK FOR ME."
-    const firstParagraph = "I’m a disciplined person, who number one interest is the productivity and creative development of me and the brand im working with."
-    const secondParagraph = "I think i act like a connector, problem-solver and forward-thinker, able to impact every step of the process with excellence."
-    const thirdParagraph = "There’s no greater joy than seeing an idea come to life."
-    const fourthParagraph = "This is your baby."
-    const fifthParagraph = "I’d love to help you raise it."
+
 //const texts
     return (
         <>
 
-            <div className={'bg-neutral-900 text-center'}>
-                <h1 className={'FrontEndTitle h-screen'}>A</h1>
-                <section ref={targetRef} className={'h-[300vh] relative'}>
-                    <div className="sticky top-0 flex h-screen items-center overflow-hidden w-[160vw]">
-                        <motion.div style={{x: x1}} className="flex gap-4">
-                            <h1 className={'FrontEndTitle '}>Front-end</h1>
-                        </motion.div>
-                    </div>
-                </section>
-
-                <h1 className={'FrontEndTitle  h-screen'}>React</h1>
-
-                <section ref={targetRef2} className={'h-[300vh] relative'}>
-                    <div className="sticky top-0 flex h-screen items-center overflow-hidden w-[200vw]">
-                        <motion.div style={{x: x2}} className="flex gap-4">
-                            <h1 className={'FrontEndTitle '}>Developer</h1>
-                        </motion.div>
-                    </div>
-                </section>
-
-                <h1 className={'FrontEndTitle h-screen'}>and</h1>
-                <h1 className={'FrontEndTitle h-screen'}>UX/UI</h1>
-
-                <section ref={targetRef3} className={'h-[300vh] relative'}>
-                    <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
-                        <motion.div style={{x: x3}} className="flex gap-4">
-                            <h1 className={'FrontEndTitle'}>Designer.</h1>
-                        </motion.div>
-                    </div>
-                </section>
-            </div>
-
+            <HorizontalScrollSection/>
 
             <section id={'About'} ref={sectionRef1} className={' firstSection relative h-[100vh] overflow-hidden'}>
                 <motion.div className={'absolute w-full'} style={{top: y}}>
 
-                    <h1 className="AboutMeText text-start">About</h1>
-
-
-                    <h1 className="AboutMeText text-end">Me</h1>
-
-
-                    <img src={me} className={'MePhoto'}/>
-
-                    <h1 className="MeText FontKaisei">I’m Lautaro Velez, a web developer.</h1>
-                    <h1 className="MeText FontEmbed">I have a solid knowledge about React, JavaScript, HTML,
-                        CSS, and more.</h1>
-                    <h1 className="MeText">I consider myself someone who is highly creative and very into
-                        design, whether it's fashion, cars, buildings, web pages, I always try to think
-                        outside
-                        the box.</h1>
-
+                    <AboutMeSection/>
 
                 </motion.div>
             </section>
@@ -140,33 +73,15 @@ const LandingPage = () => {
 
             <section id={'Projects'} ref={sectionRef2} className={'relative h-[150vh] overflow-hidden'}>
                 <motion.div className={'absolute w-full'} style={{top: y2}}>
-                    <h1 className={'mt-20 text-9xl FontRoboto font-bold ml-10 text-black'}>MY WORK</h1>
-                    <Row className={'justify-content-center'}>
-                        <div className="square"></div>
-                    </Row>
+
+                    <WorkSection/>
+
                 </motion.div>
             </section>
 
             <section className={' bg-neutral-900 relative h-[150vh] overflow-hidden'} ref={sectionRef3}>
                 <motion.div className={'absolute w-full'} style={{top: y3}}>
-                    <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
-                    <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
-                    <Container>
-                        <Row className={'justify-center'}>
-                            <Col md={8}>
-                                <p className={'paragraphWhyMe text-center'}>{firstParagraph}</p>
-                                <p className={'paragraphWhyMe text-center'}>{secondParagraph}</p>
-                                <p className={'paragraphWhyMe text-center'}>{thirdParagraph}</p>
-                                <p className={'paragraphWhyMe text-center'}>{fourthParagraph}</p>
-                                <p className={'paragraphWhyMe text-center'}>{fifthParagraph}</p>
-                            </Col>
-                        </Row>
-                    </Container>
-                    <hr className="HorizontalLine mt-6"/>
-
-                    <Row className={'justify-center'}>
-                        <FaReact className={'IconReact'}/>
-                    </Row>
+                    <WhyMeSection/>
                 </motion.div>
             </section>
 
