@@ -22,38 +22,32 @@
 }
 
 .AboutMeTitle {
-
     font-family: "Italiana";
     color: #222C17;
-    font-size: 30vh;
-}
-
-.IconReact {
-    height: 5vh;
-    width: 5vh;
-    margin: 2vh;
+    font-size: 25vh;
 }
 
 .MePhoto {
-    height: 100vh;
+    height: 90vh;
     border-top-left-radius: 5vh;
     border-bottom-right-radius: 5vh;
     border-bottom-left-radius: 5vh;
-    margin-left: 18vw;
-    margin-top: -40vh;
-
+    margin-left: 20vw;
+    margin-top: -30vh;
 }
 
 .MeTextContainer {
-
     background-color: #222C17;
     color: #FBF4EA;
-    padding: 10vh;
+    padding: 8vh;
+    width: 38vw;
     border-bottom-left-radius: 5vh;
+     border-bottom-right-radius: 5vh;
+     border-top-right-radius: 5vh;
+
 }
 
 .MeText {
-
     font-size: 3vh;
 }
 
@@ -105,3 +99,8 @@
     width: 5vw;
 }
 
+.IconReact {
+    height: 5vh;
+    width: 5vh;
+    margin: 2vh;
+}

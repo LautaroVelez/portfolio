@@ -26,7 +26,7 @@ const AboutMeSection = () => {
     const x1 = useTransform(scrollYProgress1, [0, 1], ["-15%", "5%"]);
     const x2 = useTransform(scrollYProgress2, [0, 1], ["15%", "-5%"]);
 
-    const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "30%"]);
+    const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
 
     return (
         <>
@@ -60,7 +60,7 @@ const AboutMeSection = () => {
                             I consider myself a very creative and a hard-working person who is always trying to learn
                             something new.
                         </h1>
-                        <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars, and watching rom-coms!</h1>
+                        <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars, music, and watching rom-coms!</h1>
                     </motion.div>
                 </Col>
             </Row>
