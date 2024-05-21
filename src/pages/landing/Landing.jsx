@@ -10,11 +10,12 @@ import HorizontalScrollSection from "../../components/HorizontalScrollSection.js
 import AboutMeSection from "../../components/AboutMeSection.jsx";
 import WorkSection from "../../components/WorkSection.jsx";
 import WhyMeSection from "../../components/WhyMeSection.jsx";
+import Section from "../../components/Section.jsx";
 
 
 const LandingPage = () => {
     useEffect(() => {
-        //Use Lenis for smooth scroll
+        //Using Lenis for smooth scroll
         const lenis = new Lenis()
 
         function raf(time) {
@@ -26,64 +27,23 @@ const LandingPage = () => {
     }, []);
 
 
-    //Parallax Scroll to every section
-    const sectionRef1 = useRef(null);
-    const sectionRef2 = useRef(null);
-    const sectionRef3 = useRef(null);
-
-    const {scrollYProgress: Parallax} = useScroll({
-        target: sectionRef1,
-        offset: ["start end", "end start"],
-    })
-    const {scrollYProgress: Parallax2} = useScroll({
-        target: sectionRef2,
-        offset: ["start end", "end start"],
-    })
-    const {scrollYProgress: Parallax3} = useScroll({
-        target: sectionRef3,
-        offset: ["start end", "end start"],
-    })
-
-    const y = useTransform(Parallax, [0, 1], ["-20%", "10%"]);
-    const y2 = useTransform(Parallax2, [0, 1], ["-20%", "10%"]);
-    const y3 = useTransform(Parallax3, [0, 1], ["-20%", "10%"]);
-
-//Parallax Scroll to every section
-
-
-//const texts
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
 
 
-//const texts
+
     return (
         <>
 
             <HorizontalScrollSection/>
 
-            <section id={'About'} ref={sectionRef1} className={' firstSection relative h-[100vh] overflow-hidden'}>
-                <motion.div className={'absolute w-full'} style={{top: y}}>
-
-                    <AboutMeSection/>
-
-                </motion.div>
-            </section>
+            <Section Component={<AboutMeSection/>}/>
 
 
-            <section id={'Projects'} ref={sectionRef2} className={'relative h-[150vh] overflow-hidden'}>
-                <motion.div className={'absolute w-full'} style={{top: y2}}>
+            <Section Component={<WorkSection/>}/>
 
-                    <WorkSection/>
 
-                </motion.div>
-            </section>
-
-            <section className={' bg-neutral-900 relative h-[150vh] overflow-hidden'} ref={sectionRef3}>
-                <motion.div className={'absolute w-full'} style={{top: y3}}>
-                    <WhyMeSection/>
-                </motion.div>
-            </section>
+            <Section Component={<WhyMeSection/>}/>
 
 
             <section id={'Contact'}>

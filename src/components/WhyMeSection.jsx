@@ -12,6 +12,7 @@ const WhyMeSection = () => {
 
     return (
         <>
+            <div className={'bg-neutral-900'}>
             <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
             <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
             <Container>
@@ -30,6 +31,7 @@ const WhyMeSection = () => {
             <Row className={'justify-center'}>
                 <FaReact className={'IconReact'}/>
             </Row>
+            </div>
         </>
     )
 }
