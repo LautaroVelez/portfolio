@@ -13,24 +13,24 @@ const WhyMeSection = () => {
     return (
         <>
             <div className={'bg-neutral-900'}>
-            <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
-            <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
-            <Container>
-                <Row className={'justify-center'}>
-                    <Col md={8} className={'text-center'}>
-                        <p className={'paragraphWhyMe'}>{firstParagraph}</p>
-                        <p className={'paragraphWhyMe'}>{secondParagraph}</p>
-                        <p className={'paragraphWhyMe'}>{thirdParagraph}</p>
-                        <p className={'paragraphWhyMe'}>{fourthParagraph}</p>
-                        <p className={'paragraphWhyMe'}>{fifthParagraph}</p>
-                    </Col>
-                </Row>
-            </Container>
-            <hr className="HorizontalLine mt-6"/>
+                <h1 className={'WhyMeTitle mt-28'}>¿WHY ME?</h1>
+                <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
+                <Container>
+                    <Row className={'justify-center'}>
+                        <Col md={8} className={'text-center'}>
+                            <p className={'paragraphWhyMe'}>{firstParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{secondParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{thirdParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{fourthParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{fifthParagraph}</p>
+                        </Col>
+                    </Row>
+                </Container>
+                <hr className="HorizontalLine mt-6"/>
 
-            <Row className={'justify-center'}>
-                <FaReact className={'IconReact'}/>
-            </Row>
+                <Row className={'justify-center'}>
+                    <FaReact className={'IconReact'}/>
+                </Row>
             </div>
         </>
     )

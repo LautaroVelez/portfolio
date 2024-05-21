@@ -6,7 +6,7 @@
     font-size: 50vh;
     font-family: "Poppins";
     font-weight: lighter;;
-    color: #9b937e;
+    color:  #7b5e43;
 }
 
 
@@ -22,6 +22,7 @@
 }
 
 .AboutMeTitle {
+
     font-family: "Italiana";
     color: #222C17;
     font-size: 30vh;
@@ -34,19 +35,21 @@
 }
 
 .MePhoto {
-    border-radius: 10vh;
-    height: 20vh;
-    margin-left: 5vw;
+    height: 100vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    margin-left: 18vw;
+    margin-top: -40vh;
+
 }
 
 .MeTextContainer {
-    width: 35vw;
+
     background-color: #222C17;
     color: #FBF4EA;
     padding: 10vh;
-    border-radius: 5vh;
-    max-height: 60vh;
-    margin-top: 10vh !important;
+    border-bottom-left-radius: 5vh;
 }
 
 .MeText {

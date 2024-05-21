@@ -30,19 +30,11 @@ const LandingPage = () => {
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
 
-
-
     return (
         <>
-
             <HorizontalScrollSection/>
-
             <Section Component={<AboutMeSection/>}/>
-
-
             <Section Component={<WorkSection/>}/>
-
-
             <Section Component={<WhyMeSection/>}/>
 
 
@@ -86,6 +78,7 @@ const LandingPage = () => {
                             <h1 className={'text-end'}>JAVASCRIPT</h1>
                             <h1 className={'text-end'}>HTML5</h1>
                             <h1 className={'text-end'}>REACT</h1>
+                            <h1 className={'text-end'}>GSAP</h1>
                             <h1 className={'text-end'}>CSS</h1>
                             <h1 className={'text-end'}>PYTHON</h1>
                             <h1 className={'text-end'}>FRAMER MOTION</h1>
@@ -96,7 +89,7 @@ const LandingPage = () => {
                             <h1 className={'text-start'}>TAILWIND</h1>
                             <h1 className={'text-start'}>FIGMA</h1>
                             <h1 className={'text-start'}>MUI</h1>
-                            <h1 className={'text-start'}>NEXTUI</h1>
+                            <h1 className={'text-start'}>NEXT.JS</h1>
                             <h1 className={'text-start'}>PHOTOSHOP</h1>
                             <h1 className={'text-start'}>MATERIAL DESIGN</h1>
                         </Col>
