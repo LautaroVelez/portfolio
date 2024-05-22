@@ -76,24 +76,29 @@
 }
 
 .WhyMeTitle{
-    font-size: 20vh;
+    font-size: 22vh;
     color: #7b5e43;
     font-family: "Raleway", sans-serif;
 }
 
 .MiniTitleWhyMe{
-    font-size: 8vh;
+    font-size: 9vh;
     color: darkgoldenrod;
     font-family: Italiana;
     margin-top: 5vh;
 }
 
-.paragraphWhyMe{
+.paragraphWhyMe {
     font-size: 4vh;
+    font-weight: bold;
     color: #7b5e43;
     margin-top: 2vh;
-    position: relative;
+    will-change: opacity, transform;
+    width: 70vw;
+    overflow-wrap: break-word !important;
+    word-break: keep-all !important;
 }
+
 
 .Shadow{
     position: absolute;

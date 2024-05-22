@@ -1,72 +1,74 @@
-import {Col, Container, Row} from "react-bootstrap";
-import {FaReact} from "react-icons/fa";
-import React, {useEffect, useRef} from "react";
-import {motion, useScroll, useTransform} from "framer-motion";
+import { Col, Container, Row } from "react-bootstrap";
+import { FaReact } from "react-icons/fa";
+import SplitType from 'split-type';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useLayoutEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const WhyMeSection = () => {
-    const MiniTitleWhyMe = "I THINK THAT MY WORK CAN SPEAK FOR ME."
+    const MiniTitleWhyMe = "I THINK THAT MY WORK CAN SPEAK FOR ME.";
+    const firstParagraph = "I’m a disciplined person, who number one interest is the productivity and creative development of me and the brand I'm working with.";
+    const secondParagraph = "I think I act like a connector, problem-solver and forward-thinker, able to impact every step of the process with excellence.";
+    const thirdParagraph = "There’s no greater joy than seeing an idea come to life.";
+    const fourthParagraph = "This is your baby.";
+    const fifthParagraph = "I’d love to help you raise it.";
 
-    const combinedParagraph = "I’m a disciplined person, who number one interest is the productivity and creative development of me and the brand I’m working with.\n" +
-        "I think I act like a connector, problem-solver and forward-thinker, able to impact every step of the process with excellence.\n" +
-        "There’s no greater joy than seeing an idea come to life.\n" +
-        "This is your baby.\n" +
-        "I’d love to help you raise it.";
+    const FirstRef = useRef(null);
 
+    const { scrollYProgress } = useScroll({
+        target: FirstRef,
+        offset: ["start end", "end start"],
+    });
 
+     const x1 = useTransform(scrollYProgress, [0, 1], ["-5%", "10%"]);
 
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    const words = combinedParagraph.split("");
+        const paragraphs = document.querySelectorAll('.paragraphWhyMe');
+        paragraphs.forEach((paragraph, i) => {
+            const text = new SplitType(paragraph, { types: 'words, chars' });
 
-    const element = useRef(null);
+            gsap.from(text.chars, {
+                scrollTrigger: {
+                    trigger: paragraph,
+                    start: 'top 90%',
+                    end: 'bottom 40%',
+                    scrub: true,
+                    markers: false
+                },
+                opacity: 0.2,
+                stagger: 1,
+                duration: 0.5,
+                ease: 'power2.out',
+            });
+        });
+    }, []);
 
-
-    const {scrollYProgress} = useScroll({
-        target: element,
-        offset: ['start 0.9', 'start 0.25']
-    })
 
 
     return (
         <>
             <div className={'bg-neutral-900'}>
                 <h1 className={'WhyMeTitle mt-28'}>¿WHY ME?</h1>
-                <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
+                <motion.div ref={FirstRef} style={{ x: x1 }}>
+                    <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
+                </motion.div>
                 <Container>
                     <Row className={'justify-center'}>
-                        <Col md={8} className={'text-center'}>
-                            <p ref={element}>{
-                                words.map((word, i) => {
-                                    const start = i / words.length;
-                                    const end = start + (1 / words.length)
-                                    return (
-                                        <Word key={i} range={[start, end]}
-                                              progress={scrollYProgress}>{word}</Word>
-
-
-                                    )
-                                })
-                            }</p>
-
+                        <Col md={10} className={'text-center'}>
+                            <p className={'paragraphWhyMe'}>{firstParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{secondParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{thirdParagraph}</p>
+                            <p className={'paragraphWhyMe'}>{fourthParagraph}</p>
+                            <p className={'paragraphWhyMe mb-20'}>{fifthParagraph}</p>
                         </Col>
                     </Row>
                 </Container>
-                <hr className="HorizontalLine mt-6"/>
-                <Row className={'justify-center'}>
-                    <FaReact className={'IconReact'}/>
-                </Row>
             </div>
         </>
-    )
+    );
 }
 
 export default WhyMeSection;
-
-const Word = ({children, range, progress}) => {
-    const opacity = useTransform(progress, range, [0, 1])
-    return (
-        <span className={'paragraphWhyMe'}>
-            <span className={'Shadow'}>{children}</span>
-            <motion.span style={{opacity}}>{children}</motion.span>
-        </span>
-    )
-}
