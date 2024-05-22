@@ -90,8 +90,14 @@
 
 .paragraphWhyMe{
     font-size: 4vh;
-    color: #666659;
+    color: #7b5e43;
     margin-top: 2vh;
+    position: relative;
+}
+
+.Shadow{
+    position: absolute;
+    opacity: 0.2;
 }
 
 .LastIcons {
