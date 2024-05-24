@@ -1,32 +1,38 @@
 import '../assets/styles/CardWork.css'
 import {Col, Row} from "react-bootstrap";
-import {motion, useScroll} from 'framer-motion';
+import {motion, useScroll, useTransform} from 'framer-motion';
+import {useRef} from "react";
 
 
-export const CardWork = ({title, description, src, link, color}) => {
+export const CardWork = ({i, title, description, src, link, progress, range, color, targetScale}) => {
+    const container = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: container,
+        offset: ["start end", 'start start']
+
+    })
+
+    const Imgscale = useTransform(scrollYProgress, [0, 1], [2, 1])
+    const scale = useTransform(progress, range, [1, targetScale])
+
     return (
-        <div className={'cardWorkContainer'}>
-            <div style={{backgroundColor: color}} className={'cardWork'}>
+        <div ref={container} className={'cardWorkContainer'}>
+            <motion.div  style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 25}px)`}}  className={'cardWork'}>
                 <h1 className={'text-5xl text-center font-bold'}>{title}</h1>
                 <Row>
                     <Col md={6} className={'text-center align-middle'}>
                         <p>{description}</p>
-                        <span>
-                        <a href={link} target="_blank">See more</a>
-                        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                            <path
-                                d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-                                fill="black"/>
-
-                        </svg>
-                            </span>
                     </Col>
                     <Col md={6}>
-                        <img src={`src/assets/images/${src}`} fill alt="image" className={'imgCardWork'}/>
+                        <div className={'imgCardWork'}>
+                            <motion.div className={'inner'} style={{scale: Imgscale}}>
+                                <img src={`/portfolio/src/assets/images/${src}`} alt="image"/>
+                            </motion.div>
+                        </div>
                     </Col>
                 </Row>
-            </div>
+            </motion.div>
         </div>
     )
 }

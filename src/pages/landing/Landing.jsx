@@ -36,7 +36,7 @@ const LandingPage = () => {
             <ContactSection/>
 
             <Row className={'justify-center text-center mt-10'}>
-                <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>
+                <p className={'text-1xl font-bold text-gray-500 mb-24'}>Thanks for seeing!</p>
             </Row>
         </>
     );

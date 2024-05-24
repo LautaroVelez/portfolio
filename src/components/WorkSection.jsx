@@ -1,21 +1,34 @@
 import {Row} from "react-bootstrap";
-import React from "react";
+import React, {useEffect} from "react";
 import projects from "../utils/data.js"
 import {CardWork} from "./CardWork.jsx";
+import {motion, useScroll, useTransform} from 'framer-motion';
+import {useRef} from "react";
 
 const WorkSection = () => {
+    const container = useRef(null);
+
+    const {scrollYProgress} = useScroll({
+        target: container,
+        offset: ['start start', 'end end']
+    })
+
     return (
         <>
-            <h1 className={'mt-28 WhyMeTitle'}>MY WORK</h1>
-            <Row className={'justify-content-center'}>
-
-                {
-                    projects.map((project, index) => {
-                        return <CardWork key={index} {...project}/>
-                    })
-                }
-                <div className="square"></div>
-            </Row>
+            <section className={'bg-neutral-900'}>
+                <h1 className={'mt-28 WhyMeTitle'}>MY WORK</h1>
+                <Row className={'justify-content-center'}>
+                    <div ref={container}>
+                        {
+                            projects.map((project, i) => {
+                                const targetScale = 1 - ((projects.length - i) * 0.05);
+                                return <CardWork key={i} i={i} {...project} range={[i * 0.25, 1]}
+                                                 progress={scrollYProgress} targetScale={targetScale}/>
+                            })
+                        }
+                    </div>
+                </Row>
+            </section>
         </>
     )
 }

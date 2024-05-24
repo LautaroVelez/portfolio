@@ -21,7 +21,7 @@ const WhyMeSection = () => {
         offset: ["start end", "end start"],
     });
 
-     const x1 = useTransform(scrollYProgress, [0, 1], ["-5%", "10%"]);
+     const x1 = useTransform(scrollYProgress, [0, 1], ["-10%", "3%"]);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);

@@ -2,7 +2,7 @@
     {
         title: "Finanzas Moviles",
         description: "Aplicacion creada para el ministerio de finanzas de cordoba, el objetivo de esta aplicacion es poder organizar visitas a diferentes localidades como grupo, poder formar, editar y eliminar grupos. Crear visitas, editarlas y verlas, y poder asignarle roles a los usuarios autenticados",
-        src: "me.jpg",
+        src: "landingfinanciation.jpeg",
         link: "holaaa",
         color: "#0080ff"
     },

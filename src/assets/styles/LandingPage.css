@@ -67,13 +67,6 @@
     font-family: "Radio Canada Big", sans-serif;
 }
 
-.square {
-    margin: 10vh !important;
-    width: 80vw !important;
-    height: 80vh;
-    background-color: #CCCCCC;
-    border-radius: 20vh;
-}
 
 .WhyMeTitle{
     font-size: 22vh;
@@ -94,7 +87,7 @@
     color: #7b5e43;
     margin-top: 2vh;
     will-change: opacity, transform;
-    width: 70vw;
+
     overflow-wrap: break-word !important;
     word-break: keep-all !important;
 }
