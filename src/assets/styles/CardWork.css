@@ -5,48 +5,108 @@
     justify-content: center;
     position: sticky;
     top: 0px;
-
+    font-family: "Mate SC", serif;
 
     .cardWork {
+
         display: flex;
         flex-direction: column;
         position: relative;
-        height: 500px;
-        width: 1000px;
-        border-radius: 25px;
-        padding: 50px;
+        height: 85vh;
+        width: 80vw;
+        border-radius: 8vh;
         transform-origin: top;
         transition: all 0.8s ease;
+        z-index: 1;
     }
 
-    .cardWork:hover{
+    .cardWork:hover {
         transition: all 0.8s ease;
-        filter: brightness(60%);
-    }
-    .imgCardWork {
-        position: relative;
-        width: 60%;
-        height: 100%;
-        border-radius: 25px;
-        overflow: hidden;
-
-        .inner {
-            width: 100%;
-            height: 100%;
-
-
-            img {
-                object-fit: cover;
-
-            }
-
-
-
-        }
-    }
+        box-shadow: 1px 0px 127px 38px rgba(0,0,0,0.62) inset;
+-webkit-box-shadow: 1px 0px 127px 38px rgba(0,0,0,0.62) inset;
+-moz-box-shadow: 1px 0px 127px 38px rgba(0,0,0,0.62) inset;
 
 }
 
+.imgCardWork {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8vh !important;
 
+    .inner {
+        width: 100%;
+        height: 100%;
 
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 85vh;
+            border-radius: 8vh !important;
+            z-index: 1;
+            opacity: 0.2;
+        }
+    }
+}
 
+}
+
+.titleContainer {
+    position: absolute;
+    z-index: 2;
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 10vh;
+    margin: 0;
+}
+
+.pCardWork {
+    font-size: 3vh;
+    font-weight: bolder;
+    margin: 1vh 0;
+}
+
+.iconsRow {
+    display: flex;
+    justify-content: center;
+    margin: 1vh 0;
+
+    .IconsCardWork {
+        height: 4vh;
+        width: 4vh;
+        margin: 0 1vw;
+    }
+}
+
+.viewProject {
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.viewProject p {
+    margin: 0;
+    display: inline;
+}
+
+.arrowIcon {
+    margin-left: 0.5vh;
+    font-size: 4vh;
+}

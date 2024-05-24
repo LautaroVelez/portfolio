@@ -87,7 +87,6 @@
     color: #7b5e43;
     margin-top: 2vh;
     will-change: opacity, transform;
-
     overflow-wrap: break-word !important;
     word-break: keep-all !important;
 }
