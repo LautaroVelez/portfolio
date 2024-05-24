@@ -30,10 +30,10 @@ const LandingPage = () => {
         <>
             <HorizontalScrollSection/>
             <Section Component={<AboutMeSection/>}/>
-            <Section Component={<WorkSection/>}/>
+           <WorkSection/>
             <Section Component={<TechnologiesSection/>}/>
             <Section Component={<WhyMeSection/>}/>
-            <Section Component={<ContactSection/>}/>
+            <ContactSection/>
 
             <Row className={'justify-center text-center mt-10'}>
                 <p className={'text-1xl font-bold text-gray-500'}>Thanks for seeing!</p>

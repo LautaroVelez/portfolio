@@ -10,7 +10,7 @@ const ContactSection = () => {
 
     return (
         <footer id={'Contact'}>
-            <Row className={'mt-28 text-center justify-center'}>
+            <Row className={'text-center justify-center'}>
                 <p>You can reach me in:</p>
                 <Row className={'justify-center'}>
                     <Col md={1}>
