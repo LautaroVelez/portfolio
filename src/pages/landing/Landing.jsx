@@ -9,7 +9,7 @@ import WorkSection from "../../components/WorkSection.jsx";
 import WhyMeSection from "../../components/WhyMeSection.jsx";
 import Section from "../../components/Section.jsx";
 import TechnologiesSection from "../../components/TechnologiesSection.jsx";
-import ContactSection from "../../components/ContactSection.jsx";
+import Footer from "../../components/Footer.jsx";
 
 
 const LandingPage = () => {
@@ -33,11 +33,9 @@ const LandingPage = () => {
            <WorkSection/>
             <Section Component={<TechnologiesSection/>}/>
             <Section Component={<WhyMeSection/>}/>
-            <ContactSection/>
+            <Footer/>
 
-            <Row className={'justify-center text-center mt-10'}>
-                <p className={'text-1xl font-bold text-gray-500 mb-24'}>Thanks for seeing!</p>
-            </Row>
+
         </>
     );
 };

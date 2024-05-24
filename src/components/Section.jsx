@@ -10,7 +10,7 @@ const Section = ({Component}) => {
 
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "10%"]);
     return (
-        <section ref={sectionRef} className={'relative h-[140vh] overflow-hidden'}>
+        <section ref={sectionRef} className={'relative h-[140vh] overflow-hidden bg-transparent'}>
             <motion.div className={'absolute w-full'} style= {{top: y}}>
                 {Component}
             </motion.div>

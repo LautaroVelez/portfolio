@@ -3,7 +3,7 @@ import {Col, Row} from "react-bootstrap";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import React, {useRef} from "react";
 import {FaCss3, FaFigma, FaHtml5, FaReact} from "react-icons/fa";
-
+import projects from "../utils/data.js"
 
 import {TbBrandFramerMotion} from "react-icons/tb";
 import {SiGreensock} from "react-icons/si";
@@ -21,6 +21,30 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
     const Imgscale = useTransform(scrollYProgress, [0, 1], [2, 1])
     const scale = useTransform(progress, range, [1, targetScale])
 
+
+     const renderIcons = (icons) => {
+        return icons.map((icon, index) => {
+            switch (icon) {
+                case "React":
+                    return <FaReact key={index} className={'IconsCardWork'} alt={'React'}/>;
+                case "Figma":
+                    return <FaFigma key={index} className={'IconsCardWork'}/>;
+                case "Framer Motion":
+                    return <TbBrandFramerMotion key={index} className={'IconsCardWork'}/>;
+                case "Greensock":
+                    return <SiGreensock key={index} className={'IconsCardWork'}/>;
+                case "HTML5":
+                    return <FaHtml5 key={index} className={'IconsCardWork'}/>;
+                case "CSS3":
+                    return <FaCss3 key={index} className={'IconsCardWork'}/>;
+                case "JavaScript":
+                    return <IoLogoJavascript key={index} className={'IconsCardWork'}/>;
+                default:
+                    return null;
+            }
+        });
+    }
+
     return (
 
         <div ref={container} className={'cardWorkContainer'}>
@@ -36,13 +60,7 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
                             <h1 className={'title'}>{title}</h1>
                             <p className={'pCardWork'}>TECHNOLOGIES USED</p>
                             <div className={'iconsRow'}>
-                                <FaReact className={'IconsCardWork'} alt={'React'}/>
-                                <FaFigma className={'IconsCardWork'}/>
-                                <TbBrandFramerMotion className={'IconsCardWork'}/>
-                                <SiGreensock className={'IconsCardWork'}/>
-                                <FaHtml5 className={'IconsCardWork'}/>
-                                <FaCss3 className={'IconsCardWork'}/>
-                                <IoLogoJavascript className={'IconsCardWork'}/>
+                                {renderIcons(projects[i].icons)}
                             </div>
 
                         </div>

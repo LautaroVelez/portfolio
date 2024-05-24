@@ -29,7 +29,7 @@ const AboutMeSection = () => {
     const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
 
     return (
-        <>
+        <section className={'bg-[#FBF4EA]'}>
             <Row>
                 <Col md={9}>
                     <motion.div ref={FirstRef} style={{x: x1}}>
@@ -64,7 +64,7 @@ const AboutMeSection = () => {
                     </motion.div>
                 </Col>
             </Row>
-        </>
+        </section>
     );
 };
 
