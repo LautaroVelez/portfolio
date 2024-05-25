@@ -13,15 +13,15 @@ const projects = [
         src: "landingfinanciation.jpeg",
         link: "holaaa",
         color: "#D9D9D9",
-        icons: ["React", "HTML5", "CSS3", "Figma"]
+        icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"]
     },
     {
-        title: "LOWER CONSUME",
-        description: "Aplicacion creada para poder comparar precios y planes para personas que quieran cambiar de empresa de suministro de gas o electricidad.",
+        title: "CONSTRUCTION SITE",
+        description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of the construction company.",
         src: "hola",
         link: "holaaa",
         color: "#D9D9D9",
-        icons: ["React", "Figma", "Framer Motion", "Greensock", "HTML5", "CSS3", "JavaScript"]
+        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript"]
     }
 ]
 

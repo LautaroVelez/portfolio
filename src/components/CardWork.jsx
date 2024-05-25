@@ -6,7 +6,7 @@ import {FaCss3, FaFigma, FaHtml5, FaReact} from "react-icons/fa";
 import projects from "../utils/data.js"
 
 import {TbBrandFramerMotion} from "react-icons/tb";
-import {SiGreensock} from "react-icons/si";
+import {SiDjango, SiGreensock, SiMysql} from "react-icons/si";
 import {IoLogoJavascript} from "react-icons/io";
 import {MdArrowOutward} from "react-icons/md";
 
@@ -22,7 +22,7 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
     const scale = useTransform(progress, range, [1, targetScale])
 
 
-     const renderIcons = (icons) => {
+    const renderIcons = (icons) => {
         return icons.map((icon, index) => {
             switch (icon) {
                 case "React":
@@ -39,6 +39,11 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
                     return <FaCss3 key={index} className={'IconsCardWork'}/>;
                 case "JavaScript":
                     return <IoLogoJavascript key={index} className={'IconsCardWork'}/>;
+                case "Django":
+                    return <SiDjango key={index} className={'IconsCardWork'}/>;
+                case "MySQL":
+                    return <SiMysql key={index} className={'IconsCardWork'}/>;
+
                 default:
                     return null;
             }
