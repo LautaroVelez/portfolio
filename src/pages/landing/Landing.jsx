@@ -30,7 +30,7 @@ const LandingPage = () => {
         <>
             <HorizontalScrollSection/>
             <Section Component={<AboutMeSection/>}/>
-           <WorkSection/>
+            <WorkSection/>
             <Section Component={<TechnologiesSection/>}/>
             <Section Component={<WhyMeSection/>}/>
             <Footer/>

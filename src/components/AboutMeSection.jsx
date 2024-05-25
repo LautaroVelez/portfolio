@@ -29,11 +29,11 @@ const AboutMeSection = () => {
     const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
 
     return (
-        <section className={'bg-[#FBF4EA]'}>
+        <section className={'bg-[#FBF4EA] h-[140vh]'}>
             <Row>
                 <Col md={9}>
                     <motion.div ref={FirstRef} style={{x: x1}}>
-                        <motion.h1 className="AboutMeTitle text-center mt-20">About</motion.h1>
+                        <motion.h1 className="AboutMeTitle text-center">About</motion.h1>
                     </motion.div>
                 </Col>
                 <Col md={9}>

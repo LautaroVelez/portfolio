@@ -3,7 +3,7 @@ import {Col, Row} from "react-bootstrap";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import React, {useRef} from "react";
 import {FaCss3, FaFigma, FaHtml5, FaReact} from "react-icons/fa";
-import projects from "../utils/data.js"
+import projects from "../assets/utils/data.js"
 
 import {TbBrandFramerMotion} from "react-icons/tb";
 import {SiDjango, SiGreensock, SiMysql} from "react-icons/si";

@@ -5,10 +5,10 @@ import React from "react";
 const TechnologiesSection = () => {
     return (
 
-        <section id={'Technologies'}>
-                    <span>
-                        <h1 className={'mt-28 text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
-                    </span>
+        <section id={'Technologies'} className={' h-[140vh]'}>
+            <div>
+                <h1 className={' text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
+            </div>
             <Container fluid className={'font-bold text-2xl black'}>
                 <Row className={'FontRobotoBold'}>
                     <Col>
