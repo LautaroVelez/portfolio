@@ -50,9 +50,9 @@ const WhyMeSection = () => {
 
     return (
         <>
-            <div className={'bg-neutral-900 h-[140vh]'}>
+            <div className={'bg-neutral-900 h-[140vh] flex flex-col justify-center'}>
                 <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
-                <motion.div ref={FirstRef} style={{ x: x1 }}>
+                <motion.div ref={FirstRef} style={{x: x1}}>
                     <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
                 </motion.div>
                 <Container>

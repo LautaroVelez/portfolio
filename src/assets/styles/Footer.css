@@ -1,13 +1,18 @@
-.fonth3Footer {
-    font-family: 'PP Neue Montreal', sans-serif;
 
+.fonth3Footer {
+    font-family: 'Roboto'
 }
 
 .fontPrincipalFooter{
       font-family: 'Italiana';
-     color: #222C17;
+     color: #000000;
+    font-size: 30vh;
+    line-height: 0.6;
+    left: 0;
+    bottom: 0;
 }
 
 .pInFooter{
      color: #000000;
+
 }

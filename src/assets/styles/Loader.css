@@ -47,4 +47,24 @@
 }
 
 
+@media (max-width: 800px){
+    .WelcomeLittleText{
+        text-align: center;
+    }
+
+    .ImLautaroText{
+        font-size: 12vh;
+        text-align: center !important;
+        margin-top: 10vh;
+    }
+
+    .BasedInLittleText{
+        text-align: center !important;
+    }
+
+    .sliderContainer{
+        top: calc(100vh - 20vh);
+    }
+}
+
 

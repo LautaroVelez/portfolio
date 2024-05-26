@@ -108,4 +108,18 @@
     margin: 2vh;
 }
 
+.GenericTitle {
+    font-size: 8vh; /* Ajusta según sea necesario */
+    text-align: center;
+    color: #ffffff; /* Ajusta el color si es necesario */
+}
+
+@media (max-width: 800px) {
+
+    .FrontEndTitle{
+        font-size: 8vh;
+        padding: 2vh;
+    }
+
+}
 

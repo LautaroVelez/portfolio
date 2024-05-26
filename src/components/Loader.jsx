@@ -55,37 +55,37 @@ const Loader = () => {
     return (
         <Stairs>
             <Container fluid className={'LoaderContainer'}>
-                <div className="h-screen align-middle flex-col justify-items-center">
+                <div className="h-screen align-middle justify-items-center sm:w-screen overflow-x-hidden ">
                     <Row>
-                        <Col md={3}>
+                        <Col md={3} sm={12}>
                             <motion.div
                                 animate={{opacity: 1, x: 0}}
                                 transition={{delay: 1.2, duration: 0.7}}
                                 initial={{opacity: 0, x: -30}}
                                 exit={{opacity: 0, x: 200}}
                             >
-                                <h3 className={'WelcomeLittleText font-bold text-end mt-12'}>
+                                <h3 className={'WelcomeLittleText font-bold text-md-end text-sm-center mt-12'}>
                                     Welcome to my portfolio. I'm</h3>
                             </motion.div>
                         </Col>
                     </Row>
                     <Container>
                         <Row>
-                            <Col md={7}>
+                            <Col md={7} sm={12}>
                                 <motion.div
                                     animate={{opacity: 1, x: 0}}
                                     transition={{delay: 1.9, duration: 0.5}}
                                     initial={{opacity: 0, x: -30}}
                                     exit={{opacity: 0, x: 200}}
                                 >
-                                    <h1 className="ImLautaroText text-end">
+                                    <h1 className="ImLautaroText text-md-end ">
                                         Lautaro
                                     </h1>
                                 </motion.div>
                             </Col>
                         </Row>
                         <Row>
-                            <Col md={10}>
+                            <Col md={10} sm={12}>
                                 <motion.div
                                     animate={{opacity: 1, x: 0}}
                                     transition={{delay: 2.3, duration: 0.5}}

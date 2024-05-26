@@ -16,13 +16,7 @@
         width: 80vw;
         border-radius: 8vh;
         transform-origin: top;
-        transition: all 0.8s ease;
         z-index: 1;
-    }
-
-    .cardWork:hover {
-        transition: all 0.8s ease;
-        filter: brightness(70%);
     }
 
     .imgCardWork {

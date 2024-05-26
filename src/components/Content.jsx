@@ -20,8 +20,8 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <div className='flex justify-between items-end '>
-            <h1 className='text-[14vw] leading-[0.8]  bottom-0 fontPrincipalFooter'>Lautaro Velez</h1>
+        <div className=' items-end'>
+            <h1 className='fontPrincipalFooter'>Lautaro Velez</h1>
         </div>
     )
 }
@@ -33,16 +33,16 @@ const Nav = () => {
     return (
         <div className='flex shrink-0 gap-20 fonth3Footer'>
             <div className='flex flex-col gap-2'>
-                <h3 className='mb-2 uppercase text-black font-bold'>About</h3>
+                <h3 className='uppercase text-black font-bold underline'>About</h3>
                 <a className={'pInFooter'}>Home</a>
                 <a className={'pInFooter'}>Projects</a>
                 <a className={'pInFooter'}>About Me</a>
 
             </div>
             <div className='flex flex-col gap-2 fonth3Footer'>
-                <h3 className='mb-2 uppercase text-black font-bold '>Contact Me</h3>
+                <h3 className='uppercase text-black font-bold underline'>Contact Me</h3>
                 <p className={'pInFooter'}>lautivelez28@gmail.com</p>
-                <a href={Linkedin} className={'pInFooter'}>LinkedIn</a>
+                <a href={Linkedin} className={'pInFooter '}>LinkedIn</a>
                 <a href={Github} className={'pInFooter'}>Github</a>
             </div>
         </div>

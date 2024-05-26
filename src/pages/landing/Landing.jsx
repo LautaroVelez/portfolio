@@ -13,7 +13,9 @@ import Footer from "../../components/Footer.jsx";
 
 
 const LandingPage = () => {
+
     useEffect(() => {
+
         //Using Lenis for smooth scroll
         const lenis = new Lenis()
 
@@ -29,10 +31,10 @@ const LandingPage = () => {
     return (
         <>
             <HorizontalScrollSection/>
-            <Section Component={<AboutMeSection/>}/>
+            <AboutMeSection/>
             <WorkSection/>
-            <Section Component={<TechnologiesSection/>}/>
-            <Section Component={<WhyMeSection/>}/>
+            <TechnologiesSection/>
+            <WhyMeSection/>
             <Footer/>
 
 

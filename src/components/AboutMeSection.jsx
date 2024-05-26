@@ -2,6 +2,7 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import me from "../assets/images/me.jpg";
 import React, {useRef} from "react";
 import {Col, Row} from "react-bootstrap";
+import '/src/assets/styles/LandingPage.css';
 
 const AboutMeSection = () => {
     const FirstRef = useRef(null);
@@ -31,22 +32,22 @@ const AboutMeSection = () => {
     return (
         <section className={'bg-[#FBF4EA] h-[140vh]'}>
             <Row>
-                <Col md={9}>
+                <Col md={9} sm={12}>
                     <motion.div ref={FirstRef} style={{x: x1}}>
                         <motion.h1 className="AboutMeTitle text-center">About</motion.h1>
                     </motion.div>
                 </Col>
-                <Col md={9}>
+                <Col md={9} sm={12}>
                     <motion.div ref={SecondRef} style={{x: x2}}>
                         <motion.h1 className="AboutMeTitle text-end">Me</motion.h1>
                     </motion.div>
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col sm={12} md={6}>
                     <img src={me} className={'MePhoto'}/>
                 </Col>
-                <Col>
+                <Col sm={12} md={6}>
                     <motion.div ref={ThirdRef} style={{y: y3}} className={'MeTextContainer'}>
 
                         <h1 className="MeText FontKaisei">Hello there! I’m Lautaro Velez, a web developer borned in
