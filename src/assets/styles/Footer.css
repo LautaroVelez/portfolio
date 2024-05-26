@@ -1,18 +1,62 @@
+.pInFooter {
+    font-family: Roboto;
+    font-size: 3vh;
 
-.fonth3Footer {
-    font-family: 'Roboto'
 }
 
-.fontPrincipalFooter{
-      font-family: 'Italiana';
-     color: #000000;
-    font-size: 30vh;
-    line-height: 0.6;
-    left: 0;
-    bottom: 0;
+.fontInFooter {
+    font-family: Italiana;
+    color: black;
 }
 
-.pInFooter{
-     color: #000000;
+.h2InFooter {
+    margin-top: 5vh;
+    font-size: 8vh;
+}
 
+.h4InFooter {
+    margin-top: 5vh;
+    font-size: 4vh;
+}
+
+.h1InFooter {
+    font-size: 25vh;
+    align-items: flex-end;
+}
+
+.LinksFooter {
+    font-size: 4vh;
+    margin-left: 2vw;
+    display: block; /* Asegúrate de que los <a> se muestren como bloques */
+
+}
+
+.LastIcons {
+    margin-top: 2vh;
+    height: 10vh !important;
+    width: 5vw !important;
+}
+
+@media (max-width: 800px) {
+    .pInFooter {
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+    .h2InFooter {
+        text-align: center;
+    }
+
+    .h1InFooter {
+        display: none;
+    }
+
+    .IconsRow {
+        display: inline-block !important;
+    }
+
+    .LastIcons {
+        height: 10vh !important;
+        width: 5vw !important;
+    }
 }

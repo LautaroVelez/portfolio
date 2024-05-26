@@ -6,7 +6,7 @@
     font-size: 50vh;
     font-family: "Poppins";
     font-weight: lighter;;
-    color:  #7b5e43;
+    color: #7b5e43;
 }
 
 
@@ -32,8 +32,10 @@
     border-top-left-radius: 5vh;
     border-bottom-right-radius: 5vh;
     border-bottom-left-radius: 5vh;
-    margin-left: 20vw;
-    margin-top: -30vh;
+    @media (min-width: 1000px ) {
+        margin-left: 20vw;
+        margin-top: -30vh;
+    }
 }
 
 .MeTextContainer {
@@ -42,9 +44,8 @@
     padding: 8vh;
     width: 38vw;
     border-bottom-left-radius: 5vh;
-     border-bottom-right-radius: 5vh;
-     border-top-right-radius: 5vh;
-
+    border-bottom-right-radius: 5vh;
+    border-top-right-radius: 5vh;
 }
 
 .MeText {
@@ -68,13 +69,13 @@
 }
 
 
-.WhyMeTitle{
+.WhyMeTitle {
     font-size: 22vh;
     color: #7b5e43;
     font-family: "Raleway", sans-serif;
 }
 
-.MiniTitleWhyMe{
+.MiniTitleWhyMe {
     font-size: 9vh;
     color: darkgoldenrod;
     font-family: Italiana;
@@ -92,34 +93,30 @@
 }
 
 
-.Shadow{
-    position: absolute;
-    opacity: 0.2;
-}
-
-.LastIcons {
-    height: 5vh !important;
-    width: 5vw;
-}
-
-.IconReact {
-    height: 5vh;
-    width: 5vh;
-    margin: 2vh;
-}
-
-.GenericTitle {
-    font-size: 8vh; /* Ajusta según sea necesario */
-    text-align: center;
-    color: #ffffff; /* Ajusta el color si es necesario */
-}
-
 @media (max-width: 800px) {
 
-    .FrontEndTitle{
+    .AboutMeTitle {
+        font-size: 15vh;
+
+    }
+
+    .FrontEndTitle {
         font-size: 8vh;
         padding: 2vh;
     }
 
+    .MeTextContainer {
+        height: auto;
+        width: 100vw;
+    }
+
+    .MePhoto {
+        width: 100vw !important;
+    }
+
+    .WhyMeTitle {
+        width: 100vw;
+        font-size: 10vh;
+    }
 }
 

@@ -30,13 +30,14 @@ const LandingPage = () => {
 
     return (
         <>
+            <div className={'w-screen'}>
             <HorizontalScrollSection/>
             <AboutMeSection/>
             <WorkSection/>
             <TechnologiesSection/>
             <WhyMeSection/>
             <Footer/>
-
+</div>
 
         </>
     );

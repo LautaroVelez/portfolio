@@ -113,7 +113,19 @@ const Loader = () => {
                             </motion.div>
                         </Col>
                     </Row>
-                    <div className="sliderContainer bottom-0">
+
+
+
+                </div>
+            </Container>
+        </Stairs>
+    );
+}
+
+export default Loader;
+
+/*
+  <div className="sliderContainer bottom-0">
                         <div className="slider" ref={slider}>
                             <p ref={firstText}>Córdoba, Argentina - </p>
                             <p ref={secondText}>Córdoba, Argentina - </p>
@@ -122,10 +134,4 @@ const Loader = () => {
                             <p ref={fifthText}>Córdoba, Argentina - </p>
                         </div>
                     </div>
-                </div>
-            </Container>
-        </Stairs>
-    );
-}
-
-export default Loader;
+ */

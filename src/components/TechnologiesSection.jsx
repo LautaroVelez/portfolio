@@ -7,7 +7,7 @@ const TechnologiesSection = () => {
 
         <section id={'Technologies'} className={' h-[140vh] flex flex-col justify-center'}>
             <Row>
-                <h1 className={' text-8xl text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
+                <h1 className={'text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
             </Row>
 
             <Row>

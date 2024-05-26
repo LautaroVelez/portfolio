@@ -3,6 +3,7 @@ import me from "../assets/images/me.jpg";
 import React, {useRef} from "react";
 import {Col, Row} from "react-bootstrap";
 import '/src/assets/styles/LandingPage.css';
+import {isMobile} from "react-device-detect";
 
 const AboutMeSection = () => {
     const FirstRef = useRef(null);
@@ -30,17 +31,24 @@ const AboutMeSection = () => {
     const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
 
     return (
-        <section className={'bg-[#FBF4EA] h-[140vh]'}>
+        <section className={'bg-[#FBF4EA] md:h-[140vh]'}>
             <Row>
                 <Col md={9} sm={12}>
+                    {isMobile ? (
+                        <h1 className="AboutMeTitle text-center">About</h1>
+                        ):(
                     <motion.div ref={FirstRef} style={{x: x1}}>
                         <motion.h1 className="AboutMeTitle text-center">About</motion.h1>
-                    </motion.div>
+                    </motion.div>)}
                 </Col>
                 <Col md={9} sm={12}>
+                    {isMobile ? (
+                        <h1 className="AboutMeTitle text-center">Me</h1>
+                        ):(
                     <motion.div ref={SecondRef} style={{x: x2}}>
                         <motion.h1 className="AboutMeTitle text-end">Me</motion.h1>
                     </motion.div>
+                        )}
                 </Col>
             </Row>
             <Row>
