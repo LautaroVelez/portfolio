@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const WhyMeSection = () => {
     const MiniTitleWhyMe = "I THINK THAT MY WORK CAN SPEAK FOR ME.";
-    const firstParagraph = "I’m a disciplined person, who number one interest is the productivity and creative development of me and the brand I'm working with.";
+    const firstParagraph = "I’m a disciplined person, who's number one interest is the productivity and creative development of myself and the brand I'm working with.";
     const secondParagraph = "I think I act like a connector, problem-solver and forward-thinker, able to impact every step of the process with excellence.";
     const thirdParagraph = "There’s no greater joy than seeing an idea come to life.";
     const fourthParagraph = "This is your baby.";

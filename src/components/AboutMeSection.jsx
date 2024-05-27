@@ -25,38 +25,36 @@ const AboutMeSection = () => {
         offset: ["start end", "end start"],
     });
 
-    const x1 = useTransform(scrollYProgress1, [0, 1], ["-15%", "5%"]);
-    const x2 = useTransform(scrollYProgress2, [0, 1], ["15%", "-5%"]);
+    const x1 = useTransform(scrollYProgress1, [0, 1], ["-25%", "5%"]);
+    const x2 = useTransform(scrollYProgress2, [0, 1], ["10%", "-90%"]);
 
-    const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
+    const x3 = useTransform(scrollYProgress3, [0, 1], ["5%", "-250%"]);
 
     return (
-        <section className={'bg-[#f3e6d8] md:h-[140vh]'}>
+        <section className={'AboutMeSection md:h-[140vh]'}>
             <Row>
                 <Col md={9} sm={12}>
                     {isMobile ? (
                         <h1 className="AboutMeTitle text-center">ABOUT</h1>
-                        ):(
-                    <motion.div ref={FirstRef} style={{x: x1}}>
-                        <motion.h1 className="AboutMeTitle text-center">ABOUT</motion.h1>
-                    </motion.div>)}
+                    ) : (
+                        <motion.div ref={FirstRef} style={{x: x1}}>
+                            <motion.h1 className="AboutMeTitle text-center">ABOUT</motion.h1>
+                        </motion.div>)}
                 </Col>
-                <Col md={9} sm={12}>
+                <Col md={12} sm={12}>
                     {isMobile ? (
                         <h1 className="AboutMeTitle text-center">ME</h1>
-                        ):(
-                    <motion.div ref={SecondRef} style={{x: x2}}>
-                        <motion.h1 className="AboutMeTitle text-end">ME</motion.h1>
-                    </motion.div>
-                        )}
+                    ) : (
+                        <motion.div ref={SecondRef} style={{x: x2}}>
+                            <motion.h1 className="AboutMeTitle text-end">ME</motion.h1>
+                        </motion.div>
+                    )}
                 </Col>
             </Row>
-            <Row>
+            <Row className={''}>
+                <Col md={6}></Col>
                 <Col sm={12} md={6}>
-                    <img src={me} className={'MePhoto'}/>
-                </Col>
-                <Col sm={12} md={6}>
-                    <motion.div ref={ThirdRef} style={{y: y3}} className={'MeTextContainer'}>
+                    <motion.div ref={ThirdRef} style={{x: x3}} className={'MeTextContainer'}>
 
                         <h1 className="MeText FontKaisei">Hello there! I’m Lautaro Velez, a web developer borned in
                             Córdoba,
@@ -69,7 +67,8 @@ const AboutMeSection = () => {
                             I consider myself a very creative and a hard-working person who is always trying to learn
                             something new.
                         </h1>
-                        <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars, music, and watching rom-coms!</h1>
+                        <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars, music,
+                            and watching rom-coms!</h1>
                     </motion.div>
                 </Col>
             </Row>
