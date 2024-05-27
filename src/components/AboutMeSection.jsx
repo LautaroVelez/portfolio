@@ -31,22 +31,22 @@ const AboutMeSection = () => {
     const y3 = useTransform(scrollYProgress3, [0, 1], ["-30%", "20%"]);
 
     return (
-        <section className={'bg-[#FBF4EA] md:h-[140vh]'}>
+        <section className={'bg-[#f3e6d8] md:h-[140vh]'}>
             <Row>
                 <Col md={9} sm={12}>
                     {isMobile ? (
-                        <h1 className="AboutMeTitle text-center">About</h1>
+                        <h1 className="AboutMeTitle text-center">ABOUT</h1>
                         ):(
                     <motion.div ref={FirstRef} style={{x: x1}}>
-                        <motion.h1 className="AboutMeTitle text-center">About</motion.h1>
+                        <motion.h1 className="AboutMeTitle text-center">ABOUT</motion.h1>
                     </motion.div>)}
                 </Col>
                 <Col md={9} sm={12}>
                     {isMobile ? (
-                        <h1 className="AboutMeTitle text-center">Me</h1>
+                        <h1 className="AboutMeTitle text-center">ME</h1>
                         ):(
                     <motion.div ref={SecondRef} style={{x: x2}}>
-                        <motion.h1 className="AboutMeTitle text-end">Me</motion.h1>
+                        <motion.h1 className="AboutMeTitle text-end">ME</motion.h1>
                     </motion.div>
                         )}
                 </Col>

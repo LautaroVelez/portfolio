@@ -5,7 +5,7 @@
 }
 
 .fontInFooter {
-    font-family: Italiana;
+
     color: black;
 }
 
@@ -22,6 +22,7 @@
 .h1InFooter {
     font-size: 25vh;
     align-items: flex-end;
+    font-family: "PP Neue World";
 }
 
 .LinksFooter {

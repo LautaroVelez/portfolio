@@ -3,10 +3,11 @@
 }
 
 .FrontEndTitle {
-    font-size: 50vh;
-    font-family: "Poppins";
-    font-weight: lighter;;
-    color: #7b5e43;
+    font-size: 40vh;
+    font-weight: 100;
+    font-family: "Kaisei Decol";
+    font-style: italic;
+    color: #f8d7ae;
 }
 
 
@@ -22,30 +23,33 @@
 }
 
 .AboutMeTitle {
-    font-family: "Italiana";
-    color: #222C17;
-    font-size: 25vh;
+     font-family: "Kaisei Decol";
+    font-style: italic;
+    font-weight: 100;
+    color: #3b4838;
+    font-size: 22vh;
 }
 
 .MePhoto {
     height: 90vh;
-    border-top-left-radius: 5vh;
-    border-bottom-right-radius: 5vh;
-    border-bottom-left-radius: 5vh;
+    border-top-left-radius: 15vh;
+    border-bottom-right-radius: 15vh;
+
+
     @media (min-width: 1000px ) {
         margin-left: 20vw;
-        margin-top: -30vh;
+        margin-top: -25vh;
     }
 }
 
 .MeTextContainer {
-    background-color: #222C17;
-    color: #FBF4EA;
-    padding: 8vh;
+    background-color: #3b4838;
+    color: #f3e6d8;
+    padding: 7vh;
     width: 38vw;
-    border-bottom-left-radius: 5vh;
-    border-bottom-right-radius: 5vh;
-    border-top-right-radius: 5vh;
+    border-bottom-left-radius: 15vh;
+
+    border-top-right-radius: 15vh;
 }
 
 .MeText {
@@ -71,21 +75,29 @@
 
 .WhyMeTitle {
     font-size: 22vh;
-    color: #7b5e43;
-    font-family: "Raleway", sans-serif;
+    color: #3b4838;
+    font-family: "Serif";
+    font-style: italic;
+}
+
+.MyWorkTitle {
+    font-size: 22vh;
+    color: #f8d7ae;
+    font-family: "Serif";
+    font-style: italic;
 }
 
 .MiniTitleWhyMe {
     font-size: 9vh;
-    color: darkgoldenrod;
-    font-family: Italiana;
+    color: #3b4838;
+    font-family: Serif;
     margin-top: 5vh;
 }
 
 .paragraphWhyMe {
     font-size: 4vh;
     font-weight: bold;
-    color: #7b5e43;
+    color: black;
     margin-top: 2vh;
     will-change: opacity, transform;
     overflow-wrap: break-word !important;

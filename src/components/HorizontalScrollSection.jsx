@@ -25,24 +25,24 @@ const HorizontalScrollSection = () => {
     const x3 = useTransform(scrollYProgress3, [0, 1], ["0%", "-100%"]);
 
     return (
-        <div className={'bg-neutral-900 text-center sm:w-screen'}>
-            <h1 className={'FrontEndTitle md:h-screen'}>A</h1>
-            <section ref={targetRef} className={'md:h-[300vh] md:relative'}>
-                <div className="md:sticky md:top-0 md:flex md:h-screen items-center overflow-hidden md:w-[160vw] sm:w-screen sm:text-center">
+        <div className={'bg-[#3b4838] text-center sm:w-screen'}>
+            <h1 className={'FrontEndTitle md:h-80vh'}>A</h1>
+            <section ref={targetRef} className={'md:h-[200vh] md:relative'}>
+                <div className="md:sticky md:top-0 md:flex md:h-[100vh] items-center overflow-hidden md:w-[160vw] sm:w-screen sm:text-center">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Front-end</h1>
                     ) : (
-                        <motion.div style={{ x: x1 }} className="md:flex md:gap-4 sm:h-[100vh] sm:text-center">
+                        <motion.div style={{ x: x1 }} className="md:flex md:gap-4 sm:h-[50vh] sm:text-center">
                             <h1 className={'FrontEndTitle'}>Front-end</h1>
                         </motion.div>
                     )}
                 </div>
             </section>
 
-            <h1 className={'FrontEndTitle md:h-screen'}>React</h1>
+            <h1 className={'FrontEndTitle md:h-20vh'}>React</h1>
 
-            <section ref={targetRef2} className={'md:h-[300vh] md:relative'}>
-                <div className="md:sticky md:top-0 md:flex md:h-screen items-center overflow-hidden md:w-[200vw]">
+            <section ref={targetRef2} className={'md:h-[50vh] md:relative'}>
+                <div className="md:sticky md:top-0 md:flex md:50vh items-center overflow-hidden md:w-[100vw]">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Developer</h1>
                     ) : (
@@ -53,10 +53,10 @@ const HorizontalScrollSection = () => {
                 </div>
             </section>
 
-            <h1 className={'FrontEndTitle md:h-screen'}>and</h1>
-            <h1 className={'FrontEndTitle md:h-screen'}>UX/UI</h1>
+            <h1 className={'FrontEndTitle md:h-50vh'}>and</h1>
+            <h1 className={'FrontEndTitle md:h-50vh'}>UX/UI</h1>
 
-            <section ref={targetRef3} className={'md:h-[300vh] md:relative'}>
+            <section ref={targetRef3} className={'md:h-[200vh] md:relative'}>
                 <div className="md:sticky md:top-0 md:flex md:h-screen items-center overflow-hidden">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Designer.</h1>

@@ -31,13 +31,15 @@ const LandingPage = () => {
     return (
         <>
             <div className={'w-screen'}>
-            <HorizontalScrollSection/>
-            <AboutMeSection/>
-            <WorkSection/>
-            <TechnologiesSection/>
-            <WhyMeSection/>
-            <Footer/>
-</div>
+                <HorizontalScrollSection/>
+                <Section Component={<AboutMeSection/>}/>
+                <WorkSection/>
+                <Section Component={<WhyMeSection/>}/>
+
+                <Section Component={<TechnologiesSection/>}/>
+
+                <Footer/>
+            </div>
 
         </>
     );

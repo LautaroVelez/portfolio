@@ -1,25 +1,27 @@
 .WelcomeLittleText {
     font-size: 3vh;
-    color: black;
+    color: #1a4231;
     font-family: "Jomolhari", serif;
 }
 
 .ImLautaroText {
     font-size: 25vh;
-    font-family: "Italiana";
-    color: #3c4c2b;
+      font-family: "Kaisei Decol";
+    font-weight: 100;
+    font-style: italic;
+    color: #1a4231;
 }
 
 .BasedInLittleText {
     font-size: 3vh;
     margin-top: 10vh;
-    color: black;
+    color: #1a4231;
      font-family: "Jomolhari", serif;
 }
 
 .LoaderContainer {
     /*background-color: #F1EFEB;*/
-    background-color: #f8ebd2;
+    background-color: #f3e6d8;
     overflow-x: hidden !important;
 
 }
@@ -38,10 +40,11 @@
 }
 
 .slider p {
-    font-family: "Italiana";
+    font-family: "Noto Serif";
+    font-weight: 100;
+    font-style: italic;
      position: relative;
-     margin: 0px;
-    color: black;
+    color: #1a4231;
     font-size: 7vh;
     overflow-x: hidden;
 }

@@ -65,7 +65,7 @@ const Loader = () => {
                                 exit={{opacity: 0, x: 200}}
                             >
                                 <h3 className={'WelcomeLittleText font-bold text-md-end text-sm-center mt-12'}>
-                                    Welcome to my portfolio. I'm</h3>
+                                    Welcome, I'm</h3>
                             </motion.div>
                         </Col>
                     </Row>
@@ -113,7 +113,15 @@ const Loader = () => {
                             </motion.div>
                         </Col>
                     </Row>
-
+                    <div className="sliderContainer bottom-0">
+                        <div className="slider" ref={slider}>
+                            <p ref={firstText}>Córdoba, Argentina - </p>
+                            <p ref={secondText}>Córdoba, Argentina - </p>
+                            <p ref={thirdText}>Córdoba, Argentina - </p>
+                            <p ref={fourthText}>Córdoba, Argentina - </p>
+                            <p ref={fifthText}>Córdoba, Argentina - </p>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -125,13 +133,5 @@ const Loader = () => {
 export default Loader;
 
 /*
-  <div className="sliderContainer bottom-0">
-                        <div className="slider" ref={slider}>
-                            <p ref={firstText}>Córdoba, Argentina - </p>
-                            <p ref={secondText}>Córdoba, Argentina - </p>
-                            <p ref={thirdText}>Córdoba, Argentina - </p>
-                            <p ref={fourthText}>Córdoba, Argentina - </p>
-                            <p ref={fifthText}>Córdoba, Argentina - </p>
-                        </div>
-                    </div>
+
  */

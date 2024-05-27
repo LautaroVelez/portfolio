@@ -15,8 +15,8 @@ const WorkSection = () => {
 
     return (
         <>
-            <section className={'bg-neutral-900'}>
-                <h1 className={'WhyMeTitle'}>MY WORK</h1>
+            <section className={'bg-[#3b4838]'}>
+                <h1 className={'MyWorkTitle'}>MY WORK</h1>
                 <Row className={'justify-content-center'}>
                     <div ref={container}>
                         {
