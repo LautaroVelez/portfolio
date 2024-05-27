@@ -32,10 +32,9 @@ const LandingPage = () => {
         <>
             <div className={'w-screen'}>
                 <HorizontalScrollSection/>
-                <Section Component={<AboutMeSection/>}/>
+                <AboutMeSection/>
                 <WorkSection/>
                 <Section Component={<WhyMeSection/>}/>
-
                 <Section Component={<TechnologiesSection/>}/>
 
                 <Footer/>

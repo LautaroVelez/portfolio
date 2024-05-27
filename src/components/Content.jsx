@@ -1,49 +1,66 @@
-import React from 'react'
 import '../assets/styles/Footer.css';
+import { FaFigma, FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiGreensock } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import {Col, Row} from "react-bootstrap";
 
 export default function Content() {
     return (
-        <div className='bg-[#FBF4EA] py-8 px-12 h-full w-full flex flex-col justify-between'>
-            <Section1/>
-            <Section2/>
+        <div className='bg-[#FBF4EA] h-full w-full flex flex-col justify-between'>
+            <Section />
         </div>
     )
 }
 
-const Section1 = () => {
-    return (
-        <div>
-            <Nav/>
-        </div>
-    )
-}
-
-const Section2 = () => {
-    return (
-        <div className=' items-end'>
-            <h1 className='fontPrincipalFooter'>Lautaro Velez</h1>
-        </div>
-    )
-}
-
-const Nav = () => {
+const Section = () => {
     const Linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/";
     const Github = "https://github.com/LautaroVelez";
+    const Email = "mailto:lautivelez28@gmail.com";
 
     return (
-        <div className='flex shrink-0 gap-20 fonth3Footer'>
-            <div className='flex flex-col gap-2'>
-                <h3 className='uppercase text-black font-bold underline'>About</h3>
-                <a className={'pInFooter'}>Home</a>
-                <a className={'pInFooter'}>Projects</a>
-                <a className={'pInFooter'}>About Me</a>
-
+        <div className={'h-[50vh] fontInFooter'}>
+            <div className={'text-center top-0'}>
+                <p className="pInFooter">Thanks for seeing.</p>
             </div>
-            <div className='flex flex-col gap-2 fonth3Footer'>
-                <h3 className='uppercase text-black font-bold underline'>Contact Me</h3>
-                <p className={'pInFooter'}>lautivelez28@gmail.com</p>
-                <a href={Linkedin} className={'pInFooter '}>LinkedIn</a>
-                <a href={Github} className={'pInFooter'}>Github</a>
+            <div className='flex flex-col justify-center h-full'>
+                <div className='text-center'>
+                    <p className='text-[4vh]'>If you are interested in work with me you can reach me in:</p>
+
+                    <div className='container'>
+                        <Row className='justify-content-center'>
+                            <Col className='col-auto text-center LinkMiniRow'>
+                                <a href={Linkedin} className='Link'>
+                                    <FaLinkedin className='IconLink' />
+                                    LinkedIn
+                                </a>
+                            </Col>
+                            <Col className='col-auto text-center LinkMiniRow'>
+                                <a href={Github} className='Link'>
+                                    <FaGithub className='IconLink'/>
+                                    GitHub
+                                </a>
+                            </Col>
+                            <Col className='col-auto text-center LinkMiniRow'>
+                                <a href={Email} className='Link'>
+                                    <MdEmail className='IconLink' />
+                                    Email
+                                </a>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
+            </div>
+
+            <div className='text-center bottom-0'>
+                <p className={'pInFooter'}>This website was made with</p>
+                <FaFigma className={'IconsRow'} />
+                <FaReact className={'IconsRow'} />
+                <TbBrandFramerMotion className={'IconsRow'} />
+                <SiGreensock className={'IconsRow'} />
+                <IoLogoJavascript className={'IconsRow'} />
+                <h1 className='pInFooter'>BY LAUTARO VELEZ.</h1>
             </div>
         </div>
     )

@@ -1,63 +1,44 @@
-.pInFooter {
-    font-family: Roboto;
-    font-size: 3vh;
-
-}
-
 .fontInFooter {
-
-    color: black;
+    font-family: "Kaisei Decol";
 }
 
-.h2InFooter {
-    margin-top: 5vh;
-    font-size: 8vh;
+.pInFooter {
+    font-size: 3vh;
 }
 
-.h4InFooter {
-    margin-top: 5vh;
+.IconsRow {
+    display: inline;
+    width: auto;
+    height: 3vh;
+    margin: 1vh;
+}
+
+.Link {
     font-size: 4vh;
+    display: flex;
+    align-items: center;
 }
 
-.h1InFooter {
-    font-size: 25vh;
-    align-items: flex-end;
-    font-family: "PP Neue World";
+.LinkMiniRow {
+    margin: 0 1vw;
 }
 
-.LinksFooter {
-    font-size: 4vh;
-    margin-left: 2vw;
-    display: block; /* Asegúrate de que los <a> se muestren como bloques */
-
-}
-
-.LastIcons {
-    margin-top: 2vh;
-    height: 10vh !important;
-    width: 5vw !important;
+.IconLink {
+    height: 4vh;
+    width: 4vh;
+    margin-right: 0.5vw;
 }
 
 @media (max-width: 800px) {
-    .pInFooter {
-        margin-top: 10vh;
-        text-align: center;
+    .LinkMiniRow {
+        margin: 0.5vh 0; /* Adjust margin for smaller screens */
     }
-
-    .h2InFooter {
-        text-align: center;
+    .Link {
+        flex-direction: column; /* Stack icon and text vertically on small screens */
+        align-items: center;
     }
-
-    .h1InFooter {
-        display: none;
-    }
-
-    .IconsRow {
-        display: inline-block !important;
-    }
-
-    .LastIcons {
-        height: 10vh !important;
-        width: 5vw !important;
+    .IconLink {
+        margin-right: 0;
+        margin-bottom: 0.5vh; /* Add bottom margin for spacing on small screens */
     }
 }
