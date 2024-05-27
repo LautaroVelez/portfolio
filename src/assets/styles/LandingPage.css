@@ -27,7 +27,6 @@
     background-position: 40%;
     background-repeat: no-repeat;
     width: 100%;
-
 }
 
 .AboutMeTitle {
@@ -37,6 +36,8 @@
     color: white;
     font-size: 30vh;
 }
+
+
 
 .MePhoto {
     height: 90vh;

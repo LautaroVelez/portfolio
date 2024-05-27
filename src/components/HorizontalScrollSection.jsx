@@ -20,9 +20,9 @@ const HorizontalScrollSection = () => {
         target: targetRef3,
     });
 
-    const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-100%"]);
-    const x2 = useTransform(scrollYProgress2, [0, 1], ["0%", "-100%"]);
-    const x3 = useTransform(scrollYProgress3, [0, 1], ["0%", "-100%"]);
+    const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-105%"]);
+    const x2 = useTransform(scrollYProgress2, [0, 1], ["0%", "-105%"]);
+    const x3 = useTransform(scrollYProgress3, [0, 1], ["5%", "-100%"]);
 
     return (
         <div className={'bg-[#3b4838] text-center sm:w-screen'}>

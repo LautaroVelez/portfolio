@@ -26,7 +26,7 @@ const Section = () => {
             </div>
             <div className='flex flex-col justify-center h-full'>
                 <div className='text-center'>
-                    <p className='text-[4vh]'>If you are interested in work with me you can reach me in:</p>
+                    <p className='text-[4vh]'>If you are interested in working with me you can reach me in:</p>
 
                     <div className='container'>
                         <Row className='justify-content-center'>
@@ -60,7 +60,6 @@ const Section = () => {
                 <TbBrandFramerMotion className={'IconsRow'} />
                 <SiGreensock className={'IconsRow'} />
                 <IoLogoJavascript className={'IconsRow'} />
-                <h1 className='pInFooter'>BY LAUTARO VELEZ.</h1>
             </div>
         </div>
     )

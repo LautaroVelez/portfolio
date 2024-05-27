@@ -4,6 +4,7 @@ import React, {useRef} from "react";
 import {Col, Row} from "react-bootstrap";
 import '/src/assets/styles/LandingPage.css';
 import {isMobile} from "react-device-detect";
+import mewhitoutfondo from "../assets/images/mewhitoutfondo.png";
 
 const AboutMeSection = () => {
     const FirstRef = useRef(null);
@@ -35,24 +36,25 @@ const AboutMeSection = () => {
             <Row>
                 <Col md={9} sm={12}>
                     {isMobile ? (
-                        <h1 className="AboutMeTitle text-center">ABOUT</h1>
+                        <h1 className="AboutMeTitle text-center ColorBlack">ABOUT</h1>
                     ) : (
                         <motion.div ref={FirstRef} style={{x: x1}}>
-                            <motion.h1 className="AboutMeTitle text-center">ABOUT</motion.h1>
+                            <motion.h1 className="AboutMeTitle  text-center ColorBlack">ABOUT</motion.h1>
                         </motion.div>)}
                 </Col>
                 <Col md={12} sm={12}>
                     {isMobile ? (
-                        <h1 className="AboutMeTitle text-center">ME</h1>
+                        <h1 className="AboutMeTitle text-center ColorWhite">ME</h1>
                     ) : (
                         <motion.div ref={SecondRef} style={{x: x2}}>
-                            <motion.h1 className="AboutMeTitle text-end">ME</motion.h1>
+                            <motion.h1 className="AboutMeTitle text-end ColorWhite">ME</motion.h1>
                         </motion.div>
                     )}
                 </Col>
             </Row>
             <Row className={''}>
-                <Col md={6}></Col>
+                <Col md={6}>
+                </Col>
                 <Col sm={12} md={6}>
                     <motion.div ref={ThirdRef} style={{x: x3}} className={'MeTextContainer'}>
 
