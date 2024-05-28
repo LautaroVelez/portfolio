@@ -5,6 +5,7 @@ import {motion} from "framer-motion"
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Stairs from "../assets/utils/Stairs.jsx";
+import {isMobile} from "react-device-detect";
 
 const Loader = () => {
 
@@ -14,6 +15,7 @@ const Loader = () => {
     const fourthText = useRef(null);
     const fifthText = useRef(null);
     const slider = useRef(null);
+
 
     let xPercent = 0;
     let direction = -1;
@@ -30,7 +32,7 @@ const Loader = () => {
             }
 
             if (firstText.current && secondText.current && thirdText.current && fourthText.current && fifthText.current) {
-                gsap.set([firstText.current, secondText.current, thirdText.current, fourthText.current, fifthText.current], { xPercent: xPercent });
+                gsap.set([firstText.current, secondText.current, thirdText.current, fourthText.current, fifthText.current], {xPercent: xPercent});
             }
             xPercent += 0.25 * direction;
             requestAnimationFrame(animation);
@@ -54,7 +56,7 @@ const Loader = () => {
 
     return (
         <Stairs>
-            <Container fluid className={'LoaderContainer'}>
+            <Container fluid className={'LoaderContainer w-full'}>
                 <div className="h-screen align-middle justify-items-center sm:w-screen overflow-x-hidden ">
                     <Row>
                         <Col md={3} sm={12}>
@@ -113,21 +115,33 @@ const Loader = () => {
                             </motion.div>
                         </Col>
                     </Row>
-                    <div className="sliderContainer bottom-0">
-                        <div className="slider" ref={slider}>
-                            <p ref={firstText}>Córdoba, Argentina - </p>
-                            <p ref={secondText}>Córdoba, Argentina - </p>
-                            <p ref={thirdText}>Córdoba, Argentina - </p>
-                            <p ref={fourthText}>Córdoba, Argentina - </p>
-                            <p ref={fifthText}>Córdoba, Argentina - </p>
+
+                    {isMobile ? (
+                        <motion.div className={'PinPhone'}
+                                    animate={{opacity: 1, y: 0}}
+                                    transition={{delay: 2.5, duration: 0.5}}
+                                    initial={{opacity: 0, y: 30}}
+                                    exit={{opacity: 0, y: -2000}}
+                        >
+                            <p>Cordoba, Argentina</p></motion.div>
+                    ) : (
+                        <div className="sliderContainer bottom-0">
+                            <div className="slider" ref={slider}>
+                                <p ref={firstText}>Córdoba, Argentina - </p>
+                                <p ref={secondText}>Córdoba, Argentina - </p>
+                                <p ref={thirdText}>Córdoba, Argentina - </p>
+                                <p ref={fourthText}>Córdoba, Argentina - </p>
+                                <p ref={fifthText}>Córdoba, Argentina - </p>
+                            </div>
                         </div>
-                    </div>
+                    )}
 
 
                 </div>
             </Container>
         </Stairs>
-    );
+    )
+        ;
 }
 
 export default Loader;

@@ -49,6 +49,14 @@
     overflow-x: hidden;
 }
 
+.PinPhone{
+    font-family: "Noto Serif";
+    font-weight: 100;
+    font-style: italic;
+    color: #1a4231;
+    overflow-x: hidden;
+}
+
 
 @media (max-width: 800px){
     .WelcomeLittleText{
@@ -56,7 +64,7 @@
     }
 
     .ImLautaroText{
-        font-size: 12vh;
+        font-size: 10vh;
         text-align: center !important;
         margin-top: 10vh;
     }
@@ -67,6 +75,13 @@
 
     .sliderContainer{
         top: calc(100vh - 20vh);
+    }
+
+    .PinPhone{
+        font-size: 7vh;
+        display: inline;
+        text-align: center;
+
     }
 }
 

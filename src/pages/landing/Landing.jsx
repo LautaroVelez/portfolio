@@ -35,7 +35,7 @@ const LandingPage = () => {
                 <AboutMeSection/>
                 <WorkSection/>
                 <Section Component={<WhyMeSection/>}/>
-                <Section Component={<TechnologiesSection/>}/>
+                <TechnologiesSection/>
 
                 <Footer/>
             </div>

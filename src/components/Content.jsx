@@ -20,7 +20,7 @@ const Section = () => {
     const Email = "mailto:lautivelez28@gmail.com";
 
     return (
-        <div className={'h-[50vh] fontInFooter'}>
+        <div className={'h-[50vh] FontSection'}>
             <div className={'text-center top-0'}>
                 <p className="pInFooter">Thanks for seeing.</p>
             </div>

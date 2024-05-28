@@ -1,50 +1,50 @@
-import {Col, Container, Row} from "react-bootstrap";
-import React from "react";
+import '../assets/styles/Technologies.css';
 
 
 const TechnologiesSection = () => {
     return (
 
-        <section id={'Technologies'} className={' h-[140vh] flex flex-col justify-center'}>
-            <Row>
-                <h1 className={'text-center text-black FontRobotoBold'}>TECHNOLOGIES & TOOLS</h1>
-            </Row>
+        <section id={'Technologies'} className={' h-[140vh] FontSection'}>
 
-            <Row>
-                <Col>
-                    <h1 className={'text-start'}>TECHNOLOGIES</h1>
-                </Col>
-                <Col>
-                    <h1 className={'text-center'}>&</h1>
-                </Col>
-                <Col>
-                    <h1 className={'text-end'}>TOOLS</h1>
-                </Col>
-            </Row>
-            <Row className={'text-center'}>
-                <Col md={6} sm={6}>
-                    <h1 className={'text-end'}>JAVASCRIPT</h1>
-                    <h1 className={'text-end'}>HTML5</h1>
-                    <h1 className={'text-end'}>REACT</h1>
-                    <h1 className={'text-end'}>GSAP</h1>
-                    <h1 className={'text-end'}>CSS</h1>
-                    <h1 className={'text-end'}>PYTHON</h1>
-                    <h1 className={'text-end'}>FRAMER MOTION</h1>
-                    <h1 className={'text-end'}>RESPONSIVE DESIGN</h1>
-                </Col>
-                <Col md={6} sm={6}>
-                    <h1 className={'text-start'}>BOOTSTRAP</h1>
-                    <h1 className={'text-start'}>TAILWIND</h1>
-                    <h1 className={'text-start'}>FIGMA</h1>
-                    <h1 className={'text-start'}>MUI</h1>
-                    <h1 className={'text-start'}>NEXT.JS</h1>
-                    <h1 className={'text-start'}>PHOTOSHOP</h1>
-                    <h1 className={'text-start'}>MATERIAL DESIGN</h1>
-                </Col>
-            </Row>
+
+            <div className={'grid grid-cols-3 grid-rows-1 z-3 sticky top-50 justify-between'}>
+                <h1 className={'SmallText text-start ml-10'}>TECHNOLOGIES</h1>
+                <h1 className={'SmallText text-center'}>&</h1>
+                <h1 className={'SmallText text-end mr-10'}>TOOLS</h1>
+            </div>
+
+            <div>
+                <h1 className={'text-center BigText'}>TECHNOLOGIES & TOOLS</h1>
+            </div>
+            <div className={'text-center SmallText'}>
+
+
+                <h1>JAVASCRIPT</h1>
+                <h1>HTML5</h1>
+                <h1>REACT</h1>
+                <h1>GSAP</h1>
+                <h1>CSS</h1>
+                <h1>PYTHON</h1>
+                <h1>FRAMER MOTION</h1>
+                <h1>RESPONSIVE DESIGN</h1>
+                <h1>BOOTSTRAP</h1>
+                <h1>TAILWIND</h1>
+                <h1>FIGMA</h1>
+                <h1>MUI</h1>
+                <h1>NEXT.JS</h1>
+                <h1>PHOTOSHOP</h1>
+                <h1>MATERIAL DESIGN</h1>
+
+            </div>
+
 
         </section>
     )
 };
 
 export default TechnologiesSection;
+
+/*
+
+
+ */
