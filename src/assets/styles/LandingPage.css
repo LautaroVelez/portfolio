@@ -21,11 +21,8 @@
 .firstSection {
     background-color: #FBF4EA;
 }
+
 .AboutMeSection{
-    background-image: url('../images/meexpand.jpg') !important;
-    background-size: cover;
-    background-position: 40%;
-    background-repeat: no-repeat;
     width: 100%;
 }
 
@@ -35,21 +32,9 @@
     font-weight: 100;
     color: white;
     font-size: 30vh;
+
 }
 
-
-
-.MePhoto {
-    height: 90vh;
-    border-top-left-radius: 15vh;
-    border-bottom-right-radius: 15vh;
-
-
-    @media (min-width: 1000px ) {
-        margin-left: 20vw;
-        margin-top: -25vh;
-    }
-}
 
 .MeTextContainer {
     background-color: #3b4838;
@@ -62,14 +47,6 @@
 
 .MeText {
     font-size: 3vh;
-}
-
-.FontRobotoBold {
-    font-family: "Roboto bold";
-}
-
-.FontRoboto {
-    font-family: Roboto;
 }
 
 .FontKaisei {
