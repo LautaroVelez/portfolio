@@ -1,9 +1,8 @@
 import '../assets/styles/Technologies.css';
-import {useLayoutEffect, useRef} from "react";
-import gsap from 'gsap';
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {motion, useInView, useScroll, useTransform} from "framer-motion";
+import {useRef} from "react";
 
+import {motion, useScroll, useTransform} from "framer-motion";
+import {Col, Row} from 'react-bootstrap';
 
 const TechnologiesSection = () => {
 
@@ -32,7 +31,6 @@ const TechnologiesSection = () => {
 
 
             <div className={'grid grid-cols-3 grid-rows-1 z-3 sticky top-50 justify-between mt-20'}>
-
                 <motion.div style={{scale: scale1, x: x1,}}>
                     <h1 ref={word} className={'SmallText text-start ml-10'}>TECHNOLOGIES</h1>
                 </motion.div>
@@ -44,25 +42,27 @@ const TechnologiesSection = () => {
                 </motion.div>
             </div>
 
-            <div className={'text-center SmallText flex flex-col justify-center h-full'}>
-
-
-                <h1>JAVASCRIPT</h1>
-                <h1>HTML5</h1>
-                <h1>REACT</h1>
-                <h1>GSAP</h1>
-                <h1>CSS</h1>
-                <h1>PYTHON</h1>
-                <h1>FRAMER MOTION</h1>
-                <h1>RESPONSIVE DESIGN</h1>
-                <h1>BOOTSTRAP</h1>
-                <h1>TAILWIND</h1>
-                <h1>FIGMA</h1>
-                <h1>MUI</h1>
-                <h1>NEXT.JS</h1>
-                <h1>PHOTOSHOP</h1>
-                <h1>MATERIAL DESIGN</h1>
-
+            <div className="flex items-center justify-center h-screen">
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="text-right">
+                        <h1>REACT</h1>
+                        <h1>JAVASCRIPT</h1>
+                        <h1>HTML5</h1>
+                        <h1>CSS</h1>
+                        <h1>PYTHON</h1>
+                        <h1>FRAMER MOTION</h1>
+                        <h1>RESPONSIVE DESIGN</h1>
+                    </div>
+                    <div className="text-left">
+                        <h1>BOOTSTRAP</h1>
+                        <h1>TAILWIND</h1>
+                        <h1>FIGMA</h1>
+                        <h1>PYTHON</h1>
+                        <h1>MATERIAL DESIGN</h1>
+                        <h1>MUI</h1>
+                        <h1>NEXT.JS</h1>
+                    </div>
+                </div>
             </div>
 
 
