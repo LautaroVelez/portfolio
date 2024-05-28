@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { FaReact } from "react-icons/fa";
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -33,7 +32,7 @@ const WhyMeSection = () => {
             gsap.from(text.chars, {
                 scrollTrigger: {
                     trigger: paragraph,
-                    start: 'top 90%',
+                    start: 'top 80%',
                     end: 'bottom 40%',
                     scrub: true,
                     markers: false

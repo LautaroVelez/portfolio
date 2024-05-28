@@ -1,6 +1,5 @@
 import {motion, useScroll, useTransform} from "framer-motion";
 import  {useRef} from "react";
-import {Col, Row} from "react-bootstrap";
 import '/src/assets/styles/LandingPage.css';
 import {isMobile} from "react-device-detect";
 import mewhitoutfondo from "../assets/images/mewhitoutfondo.png";
