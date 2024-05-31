@@ -15,8 +15,8 @@ const TechnologiesSection = () => {
     }, [sectionRef]);
 
     const calculateRepulsion = (baseX, baseY, scrollY) => {
-        const distanceY = (baseY-75) - (scrollY - sectionTop);
-        const repulsion = Math.max(0, 100 - Math.abs(distanceY)) / 200;
+        const distanceY = (baseY-75) - ((scrollY+50) - sectionTop);
+        const repulsion = Math.max(0, 150 - Math.abs(distanceY)) / 200;
         return baseX * repulsion;
     };
 
@@ -41,8 +41,8 @@ const TechnologiesSection = () => {
     ];
 
     return (
-        <section id='Technologies' className='h-[140vh] FontSection' ref={sectionRef}>
-            <div className='grid grid-cols-3 grid-rows-1 z-3 sticky top-50 justify-between mt-20'>
+        <section id='Technologies' className='h-[140vh] FontSection Technologies' ref={sectionRef}>
+            <div className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50 justify-between mt-20'>
                 <div className='text-start'>
                     <h1>TECHNOLOGIES</h1>
                 </div>

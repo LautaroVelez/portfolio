@@ -11,3 +11,7 @@
 .divcosas{
     border: 1px solid black;
 }
+
+.Technologies h1{
+    font-size: 5vh !important;
+}

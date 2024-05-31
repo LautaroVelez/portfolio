@@ -17,7 +17,7 @@ export default function Stairs({children, backgroundColor}){
 
     const nbOfColumns = 3;
     return(
-        <div className='page stairs' style={{backgroundColor}}>
+        <div className='page stairs z-3' style={{backgroundColor}}>
             <motion.div {...anim(opacity)} className='transition-background'/>
             <div className='transition-container'>
                 {
