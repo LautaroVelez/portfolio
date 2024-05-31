@@ -1,78 +1,84 @@
 import '../assets/styles/Technologies.css';
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-
 const TechnologiesSection = () => {
-    const word = useRef(null);
-    const word2 = useRef(null);
-    const word3 = useRef(null);
-    const [scrollY, setScrollY] = useState(0);
-
-
-    const { scrollYProgress } = useScroll();
-
+    const { scrollY } = useScroll();
+    const sectionRef = useRef(null);
+    const [sectionTop, setSectionTop] = useState(0);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
+        if (sectionRef.current) {
+            const rect = sectionRef.current.getBoundingClientRect();
+            setSectionTop(rect.top + window.scrollY);
+        }
+    }, [sectionRef]);
 
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-
-    const calculateRepulsion = (wordX, wordY) => {
-        const distance = Math.sqrt(wordX ** 2 + (wordY - scrollY) ** 2);
-        const force = Math.max(0, 200 - distance) / 200;
-        return force * wordX;
+    const calculateRepulsion = (baseX, baseY, scrollY) => {
+        const distanceY = (baseY-75) - (scrollY - sectionTop);
+        const repulsion = Math.max(0, 100 - Math.abs(distanceY)) / 200;
+        return baseX * repulsion;
     };
 
+    const basePositionsLeft = [
+        { x: -150, y: 0 },
+        { x: -150, y: 50 },
+        { x: -150, y: 100 },
+        { x: -150, y: 150 },
+        { x: -150, y: 200 },
+        { x: -150, y: 250 },
+        { x: -150, y: 300 },
+    ];
+
+    const basePositionsRight = [
+        { x: 150, y: 0 },
+        { x: 150, y: 50 },
+        { x: 150, y: 100 },
+        { x: 150, y: 150 },
+        { x: 150, y: 200 },
+        { x: 150, y: 250 },
+        { x: 150, y: 300 },
+    ];
 
     return (
-        <section id='Technologies' className='h-[140vh] FontSection'>
+        <section id='Technologies' className='h-[140vh] FontSection' ref={sectionRef}>
             <div className='grid grid-cols-3 grid-rows-1 z-3 sticky top-50 justify-between mt-20'>
-                <div
-                    className='text-start'
-                >
+                <div className='text-start'>
                     <h1>TECHNOLOGIES</h1>
                 </div>
-                <div className='text-center'
-
-
-                >
+                <div className='text-center'>
                     <h1>&</h1>
                 </div>
-                <div className='text-end'
-
-
-                >
+                <div className='text-end'>
                     <h1>TOOLS</h1>
                 </div>
             </div>
 
-
             <div className="flex items-center justify-center h-screen">
                 <div className="grid grid-cols-2 gap-4">
                     <div className="text-right">
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 0)}px)` }}>REACT</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 50)}px)` }}>JAVASCRIPT</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 100)}px)` }}>HTML5</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 150)}px)` }}>CSS</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 200)}px)` }}>PYTHON</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 250)}px)` }}>FRAMER MOTION</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(-150, 300)}px)` }}>RESPONSIVE DESIGN</h1>
+                        {basePositionsLeft.map((pos, index) => (
+                            <motion.h1
+                                key={index}
+                                style={{
+                                    x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
+                                }}
+                            >
+                                {['REACT', 'JAVASCRIPT', 'HTML5', 'CSS', 'PYTHON', 'FRAMER MOTION', 'RESPONSIVE DESIGN'][index]}
+                            </motion.h1>
+                        ))}
                     </div>
                     <div className="text-left">
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 0)}px)` }}>BOOTSTRAP</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 50)}px)` }}>TAILWIND</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 100)}px)` }}>FIGMA</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 150)}px)` }}>PYTHON</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 200)}px)` }}>MATERIAL DESIGN</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 250)}px)` }}>MUI</h1>
-                        <h1 style={{ transform: `translateX(${calculateRepulsion(150, 300)}px)` }}>NEXT.JS</h1>
+                        {basePositionsRight.map((pos, index) => (
+                            <motion.h1
+                                key={index}
+                                style={{
+                                    x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
+                                }}
+                            >
+                                {['BOOTSTRAP', 'TAILWIND', 'FIGMA', 'PYTHON', 'MATERIAL DESIGN', 'MUI', 'NEXT.JS'][index]}
+                            </motion.h1>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -80,8 +86,4 @@ const TechnologiesSection = () => {
     );
 };
 
-
 export default TechnologiesSection;
-
-
-
