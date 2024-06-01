@@ -28,7 +28,7 @@ const HorizontalScrollSection = () => {
         <div className={'bg-[#3b4838] text-center sm:w-screen'}>
             <h1 className={'FrontEndTitle md:h-80vh'}>A</h1>
             <section ref={targetRef} className={'md:h-[200vh] md:relative'}>
-                <div className="md:sticky md:top-0 md:flex md:h-[100vh] items-center overflow-hidden md:w-[160vw] sm:w-screen sm:text-center">
+                <div className="md:sticky md:top-0 md:flex md:h-[100vh] items-center relative overflow-hidden md:w-[160vw] sm:w-screen sm:text-center">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Front-end</h1>
                     ) : (
@@ -42,7 +42,7 @@ const HorizontalScrollSection = () => {
             <h1 className={'FrontEndTitle md:h-20vh'}>React</h1>
 
             <section ref={targetRef2} className={'md:h-[50vh] md:relative'}>
-                <div className="md:sticky md:top-0 md:flex md:50vh items-center overflow-hidden md:w-[100vw]">
+                <div className="md:sticky md:top-0 md:flex md:50vh items-center relative overflow-hidden md:w-[100vw]">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Developer</h1>
                     ) : (
@@ -57,7 +57,7 @@ const HorizontalScrollSection = () => {
             <h1 className={'FrontEndTitle md:h-50vh'}>UX/UI</h1>
 
             <section ref={targetRef3} className={'md:h-[200vh] md:relative'}>
-                <div className="md:sticky md:top-0 md:flex md:h-screen items-center overflow-hidden">
+                <div className="md:sticky md:top-0 md:flex md:h-screen relative items-center overflow-hidden">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Designer.</h1>
                     ) : (

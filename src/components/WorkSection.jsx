@@ -9,6 +9,7 @@ const WorkSection = () => {
     const container = useRef(null);
 
     const {scrollYProgress} = useScroll({
+        layoutEffect: false,
         target: container,
         offset: ['start start', 'end end']
     })
@@ -17,7 +18,7 @@ const WorkSection = () => {
         <>
             <section className={'bg-[#3b4838]'}>
                 <h1 className={'MyWorkTitle'}>MY WORK</h1>
-                <Row className={'justify-content-center'}>
+                <Row className={'justify-content-center relative'}>
                     <div ref={container}>
                         {
                             projects.map((project, i) => {

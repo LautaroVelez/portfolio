@@ -47,7 +47,7 @@ const AboutMeSection = () => {
                 }}>
                     <img src={mewhitoutfondo} alt="" className={'h-full w-full object-cover'}/>
                 </div>
-                <div className={'text-start align-top row flex col-12 left-0 z-2'}>
+                <div className={'text-start relative align-top row flex col-12 left-0 z-2'}>
                     {isMobile ? (
                         <h1 className="AboutMeTitle  ColorBlack">ABOUT</h1>
                     ) : (
@@ -55,7 +55,7 @@ const AboutMeSection = () => {
                             <h1 className="AboutMeTitle ColorBlack ">ABOUT</h1>
                         </motion.div>)}
                 </div>
-                <div className={'z-2 text-center row flex col-12 -mt-48'}>
+                <div className={'z-2 text-center row relative flex col-12 -mt-48'}>
                     {isMobile ? (
                         <h1 className="AboutMeTitle text-center ColorWhite">ME</h1>
                     ) : (
@@ -64,7 +64,7 @@ const AboutMeSection = () => {
                         </motion.div>
                     )}
                 </div>
-                <div className={'justify-center flex col-12 z-2 -mt-48'}>
+                <div className={'justify-center relative flex col-12 z-2 -mt-48'}>
                     <motion.div ref={ThirdRef} style={{x: x3}} className={'MeTextContainer'}>
                         <h1 className="MeText FontKaisei">Hello there! I’m Lautaro Velez, a web developer borned in
                             Córdoba,

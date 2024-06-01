@@ -51,6 +51,7 @@ const TechnologiesSection = () => {
 
 
     const { scrollYProgress } = useScroll({
+        layoutEffect: false,
         target: sectionRef,
         offset: ["0 60vh", "50vh 50vh"],
     });
@@ -68,10 +69,10 @@ const TechnologiesSection = () => {
     return (
         <section id='Technologies' className='h-[140vh] bg-[#3b4838] Technologies' ref={sectionRef}>
         
-            <div className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50 justify-between'>
+            <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
                 
                 <motion.div style={{scale: scale1, x: x1,}}>
-                    <h1 ref={word} className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
+                    <h1 className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
                 </motion.div>
                 <motion.div style={{scale: scale2, x: x2}}>
                     <h1 className={'SmallText text-center m-10'}>&</h1>
@@ -79,11 +80,11 @@ const TechnologiesSection = () => {
                 <motion.div style={{scale: scale3, x: x3}}>
                     <h1 className={'SmallText text-end m-10'}>TOOLS</h1>
                 </motion.div>
-            </div>
+            </motion.div>
         
 
 
-            <div className="flex items-center justify-center h-screen">
+            <div className="flex items-center relative justify-center h-screen">
                 <div className="grid grid-cols-2 gap-4">
                     <div className="text-right">
                         {basePositionsLeft.map((pos, index) => (

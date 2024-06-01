@@ -57,7 +57,7 @@ const Loader = () => {
     return (
         <Stairs>
             <Container fluid className={'LoaderContainer w-full'}>
-                <div className="h-screen align-middle justify-items-center sm:w-screen overflow-x-hidden ">
+                <div className="h-screen relative align-middle justify-items-center sm:w-screen overflow-x-hidden ">
                     <Row>
                         <Col md={3} sm={12}>
                             <motion.div
@@ -125,7 +125,7 @@ const Loader = () => {
                         >
                             <p>Cordoba, Argentina</p></motion.div>
                     ) : (
-                        <div className="sliderContainer bottom-0">
+                        <div className="sliderContainer  bottom-0">
                             <div className="slider" ref={slider}>
                                 <p ref={firstText}>Córdoba, Argentina - </p>
                                 <p ref={secondText}>Córdoba, Argentina - </p>

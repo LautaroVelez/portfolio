@@ -49,13 +49,13 @@ const WhyMeSection = () => {
 
     return (
         <>
-            <div className={'bg-[#f3e6d8] md:h-[140vh] flex flex-col justify-center'}>
+            <div className={'bg-[#f3e6d8] md:h-[140vh] relative flex flex-col justify-center'}>
                 <h1 className={'WhyMeTitle'}>¿WHY ME?</h1>
-                <motion.div ref={FirstRef} style={{x: x1}}>
+                <motion.div className={'relative'} ref={FirstRef} style={{x: x1}}>
                     <h1 className={'MiniTitleWhyMe text-center'}>{MiniTitleWhyMe}</h1>
                 </motion.div>
                 <Container>
-                    <Row className={'justify-center'}>
+                    <Row className={'justify-center relative'}>
                         <Col md={10} className={'text-center'}>
                             <p className={'paragraphWhyMe'}>{firstParagraph}</p>
                             <p className={'paragraphWhyMe'}>{secondParagraph}</p>

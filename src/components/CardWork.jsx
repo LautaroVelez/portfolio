@@ -57,7 +57,7 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
                 backgroundColor: color,
                 scale,
                 top: `calc(-5vh + ${i * 25}px)`
-            }} className={'cardWork'}>
+            }} className={'cardWork relative'}>
 
                 <div className={'imgCardWork'}>
                     <a href={link}>
