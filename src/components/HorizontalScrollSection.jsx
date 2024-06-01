@@ -25,9 +25,9 @@ const HorizontalScrollSection = () => {
     const x3 = useTransform(scrollYProgress3, [0, 1], ["5%", "-100%"]);
 
     return (
-        <div className={'bg-[#3b4838] text-center sm:w-screen'}>
+        <div className={'bg-[#3b4838] text-center sm:w-screen w-screen'}>
             <h1 className={'FrontEndTitle md:h-80vh'}>A</h1>
-            <section ref={targetRef} className={'md:h-[200vh] md:relative'}>
+            <section ref={targetRef} className={'md:h-[200vh] md:relative w-screen'}>
                 <div className="md:sticky md:top-0 md:flex md:h-[100vh] items-center relative overflow-hidden md:w-[160vw] sm:w-screen sm:text-center">
                     {isMobile ? (
                         <h1 className={'FrontEndTitle'}>Front-end</h1>

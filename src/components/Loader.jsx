@@ -56,7 +56,7 @@ const Loader = () => {
 
     return (
         <Stairs>
-            <Container fluid className={'LoaderContainer w-full'}>
+            <Container fluid className={'LoaderContainer w-screen'}>
                 <div className="h-screen relative align-middle justify-items-center sm:w-screen overflow-x-hidden ">
                     <Row>
                         <Col md={3} sm={12}>
@@ -66,7 +66,7 @@ const Loader = () => {
                                 initial={{opacity: 0, x: -30}}
                                 exit={{opacity: 0, x: 200}}
                             >
-                                <h3 className={'WelcomeLittleText font-bold text-md-end text-sm-center mt-12'}>
+                                <h3 className={'WelcomeLittleText font-bold text-md-end text-sm-center text-bg-end mt-12'}>
                                     Welcome, I'm</h3>
                             </motion.div>
                         </Col>
@@ -125,7 +125,7 @@ const Loader = () => {
                         >
                             <p>Cordoba, Argentina</p></motion.div>
                     ) : (
-                        <div className="sliderContainer  bottom-0">
+                        <div className="sliderContainer d-sm-none d-md-inline bottom-0">
                             <div className="slider" ref={slider}>
                                 <p ref={firstText}>Córdoba, Argentina - </p>
                                 <p ref={secondText}>Córdoba, Argentina - </p>

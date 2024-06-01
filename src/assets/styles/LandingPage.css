@@ -116,5 +116,9 @@
         width: 100vw;
         font-size: 10vh;
     }
+    .MyWorkTitle{
+        font-size: 10vh;
+        width: fit-content;
+    }
 }
 

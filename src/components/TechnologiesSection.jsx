@@ -1,6 +1,8 @@
 import '../assets/styles/Technologies.css';
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { isMobile } from "react-device-detect";
+
 
 const TechnologiesSection = () => {
 
@@ -19,7 +21,7 @@ const TechnologiesSection = () => {
 
 
     const calculateRepulsion = (baseX, baseY, scrollY) => {
-        const distanceY = (baseY-75) - ((scrollY+20) - sectionTop);
+        const distanceY = (baseY - 100) - ((scrollY + 135) - sectionTop);
         const repulsion = Math.max(0, 120 - Math.abs(distanceY)) / 200;
         return baseX * repulsion;
     };
@@ -32,6 +34,12 @@ const TechnologiesSection = () => {
         { x: -150, y: 200 },
         { x: -150, y: 250 },
         { x: -150, y: 300 },
+        { x: -150, y: 350 },
+        { x: -150, y: 400 },
+        { x: -150, y: 450 },
+        { x: -150, y: 500 },
+        { x: -150, y: 550 },
+        { x: -150, y: 600 },
     ];
 
     const basePositionsRight = [
@@ -42,6 +50,12 @@ const TechnologiesSection = () => {
         { x: 150, y: 200 },
         { x: 150, y: 250 },
         { x: 150, y: 300 },
+        { x: 150, y: 350 },
+        { x: 150, y: 400 },
+        { x: 150, y: 450 },
+        { x: 150, y: 500 },
+        { x: 150, y: 550 },
+        { x: 150, y: 600 },
     ];
 
 
@@ -51,12 +65,12 @@ const TechnologiesSection = () => {
 
 
     const { scrollYProgress } = useScroll({
-        layoutEffect: false,
+
         target: sectionRef,
         offset: ["0 60vh", "50vh 50vh"],
     });
 
-   
+
     const scale1 = useTransform(scrollYProgress, [0, 0.50], [3, 1]);
     const x1 = useTransform(scrollYProgress, [0, 0.50], ["80%", "0%"]);
 
@@ -68,24 +82,31 @@ const TechnologiesSection = () => {
 
     return (
         <section id='Technologies' className='h-[140vh] bg-[#3b4838] Technologies' ref={sectionRef}>
-        
-            <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
-                
-                <motion.div style={{scale: scale1, x: x1,}}>
-                    <h1 className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
-                </motion.div>
-                <motion.div style={{scale: scale2, x: x2}}>
-                    <h1 className={'SmallText text-center m-10'}>&</h1>
-                </motion.div>
-                <motion.div style={{scale: scale3, x: x3}}>
-                    <h1 className={'SmallText text-end m-10'}>TOOLS</h1>
-                </motion.div>
-            </motion.div>
-        
+            {isMobile ? (
 
+                <div className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
+                    
+                        <h1 className={'SmallText text-start '}>TECHNOLOGIES</h1>
+                        <h1 className={'SmallText text-center'}>&</h1>
+                        <h1 className={'SmallText text-end '}>TOOLS</h1>
+                    
+                </div>
+            ) : (
+                <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
+                    <motion.div style={{ scale: scale1, x: x1, }}>
+                        <h1 className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
+                    </motion.div>
+                    <motion.div style={{ scale: scale2, x: x2 }}>
+                        <h1 className={'SmallText text-center m-10'}>&</h1>
+                    </motion.div>
+                    <motion.div style={{ scale: scale3, x: x3 }}>
+                        <h1 className={'SmallText text-end m-10'}>TOOLS</h1>
+                    </motion.div>
+                </motion.div>
+            )}
 
             <div className="flex items-center relative justify-center h-screen">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 w-screen">
                     <div className="text-right">
                         {basePositionsLeft.map((pos, index) => (
                             <motion.h1
@@ -93,8 +114,9 @@ const TechnologiesSection = () => {
                                 style={{
                                     x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
                                 }}
+                                className='italic TechsTools'
                             >
-                                {['REACT', 'JAVASCRIPT', 'HTML5', 'CSS', 'PYTHON', 'FRAMER MOTION', 'RESPONSIVE DESIGN'][index]}
+                                {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                             </motion.h1>
                         ))}
                     </div>
@@ -105,8 +127,9 @@ const TechnologiesSection = () => {
                                 style={{
                                     x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
                                 }}
+                                className='italic TechsTools'
                             >
-                                {['BOOTSTRAP', 'TAILWIND', 'FIGMA', 'PYTHON', 'MATERIAL DESIGN', 'MUI', 'NEXT.JS'][index]}
+                                {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                             </motion.h1>
                         ))}
                     </div>

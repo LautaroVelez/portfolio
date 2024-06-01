@@ -3,18 +3,22 @@
     color: black;
 }
 
-.SmallText{
-    font-size: 5vh;
-    color: black;
-}
 
-.divcosas{
-    border: 1px solid black;
-}
 
 .Technologies h1{
     font-size: 5vh !important;
     color: #f3e6d8;
     font-family: "Kaisei Decol";
     
+}
+
+@media (max-width: 800px) {
+    .Technologies h1{
+        font-size: 1vh;
+    }
+ 
+    .TechsTools{
+        font-size: 1vh;
+        width: 50vw;
+    }
 }
