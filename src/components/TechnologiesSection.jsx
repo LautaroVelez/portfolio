@@ -19,8 +19,8 @@ const TechnologiesSection = () => {
 
 
     const calculateRepulsion = (baseX, baseY, scrollY) => {
-        const distanceY = (baseY-75) - ((scrollY+50) - sectionTop);
-        const repulsion = Math.max(0, 150 - Math.abs(distanceY)) / 200;
+        const distanceY = (baseY-75) - ((scrollY+20) - sectionTop);
+        const repulsion = Math.max(0, 120 - Math.abs(distanceY)) / 200;
         return baseX * repulsion;
     };
 
@@ -50,33 +50,37 @@ const TechnologiesSection = () => {
     const word3 = useRef(null);
 
 
-    const {scrollYProgress} = useScroll({
-        target: word, word2, word3,
-        offset: ["0 60vh", "end 50vh"],
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["0 60vh", "50vh 50vh"],
     });
 
-    const scale1 = useTransform(scrollYProgress, [0,0.50, 1], [3, 0.30,3]);
-    const x1 = useTransform(scrollYProgress, [0, 0.50,1], ["80%", "-35%","80%"]);
+   
+    const scale1 = useTransform(scrollYProgress, [0, 0.50], [3, 1]);
+    const x1 = useTransform(scrollYProgress, [0, 0.50], ["80%", "0%"]);
 
-    const scale2 = useTransform(scrollYProgress, [0, 0.50,1], [3, 0.30, 3]);
-    const x2 = useTransform(scrollYProgress, [0, 0.50,1], ["52%", "-18%", "52%"]);
+    const scale2 = useTransform(scrollYProgress, [0, 0.50], [3, 1]);
+    const x2 = useTransform(scrollYProgress, [0, 0.50], ["52%", "0%"]);
 
-    const scale3 = useTransform(scrollYProgress, [0, 0.50,1], [3, 0.30, 3]);
-    const x3 = useTransform(scrollYProgress, [0, 0.50,1], ["-80%", "30%", "-80%"]);
+    const scale3 = useTransform(scrollYProgress, [0, 0.50], [3, 1]);
+    const x3 = useTransform(scrollYProgress, [0, 0.50], ["-80%", "0%"]);
 
     return (
         <section id='Technologies' className='h-[140vh] bg-[#3b4838] Technologies' ref={sectionRef}>
+        
             <div className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50 justify-between'>
+                
                 <motion.div style={{scale: scale1, x: x1,}}>
-                    <h1 ref={word} className={'SmallText text-start ml-10'}>TECHNOLOGIES</h1>
+                    <h1 ref={word} className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
                 </motion.div>
                 <motion.div style={{scale: scale2, x: x2}}>
-                    <h1 className={'SmallText text-center'}>&</h1>
+                    <h1 className={'SmallText text-center m-10'}>&</h1>
                 </motion.div>
                 <motion.div style={{scale: scale3, x: x3}}>
-                    <h1 className={'SmallText text-end mr-10'}>TOOLS</h1>
+                    <h1 className={'SmallText text-end m-10'}>TOOLS</h1>
                 </motion.div>
             </div>
+        
 
 
             <div className="flex items-center justify-center h-screen">
