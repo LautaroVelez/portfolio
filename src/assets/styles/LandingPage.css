@@ -1,3 +1,4 @@
+
 .FronteEndWelcome {
     color: #f8ebd2;
 }
@@ -11,23 +12,12 @@
 }
 
 
-.HorizontalLine {
-    border: 1px solid #D9D9D9;
-    margin-left: 25vw;
-    margin-bottom: 5vh;
-    width: 50vw;
-}
-
-.firstSection {
-    background-color: #FBF4EA;
-}
-
-.AboutMeSection{
+.AboutMeSection {
     width: 100%;
 }
 
 .AboutMeTitle {
-     font-family: "Serif";
+    font-family: "Serif";
     font-style: italic;
     font-weight: 100;
     color: white;
@@ -81,7 +71,6 @@
 
 .paragraphWhyMe {
     font-size: 4vh;
-
     font-family: "Kaisei Decol";
     color: black;
     margin-top: 2vh;
@@ -91,16 +80,36 @@
 }
 
 
-@media (max-width: 800px) {
-
-    .AboutMeTitle {
-        font-size: 15vh;
-
+@media (max-width: 1024px) {
+     .HorizontalSection {
+        background-color: #3b4838;
+        width: 160vw !important;
+         text-align: center !important;
     }
 
     .FrontEndTitle {
-        font-size: 8vh;
+        font-size: 26vh !important;
+        text-align: center!important;
+        width: 160vw !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .HorizontalSection {
+        background-color: #3b4838;
+        width: 100vw !important;
+    }
+
+    .FrontEndTitle {
+        font-size: 8vh !important;
         padding: 2vh;
+        text-align: center !important;
+        width: 100vw !important;
+    }
+
+
+    .AboutMeTitle {
+        font-size: 15vh;
     }
 
     .MeTextContainer {
@@ -116,9 +125,21 @@
         width: 100vw;
         font-size: 10vh;
     }
-    .MyWorkTitle{
+
+    .MyWorkTitle {
         font-size: 10vh;
         width: fit-content;
     }
 }
 
+@media (max-width: 1000px) and (min-width: 800px) {
+    .HorizontalSection {
+        background-color: #3b4838;
+    }
+
+    .FrontEndTitle {
+        font-size: 17vh;
+        padding: 2vh;
+        width: 100vw;
+    }
+}
