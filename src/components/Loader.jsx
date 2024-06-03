@@ -73,12 +73,11 @@ const Loader = () => {
                     </Row>
                     <Container>
                         <Row>
-                            <Col md={7} sm={12}>
+                            <Col md={7} sm={12} xs={12} xl={7}>
                                 <motion.div
                                     animate={{opacity: 1, x: 0}}
                                     transition={{delay: 1.9, duration: 0.5}}
                                     initial={{opacity: 0, x: -30}}
-                                    exit={{opacity: 0, x: 200}}
                                 >
                                     <h1 className="ImLautaroText text-md-end ">
                                         Lautaro
@@ -94,7 +93,7 @@ const Loader = () => {
                                     initial={{opacity: 0, x: 30}}
                                     exit={{opacity: 0, x: 0}}
                                 >
-                                    <h1 className="ImLautaroText text-end">
+                                    <h1 className="ImLautaroText text-md-end">
                                         Velez
                                     </h1>
                                 </motion.div>
