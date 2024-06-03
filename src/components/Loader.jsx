@@ -64,7 +64,7 @@ const Loader = () => {
                                 animate={{opacity: 1, x: 0}}
                                 transition={{delay: 1.2, duration: 0.7}}
                                 initial={{opacity: 0, x: -30}}
-                                exit={{opacity: 0, x: 200}}
+
                             >
                                 <h3 className={'WelcomeLittleText font-bold text-md-end text-sm-center text-bg-end mt-12'}>
                                     Welcome, I'm</h3>
@@ -91,7 +91,7 @@ const Loader = () => {
                                     animate={{opacity: 1, x: 0}}
                                     transition={{delay: 2.3, duration: 0.5}}
                                     initial={{opacity: 0, x: 30}}
-                                    exit={{opacity: 0, x: 0}}
+
                                 >
                                     <h1 className="ImLautaroText text-md-end">
                                         Velez
@@ -106,7 +106,7 @@ const Loader = () => {
                                 animate={{opacity: 1, y: 0}}
                                 transition={{delay: 2.5, duration: 0.5}}
                                 initial={{opacity: 0, y: 30}}
-                                exit={{opacity: 0, y: -2000}}
+
                             >
                                 <h3 className="BasedInLittleText text-end font-bold" id="BasedInText">
                                     Based in:
@@ -120,7 +120,7 @@ const Loader = () => {
                                     animate={{opacity: 1, y: 0}}
                                     transition={{delay: 2.5, duration: 0.5}}
                                     initial={{opacity: 0, y: 30}}
-                                    exit={{opacity: 0, y: -2000}}
+
                         >
                             <p>Cordoba, Argentina</p></motion.div>
                     ) : (
