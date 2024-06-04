@@ -1,14 +1,14 @@
 import '../assets/styles/Technologies.css';
-import { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { isMobile } from "react-device-detect";
+import {useRef, useEffect, useState} from "react";
+import {motion, useScroll, useTransform} from "framer-motion";
+import {isMobile} from "react-device-detect";
 
 
 const TechnologiesSection = () => {
 
     //calculo de animacion de repulsion
     //agarro la posicion del scroll y el top de la section
-    const { scrollY } = useScroll();
+    const {scrollY} = useScroll();
     const sectionRef = useRef(null);
     const [sectionTop, setSectionTop] = useState(0);
 
@@ -26,36 +26,37 @@ const TechnologiesSection = () => {
         return baseX * repulsion;
     };
 
+
     const basePositionsLeft = [
-        { x: -150, y: 0 },
-        { x: -150, y: 50 },
-        { x: -150, y: 100 },
-        { x: -150, y: 150 },
-        { x: -150, y: 200 },
-        { x: -150, y: 250 },
-        { x: -150, y: 300 },
-        { x: -150, y: 350 },
-        { x: -150, y: 400 },
-        { x: -150, y: 450 },
-        { x: -150, y: 500 },
-        { x: -150, y: 550 },
-        { x: -150, y: 600 },
+        {x: -150, y: 0},
+        {x: -150, y: 50},
+        {x: -150, y: 100},
+        {x: -150, y: 150},
+        {x: -150, y: 200},
+        {x: -150, y: 250},
+        {x: -150, y: 300},
+        {x: -150, y: 350},
+        {x: -150, y: 400},
+        {x: -150, y: 450},
+        {x: -150, y: 500},
+        {x: -150, y: 550},
+        {x: -150, y: 600},
     ];
 
     const basePositionsRight = [
-        { x: 150, y: 0 },
-        { x: 150, y: 50 },
-        { x: 150, y: 100 },
-        { x: 150, y: 150 },
-        { x: 150, y: 200 },
-        { x: 150, y: 250 },
-        { x: 150, y: 300 },
-        { x: 150, y: 350 },
-        { x: 150, y: 400 },
-        { x: 150, y: 450 },
-        { x: 150, y: 500 },
-        { x: 150, y: 550 },
-        { x: 150, y: 600 },
+        {x: 150, y: 0},
+        {x: 150, y: 50},
+        {x: 150, y: 100},
+        {x: 150, y: 150},
+        {x: 150, y: 200},
+        {x: 150, y: 250},
+        {x: 150, y: 300},
+        {x: 150, y: 350},
+        {x: 150, y: 400},
+        {x: 150, y: 450},
+        {x: 150, y: 500},
+        {x: 150, y: 550},
+        {x: 150, y: 600},
     ];
 
 
@@ -64,7 +65,7 @@ const TechnologiesSection = () => {
     const word3 = useRef(null);
 
 
-    const { scrollYProgress } = useScroll({
+    const {scrollYProgress} = useScroll({
 
         target: sectionRef,
         offset: ["0 60vh", "50vh 50vh"],
@@ -80,61 +81,97 @@ const TechnologiesSection = () => {
     const scale3 = useTransform(scrollYProgress, [0, 0.50], [3, 1]);
     const x3 = useTransform(scrollYProgress, [0, 0.50], ["-80%", "0%"]);
 
-    return (
-        <section id='Technologies' className='h-[140vh] bg-[#3b4838] Technologies' ref={sectionRef}>
-            {isMobile ? (
 
-                <div className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
-                    
-                        <h1 className={'SmallText text-start '}>TECHNOLOGIES</h1>
-                        <h1 className={'SmallText text-center'}>&</h1>
-                        <h1 className={'SmallText text-end '}>TOOLS</h1>
-                    
-                </div>
+    const scale1Mobile = useTransform(scrollYProgress, [0, 0.50], [1, 0.5]);
+    const x1Mobile = useTransform(scrollYProgress, [0, 0.50], ["10%", "0%"]);
+
+    const scale2Mobile = useTransform(scrollYProgress, [0, 0.50], [1, 0.5]);
+    const x2Mobile = useTransform(scrollYProgress, [0, 0.50], ["50%", "0%"]);
+
+    const scale3Mobile = useTransform(scrollYProgress, [0, 0.50], [1, 0.5]);
+    const x3Mobile = useTransform(scrollYProgress, [0, 0.50], ["0%", "0%"]);
+
+    return (
+        <section id='Technologies' className='h-[140vh] bg-[#3b4838] w-[full] Technologies' ref={sectionRef}>
+            {isMobile ? (
+                <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50'>
+                    <motion.h1 className={'TechsAndToolsMobile text-start ml-2'} style={{scale: scale1Mobile, x: x1Mobile,}}>TECHNOLOGIES</motion.h1>
+                     <motion.h1 className={'TechsAndToolsMobile text-center'} style={{scale: scale2Mobile, x: x2Mobile,}}>&</motion.h1>
+                    <motion.h1 className={'TechsAndToolsMobile text-end mr-2'} style={{scale: scale3Mobile, x: x3Mobile,}}>TOOLS</motion.h1>
+                </motion.div>
             ) : (
-                <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 relative sticky top-50 justify-between'>
-                    <motion.div style={{ scale: scale1, x: x1, }}>
-                        <h1 className={'SmallText text-start m-10'}>TECHNOLOGIES</h1>
+                <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1  sticky top-50 justify-between'>
+                    <motion.div style={{scale: scale1, x: x1,}}>
+                        <h1 className={'text-start m-10 TextH1InPC'}>TECHNOLOGIES</h1>
                     </motion.div>
-                    <motion.div style={{ scale: scale2, x: x2 }}>
-                        <h1 className={'SmallText text-center m-10'}>&</h1>
+                    <motion.div style={{scale: scale2, x: x2}}>
+                        <h1 className={' text-center m-10 TextH1InPC'}>&</h1>
                     </motion.div>
-                    <motion.div style={{ scale: scale3, x: x3 }}>
-                        <h1 className={'SmallText text-end m-10'}>TOOLS</h1>
+                    <motion.div style={{scale: scale3, x: x3}}>
+                        <h1 className={' text-end m-10 TextH1InPC'}>TOOLS</h1>
                     </motion.div>
                 </motion.div>
             )}
 
-            <div className="flex items-center relative justify-center h-screen">
-                <div className="grid grid-cols-2 gap-4 w-screen">
-                    <div className="text-right">
-                        {basePositionsLeft.map((pos, index) => (
-                            <motion.h1
-                                key={index}
-                                style={{
-                                    x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
-                                }}
-                                className='italic TechsTools'
-                            >
-                                {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
-                            </motion.h1>
-                        ))}
+            {isMobile ? (
+                <>
+                    <div className="flex items-center relative justify-center h-screen">
+                        <div className="grid grid-cols-2 gap-4 w-screen">
+                            <div className="text-right">
+                                {basePositionsLeft.map((pos, index) => (
+                                    <h1
+                                        key={index}
+                                        className='italic ToolsMobile'
+                                    >
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                    </h1>
+                                ))}
+                            </div>
+                            <div className="text-left">
+                                {basePositionsLeft.map((pos, index) => (
+                                    <h1
+                                        key={index}
+                                        className='italic ToolsMobile'
+                                    >
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                    </h1>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-                    <div className="text-left">
-                        {basePositionsRight.map((pos, index) => (
-                            <motion.h1
-                                key={index}
-                                style={{
-                                    x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
-                                }}
-                                className='italic TechsTools'
-                            >
-                                {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
-                            </motion.h1>
-                        ))}
+                </>
+            ) : (
+                <div className="flex items-center relative justify-center h-screen">
+                    <div className="grid grid-cols-2 gap-4 w-screen">
+                        <div className="text-right">
+                            {basePositionsLeft.map((pos, index) => (
+                                <motion.h1
+                                    key={index}
+                                    style={{
+                                        x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
+                                    }}
+                                    className='italic TextH1InPC'
+                                >
+                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                </motion.h1>
+                            ))}
+                        </div>
+                        <div className="text-left">
+                            {basePositionsRight.map((pos, index) => (
+                                <motion.h1
+                                    key={index}
+                                    style={{
+                                        x: useTransform(scrollY, (scrollY) => calculateRepulsion(pos.x, pos.y, scrollY))
+                                    }}
+                                    className='italic TextH1InPC'
+                                >
+                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                </motion.h1>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 };

@@ -1,24 +1,52 @@
-.BigText {
-    font-size: 15vh;
-    color: black;
-}
-
-
-
-.Technologies h1{
-    font-size: 5vh !important;
-    color: #f3e6d8;
+.Technologies h1 {
+    color: #f3e6d8 !important;
     font-family: "Kaisei Decol";
-    
 }
 
-@media (max-width: 800px) {
-    .Technologies h1{
-        font-size: 1vh;
+.TextH1InPC, .TechsAndToolsMobile, .ToolsMobile{
+    font-size: 5vh;
+}
+
+@media (max-width: 1023px) and (min-width: 786px) {
+    .TextH1InPC {
+        font-size: 2vh !important;
+
     }
- 
-    .TechsTools{
-        font-size: 1vh;
-        width: 50vw;
+    .TechsAndToolsMobile {
+        font-size: 2vh;
+    }
+
+    .ToolsMobile {
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 786px) and (min-width: 601px) {
+    .TextH1InPC {
+        font-size: 2vh !important;
+
+    }
+.TechsAndToolsMobile {
+        font-size: 9vh;
+    }
+
+    .ToolsMobile {
+        font-size: 3vh;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .TextH1InPC{
+        font-size: 2vh;
+    }
+
+    .TechsAndToolsMobile {
+        font-size: 3vh;
+    }
+
+    .ToolsMobile {
+        font-size: 3vh;
     }
 }

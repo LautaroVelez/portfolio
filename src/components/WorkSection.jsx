@@ -15,8 +15,8 @@ const WorkSection = () => {
 
     return (
         <>
-            <div className={'bg-[#3b4838] w-screen sm:w-[120vw'}>
-                <h1 className={'MyWorkTitle'}>MY WORK</h1>
+            <div className={'bg-[#3b4838] h-[full] w-[full]'}>
+                <h1 className={'MyWorkTitle bg-[#3b4838] h-[full] w-[full]'}>MY WORK</h1>
                 <Row className={'justify-content-center relative'}>
                     <div ref={container}>
                         {
@@ -29,6 +29,7 @@ const WorkSection = () => {
                     </div>
                 </Row>
             </div>
+
         </>
     )
 }
