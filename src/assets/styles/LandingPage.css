@@ -25,7 +25,6 @@
 
 }
 
-
 .MeTextContainer {
     background-color: #3b4838;
     color: #f3e6d8;
@@ -38,6 +37,7 @@
 .MeText {
     font-size: 3vh;
 }
+
 
 .FontKaisei {
     font-family: "Kaisei Decol";
@@ -80,18 +80,78 @@
 }
 
 
-@media (max-width: 1024px) {
-     .HorizontalSection {
+@media (min-width: 1024px) {
+    .HorizontalSection {
         background-color: #3b4838;
         width: 160vw !important;
-         text-align: center !important;
+        text-align: center !important;
     }
 
     .FrontEndTitle {
         font-size: 26vh !important;
-        text-align: center!important;
+        text-align: center !important;
         width: 160vw !important;
     }
+
+    .MeTextContainer {
+        margin-top: 10vh;
+    }
+
+}
+
+@media (max-width: 1023px) and (min-width: 786px) {
+    .HorizontalSection {
+        background-color: #3b4838;
+    }
+
+    .FrontEndTitle {
+        font-size: 17vh;
+        padding: 2vh;
+        width: 100vw;
+    }
+
+    .MeTextContainer {
+        margin-top: 20vh;
+        width: 50%;
+        margin-left: 10vw;
+    }
+
+    .AboutMeTitle {
+        font-size: 25vh;
+        text-align: center !important;
+
+    }
+
+}
+
+@media (max-width: 786px) and (min-width: 601px) {
+    .HorizontalSection {
+        background-color: #3b4838;
+    }
+
+    .FrontEndTitle {
+        font-size: 17vh;
+        padding: 2vh;
+        width: 100vw;
+    }
+
+    .MeTextContainer {
+
+        width: 55%;
+        margin-left: 10vw;
+    }
+
+    .AboutMeTitle {
+        font-size: 20vh;
+        text-align: start !important;
+    }
+
+    .MeTitle {
+        margin-top: 30vh;
+        text-align: center !important;
+    }
+
+
 }
 
 @media (max-width: 600px) {
@@ -109,17 +169,51 @@
 
 
     .AboutMeTitle {
-        font-size: 15vh;
+        font-size: 12vh !important;
+        width: 100%;
+        text-align: start !important;
+        font-family: "Serif";
+        font-style: italic;
+        font-weight: 100;
+        color: white;
     }
+
+
+    .MeTitle {
+        margin-top: 30vh !important;
+        text-align: center !important;
+        font-size: 12vh !important;
+        font-family: "Serif";
+
+        font-style: italic;
+        font-weight: 100;
+
+        color: white;
+    }
+
 
     .MeTextContainer {
-        height: auto;
-        width: 100vw;
+        height: 100vw;
+        width: auto;
+        margin-left: 20vw;
+
     }
 
-    .MePhoto {
-        width: 100vw !important;
+    .MeTextContainerMobile {
+        height: 70vh;
+        width: auto;
+        background-color: #3b4838;
+        color: #f3e6d8;
+        padding: 5vh;
+        border-radius: 5vh;
+
     }
+
+    .MeText{
+        font-size: 2.3vh;
+         width: 45vw;
+    }
+
 
     .WhyMeTitle {
         width: 100vw;
@@ -132,14 +226,3 @@
     }
 }
 
-@media (max-width: 1000px) and (min-width: 800px) {
-    .HorizontalSection {
-        background-color: #3b4838;
-    }
-
-    .FrontEndTitle {
-        font-size: 17vh;
-        padding: 2vh;
-        width: 100vw;
-    }
-}
