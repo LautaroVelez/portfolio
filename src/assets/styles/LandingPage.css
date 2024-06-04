@@ -80,24 +80,7 @@
 }
 
 
-@media (min-width: 1024px) {
-    .HorizontalSection {
-        background-color: #3b4838;
-        width: 160vw !important;
-        text-align: center !important;
-    }
 
-    .FrontEndTitle {
-        font-size: 26vh !important;
-        text-align: center !important;
-        width: 160vw !important;
-    }
-
-    .MeTextContainer {
-        margin-top: 10vh;
-    }
-
-}
 
 @media (max-width: 1023px) and (min-width: 786px) {
     .HorizontalSection {
