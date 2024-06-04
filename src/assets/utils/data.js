@@ -16,7 +16,7 @@ const projects = [
         icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"]
     },
     {
-        title: "CONSTRUCTION SITE",
+        title: "SERGI C",
         description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of the construction company.",
         src: "hola",
         link: "holaaa",

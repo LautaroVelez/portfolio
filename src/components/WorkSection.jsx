@@ -1,8 +1,7 @@
 import {Row} from "react-bootstrap";
-import React, {useEffect} from "react";
 import projects from "../assets/utils/data.js"
 import {CardWork} from "./CardWork.jsx";
-import {motion, useScroll, useTransform} from 'framer-motion';
+import {useScroll} from 'framer-motion';
 import {useRef} from "react";
 
 const WorkSection = () => {
@@ -16,7 +15,7 @@ const WorkSection = () => {
 
     return (
         <>
-            <section className={'bg-[#3b4838]'}>
+            <div className={'bg-[#3b4838] w-screen sm:w-[120vw'}>
                 <h1 className={'MyWorkTitle'}>MY WORK</h1>
                 <Row className={'justify-content-center relative'}>
                     <div ref={container}>
@@ -29,7 +28,7 @@ const WorkSection = () => {
                         }
                     </div>
                 </Row>
-            </section>
+            </div>
         </>
     )
 }

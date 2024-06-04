@@ -60,6 +60,7 @@
     color: #f8d7ae;
     font-family: "Serif";
     font-style: italic;
+    margin-left: 2vw;
 }
 
 .MiniTitleWhyMe {
@@ -104,6 +105,9 @@
         text-align: center !important;
 
     }
+    .MyWorkTitle{
+        font-size: 15vh;
+    }
 
 }
 
@@ -132,6 +136,13 @@
     .MeTitle {
         margin-top: 30vh;
         text-align: center !important;
+    }
+
+    .MyWorkTitle {
+        font-size: 10vh;
+        width: 100vw;
+        text-align: center;
+         padding-top: 5vh;
     }
 
 
@@ -205,7 +216,11 @@
 
     .MyWorkTitle {
         font-size: 10vh;
-        width: fit-content;
+        width: 100vw;
+        text-align: center;
+
     }
+
+
 }
 

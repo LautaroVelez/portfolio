@@ -1,7 +1,7 @@
 import '../assets/styles/CardWork.css'
-import {Col, Row} from "react-bootstrap";
+
 import {motion, useScroll, useTransform} from 'framer-motion';
-import React, {useRef} from "react";
+import  {useRef} from "react";
 import {FaCss3, FaFigma, FaHtml5, FaReact} from "react-icons/fa";
 import projects from "../assets/utils/data.js"
 
