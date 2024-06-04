@@ -6,9 +6,12 @@
     font-size: 3vh;
 }
 
+.IfYouAreText{
+    font-size: 4vh;
+}
+
 .IconsRow {
     display: inline;
-    width: auto;
     height: 3vh;
     margin: 1vh;
 }
@@ -29,13 +32,31 @@
     margin-right: 0.5vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1023px) and (min-width: 786px) {
+    .IfYouAreText, .pInFooter, .Link {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .IfYouAreText{
+        text-align: center;
+        font-size: 2vh;
+        width: 80vw;
+        margin-bottom: 2vh;
+    }
+
+    .pInFooter{
+        font-size: 2vh;
+    }
+
     .LinkMiniRow {
         margin: 0.5vh 0; /* Adjust margin for smaller screens */
     }
     .Link {
         flex-direction: column; /* Stack icon and text vertically on small screens */
         align-items: center;
+        font-size: 2vh;
     }
     .IconLink {
         margin-right: 0;
