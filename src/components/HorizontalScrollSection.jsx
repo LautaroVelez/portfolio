@@ -26,7 +26,7 @@ const HorizontalScrollSection = () => {
 
     return (
         <section className={''}>
-            <div className={' HorizontalSection bg-[#3b4838] text-center sm:w-screen w-screen'}>
+            <div className={' HorizontalSection bg-[#3b4838] w-[full] text-center sm:w-screen'}>
                 <h1 className={'FrontEndTitle md:h-80vh'}>A</h1>
                 <section ref={targetRef} className={'md:h-[200vh] md:relative w-screen'}>
                     <div

@@ -9,9 +9,8 @@ export default function App() {
     return (
         <div className='main'>
             <AnimatePresence mode='wait'>
-                <Loader key={Loader}></Loader>
+                <Loader key={Loader}/>
                 <LandingPage key={LandingPage}/>
-
             </AnimatePresence>
         </div>
 

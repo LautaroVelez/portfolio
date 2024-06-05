@@ -1,0 +1,53 @@
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+    .HorizontalSection {
+        height: 100vh !important;
+        background-color: #3b4838;
+        width: 100vw !important;
+    }
+
+    .FronteEndWelcome {
+        color: #f8ebd2;
+    }
+
+    .FrontEndTitle {
+        font-size: 40vh;
+        font-weight: 100;
+        font-family: "Kaisei Decol";
+        font-style: italic;
+        color: #f8d7ae;
+    }
+
+}
+
+
+@media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .HorizontalSection {
+        height: 100vh !important;
+        background-color: #3b4838;
+        width: 100vw !important;
+    }
+
+    .FrontEndTitle {
+        font-size: 8vh;
+        padding: 2vh;
+    }
+
+}
+
+
+@media (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .HorizontalSection {
+        height: 100vh !important;
+        background-color: #3b4838;
+        width: 100vw !important;
+    }
+
+    .FrontEndTitle {
+        font-size: 8vh;
+        padding: 2vh;
+    }
+
+}

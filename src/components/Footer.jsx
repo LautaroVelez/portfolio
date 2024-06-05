@@ -13,14 +13,14 @@ const Footer = () => {
     const Email = "mailto:lautivelez28@gmail.com";
     return (
         <div className='relative h-[70vh] bg-[#FBF4EA]' style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
-            <div className='fixed bottom-0 h-[70vh] w-full text-center flex flex-col FontSection '>
+            <div className='fixed bottom-0 h-[70vh] w-[full] text-center flex flex-col FontSection '>
 
                     <div className={'top-0'}>
                         <p className="pInFooter">Thanks for seeing.</p>
                     </div>
 
                     <div className='flex flex-col justify-center h-full '>
-                        <div className='text-center w-[full]'>
+                        <div className='text-center w-[100vw]'>
                             <p className='IfYouAreText'>If you are interested in working with me you can reach me in:</p>
 
                             <div className='container'>

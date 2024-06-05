@@ -35,15 +35,17 @@
 @media (max-width: 1023px) and (min-width: 786px) {
     .IfYouAreText, .pInFooter, .Link {
         font-size: 2vh;
+        text-align: center !important;
     }
 }
 
 @media (max-width: 600px) {
     .IfYouAreText{
-        text-align: center;
+        text-align: center !important;
         font-size: 2vh;
-        width: 80vw;
+        width: 100vw;
         margin-bottom: 2vh;
+
     }
 
     .pInFooter{

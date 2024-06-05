@@ -1,0 +1,38 @@
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+
+    .WhyMeTitle {
+        font-size: 22vh;
+        color: #3b4838;
+        font-family: "Serif";
+        font-style: italic;
+    }
+
+    .MiniTitleWhyMe {
+        font-size: 9vh;
+        color: #3b4838;
+        font-family: Serif;
+        margin-top: 5vh;
+    }
+
+    .paragraphWhyMe {
+        font-size: 4vh;
+        font-family: "Kaisei Decol";
+        color: black;
+        margin-top: 2vh;
+        will-change: opacity, transform;
+        overflow-wrap: break-word !important;
+        word-break: keep-all !important;
+    }
+}
+
+
+@media (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .WhyMeTitle {
+        width: 100vw;
+        font-size: 10vh;
+    }
+}
+

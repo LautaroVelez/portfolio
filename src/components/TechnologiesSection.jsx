@@ -92,7 +92,7 @@ const TechnologiesSection = () => {
     const x3Mobile = useTransform(scrollYProgress, [0, 0.50], ["0%", "0%"]);
 
     return (
-        <section id='Technologies' className='h-[140vh] bg-[#3b4838] w-[full] Technologies' ref={sectionRef}>
+        <section id='Technologies' className='h-[140vh] bg-[#3b4838] w-[100vw] Technologies' ref={sectionRef}>
             {isMobile ? (
                 <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50'>
                     <motion.h1 className={'TechsAndToolsMobile text-start ml-2'} style={{scale: scale1Mobile, x: x1Mobile,}}>TECHNOLOGIES</motion.h1>
