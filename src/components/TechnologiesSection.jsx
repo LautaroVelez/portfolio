@@ -123,7 +123,7 @@ const TechnologiesSection = () => {
                                         key={index}
                                         className='italic ToolsMobile'
                                     >
-                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS','MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                                     </h1>
                                 ))}
                             </div>
@@ -133,7 +133,7 @@ const TechnologiesSection = () => {
                                         key={index}
                                         className='italic ToolsMobile'
                                     >
-                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS','MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                                     </h1>
                                 ))}
                             </div>
