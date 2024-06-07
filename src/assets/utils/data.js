@@ -11,15 +11,23 @@ const projects = [
         title: "MINISTRY OF FINANCE",
         description: "Aplicacion creada para el ministerio de finanzas de cordoba, el objetivo de esta aplicacion es poder organizar visitas a diferentes localidades como grupo, poder formar, editar y eliminar grupos. Crear visitas, editarlas y verlas, y poder asignarle roles a los usuarios autenticados",
         src: "landingfinanciation.jpeg",
-        link: "holaaa",
+        link: "https://financiation2.onrender.com/",
         color: "#D9D9D9",
         icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"]
     },
-    {
-        title: "SERGI C",
+     {
+        title: "CONSTRUCTION SITE",
         description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of the construction company.",
         src: "hola",
-        link: "holaaa",
+        link: "CONSTRUCTIONSITE",
+        color: "#D9D9D9",
+        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript"]
+    },
+    {
+        title: "SERGI C",
+        description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of architect Sergi Comellas..",
+        src: "hola",
+        link: "SERGIC",
         color: "#D9D9D9",
         icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript"]
     }
