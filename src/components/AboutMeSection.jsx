@@ -82,7 +82,7 @@ const AboutMeSection = () => {
                                 Córdoba,
                                 Argentina.</h1>
                             <h1 className="MeText FontEmbed mt-2">
-                                I have a solid knowledge in React, JavaScript, HTML, CSS, and more.
+                                I have a solid knowledge in React, JavaScript, Python, MySQL, and more.
                             </h1>
                             <h1 className="MeText FontKaisei mt-2">
                                 I consider myself a very creative and a hard-working person who is always trying to
@@ -106,7 +106,7 @@ const AboutMeSection = () => {
                                 Córdoba,
                                 Argentina.</h1>
                             <h1 className="MeText FontEmbed mt-2">
-                                I have a solid knowledge in React, JavaScript, HTML, CSS, and more.
+                                I have a solid knowledge in React, JavaScript, Python, MySQL, and more.
                             </h1>
                             <h1 className="MeText FontKaisei mt-2">
                                 I consider myself a very creative and a hard-working person who is always trying to

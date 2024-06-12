@@ -20,7 +20,7 @@ const HorizontalScrollSection = () => {
         target: targetRef3,
     });
 
-    const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-105%"]);
+    const x1 = useTransform(scrollYProgress1, [0, 1], ["20%", "-105%"]);
     const x2 = useTransform(scrollYProgress2, [0, 1], ["20%", "-105%"]);
     const x3 = useTransform(scrollYProgress3, [0, 1], ["20%", "-100%"]);
 
@@ -32,10 +32,10 @@ const HorizontalScrollSection = () => {
                     <div
                         className="md:sticky md:top-0 md:flex md:h-[100vh] items-center relative overflow-hidden md:w-[160vw] sm:w-screen text-center">
                         {isMobile ? (
-                            <h1 className={'FrontEndTitle'}>Front-end</h1>
+                            <h1 className={'FrontEndTitle'}>Full-stack</h1>
                         ) : (
                             <motion.div style={{x: x1}} className="md:flex md:gap-4 sm:h-[50vh]">
-                                <h1 className={'FrontEndTitle'}>Front-end</h1>
+                                <h1 className={'FrontEndTitle'}>Full-stack</h1>
                             </motion.div>
                         )}
                     </div>

@@ -18,12 +18,19 @@ const projects = [
      {
         title: "CONSTRUCTION SITE",
         description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of the construction company.",
-        src: "hola",
-        link: "CONSTRUCTIONSITE",
+        src: "ConstructionSite.png",
+        link: "https://velezconstrucciones.netlify.app",
         color: "#D9D9D9",
-        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript"]
+        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"]
     },
-    {
+
+]
+
+export default projects;
+
+
+/*
+  {
         title: "SERGI C",
         description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of architect Sergi Comellas..",
         src: "hola",
@@ -31,6 +38,4 @@ const projects = [
         color: "#D9D9D9",
         icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript"]
     }
-]
-
-export default projects;
+ */

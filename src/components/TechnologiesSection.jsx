@@ -95,9 +95,15 @@ const TechnologiesSection = () => {
         <section id='Technologies' className='h-[140vh] bg-[#3b4838] w-[100vw] Technologies' ref={sectionRef}>
             {isMobile ? (
                 <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1 sticky top-50'>
-                    <motion.h1 className={'TechsAndToolsMobile text-start ml-2'} style={{scale: scale1Mobile, x: x1Mobile,}}>TECHNOLOGIES</motion.h1>
-                     <motion.h1 className={'TechsAndToolsMobile text-center'} style={{scale: scale2Mobile, x: x2Mobile,}}>&</motion.h1>
-                    <motion.h1 className={'TechsAndToolsMobile text-end mr-2'} style={{scale: scale3Mobile, x: x3Mobile,}}>TOOLS</motion.h1>
+                    <motion.h1 className={'TechsAndToolsMobile text-start ml-2'}
+                               style={{scale: scale1Mobile, x: x1Mobile,}}>TECHNOLOGIES
+                    </motion.h1>
+                    <motion.h1 className={'TechsAndToolsMobile text-center'}
+                               style={{scale: scale2Mobile, x: x2Mobile,}}>&
+                    </motion.h1>
+                    <motion.h1 className={'TechsAndToolsMobile text-end mr-2'}
+                               style={{scale: scale3Mobile, x: x3Mobile,}}>TOOLS
+                    </motion.h1>
                 </motion.div>
             ) : (
                 <motion.div ref={word} className='grid grid-cols-3 grid-rows-1 z-1  sticky top-50 justify-between'>
@@ -123,7 +129,7 @@ const TechnologiesSection = () => {
                                         key={index}
                                         className='italic ToolsMobile'
                                     >
-                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS','MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                                     </h1>
                                 ))}
                             </div>
@@ -133,7 +139,7 @@ const TechnologiesSection = () => {
                                         key={index}
                                         className='italic ToolsMobile'
                                     >
-                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS','MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                        {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'MYSQL', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
                                     </h1>
                                 ))}
                             </div>
@@ -152,7 +158,7 @@ const TechnologiesSection = () => {
                                     }}
                                     className='italic TextH1InPC'
                                 >
-                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'MYSQL', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'FIGMA', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI'][index]}
                                 </motion.h1>
                             ))}
                         </div>
@@ -165,7 +171,7 @@ const TechnologiesSection = () => {
                                     }}
                                     className='italic TextH1InPC'
                                 >
-                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI', 'FIGMA', 'MATERIAL DESIGN', 'RESPONSIVE DESIGN'][index]}
+                                    {['REACT', 'NEXT.JS', 'PYTHON', 'JAVASCRIPT', 'MYSQL', 'HTML5', 'CSS', 'FRAMER MOTION', 'TAILWIND', 'FIGMA', 'BOOTSTRAP', 'ANTD DESIGN', 'MATERIAL UI'][index]}
                                 </motion.h1>
                             ))}
                         </div>
