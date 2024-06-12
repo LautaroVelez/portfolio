@@ -4,7 +4,7 @@ import '/src/assets/styles/LandingPage.css';
 import {isMobile} from "react-device-detect";
 import mewhitoutfondo from "../assets/images/mewhitoutfondo.png";
 import meexpand from "../assets/images/meexpand.jpg";
-import me from "../assets/images/me.jpg";
+
 
 
 const AboutMeSection = () => {
@@ -89,6 +89,10 @@ const AboutMeSection = () => {
                                 learn
                                 something new.
                             </h1>
+                            <h1 className="MeText FontKaisei mt-2">
+                                Currently im working freelance and also learning new technologies like Angular and
+                                Node.js in the XAcademy DEV by Santex.
+                            </h1>
                             <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars,
                                 music,
                                 and watching rom-coms!</h1>
@@ -109,9 +113,13 @@ const AboutMeSection = () => {
                                 learn
                                 something new.
                             </h1>
-                            <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out, cars,
-                                music,
-                                and watching rom-coms!</h1>
+                            <h1 className="MeText FontKaisei mt-2">
+                                Currently im working freelance and also learning new technologies like Angular and Node.js in the XAcademy DEV by Santex.
+                            </h1>
+                                <h1 className="MeText FontKaisei mt-2">Extra: I'm 19 years old, I love working out,
+                                    cars,
+                                    music,
+                                    and watching rom-coms!</h1>
                         </motion.div>
                     </div>)}
             </div>

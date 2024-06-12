@@ -21,8 +21,8 @@ const HorizontalScrollSection = () => {
     });
 
     const x1 = useTransform(scrollYProgress1, [0, 1], ["0%", "-105%"]);
-    const x2 = useTransform(scrollYProgress2, [0, 1], ["0%", "-105%"]);
-    const x3 = useTransform(scrollYProgress3, [0, 1], ["5%", "-100%"]);
+    const x2 = useTransform(scrollYProgress2, [0, 1], ["20%", "-105%"]);
+    const x3 = useTransform(scrollYProgress3, [0, 1], ["20%", "-100%"]);
 
     return (
         <section className={''}>
