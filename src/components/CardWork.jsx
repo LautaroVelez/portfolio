@@ -79,7 +79,7 @@ export const CardWork = ({i, title, description, src, link, progress, range, col
 
                         </div>
                         <motion.div className={'inner'} style={{scale: Imgscale}}>
-                            <img src={`/portfolio/src/assets/images/${src}`} alt="image"/>
+                            <img src={src} alt="image"/>
                         </motion.div>
                     </a>
                 </div>
