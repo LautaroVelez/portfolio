@@ -1,6 +1,6 @@
 import Suicidal from '../images/Suicidal.png'
 import financiation from '../images/landingfinanciation.jpeg';
-import ConstructionSite from '..images/ConstructionSite.png';
+import ConstructionSite from '../images/ConstructionSite.png';
 
 const projects = [
     {
