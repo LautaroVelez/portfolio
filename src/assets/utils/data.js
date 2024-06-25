@@ -16,7 +16,7 @@ const projects = [
         title: "MINISTRY OF FINANCE",
         description: "Aplicacion creada para el ministerio de finanzas de cordoba, el objetivo de esta aplicacion es poder organizar visitas a diferentes localidades como grupo, poder formar, editar y eliminar grupos. Crear visitas, editarlas y verlas, y poder asignarle roles a los usuarios autenticados",
         src: financiation,
-        link: "https://financiation2.onrender.com/",
+        link: "/projectfinanciation",
         color: "#D9D9D9",
         icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"],
            id: 2
@@ -25,7 +25,7 @@ const projects = [
         title: "CONSTRUCTION SITE",
         description: "A web dedicated to showcasing its portfolio of completed projects and specialized expertise of the construction company.",
         src: ConstructionSite,
-        link: "https://velezconstrucciones.netlify.app",
+        link: "/projectconstruction",
         color: "#D9D9D9",
         icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"],
             id: 3

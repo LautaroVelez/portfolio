@@ -5,6 +5,8 @@ import {Route, Routes} from 'react-router-dom';
 import ProjectInfoSuic from "./pages/ProjectInfoSuic/ProjectInfoSuic.jsx";
 import {useEffect} from "react";
 import Lenis from "lenis";
+import ProjectInfoFinan from "./pages/ProjectInfoFinan/ProjectInfoFinan.jsx";
+import ProjectInfoCons from "./pages/ProjectInfoCons/ProjectInfoCons.jsx";
 
 export default function App() {
     useEffect(() => {
@@ -24,8 +26,8 @@ export default function App() {
                 <Routes location={location} key={location.pathname}>
                     <Route path={'/'} element={<LandingPage key={LandingPage}/>}/>
                     <Route path={'/projectSuicidal'} element={<ProjectInfoSuic/>}/>
-                    <Route path={'/projectfinanciation'} element={<ProjectInfoSuic/>}/>
-                    <Route path={'/projectconstruction'} element={<ProjectInfoSuic/>}/>
+                    <Route path={'/projectfinanciation'} element={<ProjectInfoFinan/>}/>
+                    <Route path={'/projectconstruction'} element={<ProjectInfoCons/>}/>
                 </Routes>
             </AnimatePresence>
         </div>
