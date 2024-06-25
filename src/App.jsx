@@ -3,8 +3,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {AnimatePresence} from "framer-motion";
 import {Route, Routes} from 'react-router-dom';
 import ProjectInfoSuic from "./pages/ProjectInfoSuic/ProjectInfoSuic.jsx";
+import {useEffect} from "react";
+import Lenis from "lenis";
 
 export default function App() {
+    useEffect(() => {
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    }, []);
 
     return (
         <div className='main'>
@@ -14,12 +26,12 @@ export default function App() {
                     <Route path={'/projectSuicidal'} element={<ProjectInfoSuic/>}/>
                     <Route path={'/projectfinanciation'} element={<ProjectInfoSuic/>}/>
                     <Route path={'/projectconstruction'} element={<ProjectInfoSuic/>}/>
-            </Routes>
-        </AnimatePresence>
-</div>
+                </Routes>
+            </AnimatePresence>
+        </div>
 
-)
-    ;
+    )
+        ;
 }
 
 
