@@ -25,7 +25,7 @@ const ProjectInfoSuic = () => {
             <div className="m-5">
                 <a
                     href="https://hopeheaven.netlify.app/"
-                    className="uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex"
+                    className="uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex "
                 >
                     <span>Visit Website</span>
                     <FaArrowRight/>
@@ -44,6 +44,12 @@ const ProjectInfoSuic = () => {
                         otro enfoque a
                         una pagina de asistencia al suicida, me parecio que todas las otras son iguales, asi que intente
                         ir por otro lado. Fue desarrollada con bla bla bla. </p>
+                    <h4 className={'uppercase font-bold mt-10'}>Details</h4>
+                    <ul className={'list-disc ml-6'}>
+                        <li className={'mt-2'}>Made with Next.js, Tailwind, Framer Motion, GSAP, GitHub.</li>
+                        <li className={'mt-2'}>May 2024</li>
+                        <li className={'mt-2'}>Designed in Figma</li>
+                    </ul>
                 </div>
             </div>
         </div>
