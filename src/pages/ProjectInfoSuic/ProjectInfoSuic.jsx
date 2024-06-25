@@ -1,7 +1,8 @@
 import {FaArrowLeft} from "react-icons/fa";
 import {FaArrowRight} from "react-icons/fa";
-import Suicidal from "../../assets/images/Suicidal.png";
 import suic1 from "./imgs/suic1.png";
+import suic2 from "./imgs/suic2.png";
+import suic3 from "./imgs/suic3.png";
 
 const ProjectInfoSuic = () => {
     return (
@@ -13,7 +14,8 @@ const ProjectInfoSuic = () => {
             </div>
 
             <div className={'m-10'}>
-                <h4 className={'md:text-4xl FontKaisei md:w-1/2 w-full text-2xl'}> A web designed to help people with suicidal thoughts and
+                <h4 className={'md:text-4xl FontKaisei md:w-1/2 w-full text-2xl'}> A web designed to help people with
+                    suicidal thoughts and
                     provide
                     care and information to those who need it.</h4>
             </div>
@@ -27,21 +29,20 @@ const ProjectInfoSuic = () => {
                     <FaArrowRight/>
                 </a>
             </div>
-            <div className={'md:flex'}>
-                <div className={'md:w-3/4'}>
-                <img src={Suicidal} alt=""/>
+            <div className={'md:flex '}>
+                <div className={' md:w-3/4'}>
+                    <img src={suic1} alt=""/>
+                    <img src={suic2} alt="" className={'mt-3'}/>
+                    <img src={suic3} alt="" className={'mt-3'}/>
                 </div>
-                <div  className={'md:w-1/5 md:ml-10 md:sticky md:top-20'}>
+
+                <div className={'md:w-1/5 md:ml-10 md:sticky md:top-20 md: right-0'}>
                     <h4 className={'uppercase font-bold'}>About</h4>
-                    <p className={'mt-3'}>I developed this website como mi Self-Learning, quise darle otro enfoque a
+                    <p className={'md:mt-3 md:m-0 m-10 '}>I developed this website como mi Self-Learning, quise darle otro enfoque a
                         una pagina de asistencia al suicida, me parecio que todas las otras son iguales, asi que intente
                         ir por otro lado. Fue desarrollada con bla bla bla. </p>
                 </div>
             </div>
-            <div className={'mt-4'}>
-                <img src={suic1} alt="" className={'w-3/4'}/>
-            </div>
-
         </div>
     )
 }
