@@ -7,9 +7,10 @@ const projects = [
         title: "SUICIDAL CARE",
         description: "A web designed to help people with suicidal thoughts and provide care and information to those who need it.",
         src: Suicidal,
-        link: "https://hopeheaven.netlify.app/",
+        link: '/projectSuicidal',
         color: "#D9D9D9",
-        icons: ["React", "Figma", "Framer Motion", "Greensock", "HTML5", "CSS3", "JavaScript"]
+        icons: ["React", "Figma", "Framer Motion", "Greensock", "HTML5", "CSS3", "JavaScript"],
+        id: 1
     },
     {
         title: "MINISTRY OF FINANCE",
@@ -17,7 +18,8 @@ const projects = [
         src: financiation,
         link: "https://financiation2.onrender.com/",
         color: "#D9D9D9",
-        icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"]
+        icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"],
+           id: 2
     },
      {
         title: "CONSTRUCTION SITE",
@@ -25,7 +27,8 @@ const projects = [
         src: ConstructionSite,
         link: "https://velezconstrucciones.netlify.app",
         color: "#D9D9D9",
-        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"]
+        icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"],
+            id: 3
     },
 
 ]

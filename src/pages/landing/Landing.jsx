@@ -10,6 +10,7 @@ import WhyMeSection from "../../components/WhyMeSection.jsx";
 import Section from "../../components/Section.jsx";
 import TechnologiesSection from "../../components/TechnologiesSection.jsx";
 import Footer from "../../components/Footer.jsx";
+import Loader from "../../components/Loader.jsx";
 
 
 const LandingPage = () => {
@@ -30,14 +31,13 @@ const LandingPage = () => {
 
     return (
         <>
-            <div className={'w-screen'}>
-                <HorizontalScrollSection/>
-                <AboutMeSection/>
-                <WorkSection/>
-                <WhyMeSection/>
-                <TechnologiesSection/>
-                <Footer/>
-            </div>
+            <Loader key={Loader}/>
+            <HorizontalScrollSection/>
+            <AboutMeSection/>
+            <WorkSection/>
+            <WhyMeSection/>
+            <TechnologiesSection/>
+            <Footer/>
 
         </>
     );

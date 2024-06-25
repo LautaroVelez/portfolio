@@ -11,7 +11,7 @@ import {IoLogoJavascript} from "react-icons/io";
 import {MdArrowOutward} from "react-icons/md";
 
 
-export const CardWork = ({i, title, description, src, link, progress, range, color, targetScale}) => {
+export const CardWork = ({i, title, src, link, progress, range, color, targetScale}) => {
     const container = useRef(null);
     const {scrollYProgress} = useScroll({
         target: container,
