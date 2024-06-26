@@ -70,13 +70,8 @@ export const CardWork = ({i, title, src, link, progress, range, color, targetSca
 
                         </div>
                         <div className={'viewProject'}>
-
-
                             <p>VIEW PROJECT</p>
-
                             <MdArrowOutward className={'arrowIcon'}/>
-
-
                         </div>
                         <motion.div className={'inner'} style={{scale: Imgscale}}>
                             <img src={src} alt="image"/>

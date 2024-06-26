@@ -12,12 +12,7 @@ const ProjectInfoFinan = () => {
             </div>
 
             <div className={'m-10'}>
-                <h4 className={'md:text-3xl FontKaisei md:w-1/2 w-full text-2xl'}> Application created for the ministry
-                    of finances of cordoba, the objective of this application is to be able to organize visits to
-                    different
-                    locations as a group, being able to form, edit and delete groups. Create visits, edit and view them,
-                    and
-                    be able to assign roles to authenticated users </h4>
+                <h4 className={'md:text-3xl FontKaisei md:w-1/2 w-full text-2xl'}> This project is a comprehensive finance management website developed for the Ministry of Finance of the Province of Cordoba. It facilitates financial tracking, reporting, and analysis for government officials.</h4>
 
             </div>
 
@@ -39,14 +34,17 @@ const ProjectInfoFinan = () => {
 
                 <div className={'md:w-1/5 md:ml-10  md:sticky md:top-20 md:right-0  h-full'}>
                     <h4 className={'uppercase font-bold md:m-0 m-10'}>About</h4>
-                    <p className={'md:mt-3 md:m-0 m-10 '}>I developed this website como mi Self-Learning, quise darle
-                        otro enfoque a
-                        una pagina de asistencia al suicida, me parecio que todas las otras son iguales, asi que intente
-                        ir por otro lado. Fue desarrollada con bla bla bla. </p>
+                    <p className={'md:mt-3 md:m-0 m-10 '}>This website was developed as part of a team project during my studies. It was a collaborative effort involving multiple roles and responsibilities, showcasing my ability to work in a team and manage complex requirements. </p>
+                   
+                    <h4 className={'uppercase font-bold md:m-0 m-10 mt-5'}>Role</h4>
+                    <p className={'md:mt-3 md:m-0 m-10 '}>Product Owner and Full-Stack Developer.</p> 
+                    <p className={'md:mt-3 md:m-0 m-10 '}>In this role, I primarily focused on front-end development, ensuring a seamless and engaging user experience. Additionally, I contributed to several features in both the backend and the database.</p>
+                   
                     <h4 className={'uppercase font-bold mt-10'}>Details</h4>
                     <ul className={'list-disc ml-6'}>
-                        <li className={'mt-2'}>Made with Next.js, Tailwind, Framer Motion, GSAP, GitHub.</li>
-                        <li className={'mt-2'}>May 2024</li>
+                        <li className={'mt-2'}>Made with React, JavaScript, Postgresql, Python, Django, Scrum, GitHub.</li>
+                        <li className={'mt-2'}>Design Tools: Material UI, Antd Design, Boostrap.</li>
+                        <li className={'mt-2'}>Year 2023</li>
                         <li className={'mt-2'}>Designed in Figma</li>
                     </ul>
                 </div>
