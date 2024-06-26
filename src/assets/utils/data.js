@@ -6,7 +6,7 @@ const projects = [
     {
         title: "SUICIDAL CARE",
         src: Suicidal,
-        link: '/portfolio/projectsuicidal',
+        link: '#/projectsuicidal',
         color: "#D9D9D9",
         icons: ["React", "Figma", "Framer Motion", "Greensock", "HTML5", "CSS3", "JavaScript"],
         id: 1
@@ -14,7 +14,7 @@ const projects = [
     {
         title: "MINISTRY OF FINANCE",
         src: financiation,
-        link: "/portfolio/projectfinanciation",
+        link: "#/projectfinanciation",
         color: "#D9D9D9",
         icons: ["React", "HTML5", "CSS3", "Figma", "Django", "MySQL"],
            id: 2
@@ -22,7 +22,7 @@ const projects = [
      {
         title: "CONSTRUCTION SITE",
         src: ConstructionSite,
-        link: "/portfolio/projectconstruction",
+        link: "#/projectconstruction",
         color: "#D9D9D9",
         icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"],
             id: 3

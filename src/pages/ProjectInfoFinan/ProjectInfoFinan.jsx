@@ -6,13 +6,17 @@ import finan3 from './imgs/finan3.png';
 import finan4 from './imgs/finan4.png';
 import finan5 from './imgs/finan5.png';
 import finan6 from './imgs/finan6.png';
+import {useEffect} from "react";
 
 const ProjectInfoFinan = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
-                   href="/portfolio"><FaArrowLeft/><span>BACK</span></a>
+                   href="/"><FaArrowLeft/><span>BACK</span></a>
                 <h1 className={'FontKaisei flex items-center space-x-2'}>| Project Ministry of Finance</h1>
             </div>
 
@@ -67,7 +71,7 @@ const ProjectInfoFinan = () => {
                         </li>
                         <li className={'mt-2'}>Design Tools: Material UI, Antd Design, Boostrap.</li>
                         <li className={'mt-2'}>Year 2023</li>
-                        <li className={'mt-2'}>Designed in Figma</li>
+                        <li className={'mt-2 pb-20'}>Designed in Figma</li>
                     </ul>
                 </div>
             </div>

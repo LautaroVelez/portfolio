@@ -4,13 +4,17 @@ import const1 from '../../assets/images/ConstructionSite.png';
 import const2 from './imgs/const2.png';
 import const3 from './imgs/const3.png';
 import const4 from './imgs/const4.png';
+import {useEffect} from "react";
 
 const ProjectInfoCons = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
-                   href="/portfolio"><FaArrowLeft/><span>BACK</span></a>
+                   href="/"><FaArrowLeft/><span>BACK</span></a>
                 <h1 className={'FontKaisei flex items-center space-x-2'}>| Project Construction Site</h1>
             </div>
 

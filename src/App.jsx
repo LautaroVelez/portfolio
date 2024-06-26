@@ -1,12 +1,12 @@
-import LandingPage from "./pages/landing/Landing.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
-import { Route, Routes, useLocation } from 'react-router-dom';
+import LandingPage from "./pages/landing/Landing.jsx";
 import ProjectInfoSuic from "./pages/ProjectInfoSuic/ProjectInfoSuic.jsx";
-import { useEffect } from "react";
-import Lenis from "lenis";
 import ProjectInfoFinan from "./pages/ProjectInfoFinan/ProjectInfoFinan.jsx";
 import ProjectInfoCons from "./pages/ProjectInfoCons/ProjectInfoCons.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Lenis from "lenis";
 
 export default function App() {
     useEffect(() => {
@@ -26,10 +26,11 @@ export default function App() {
         <div className='main'>
             <AnimatePresence mode='wait'>
                 <Routes location={location} key={location.pathname}>
-                    <Route path='/portfolio' element={<LandingPage key={LandingPage} />} />
-                    <Route path='/portfolio/projectsuicidal' element={<ProjectInfoSuic />} />
-                    <Route path='/portfolio/projectfinanciation' element={<ProjectInfoFinan />} />
-                    <Route path='/portfolio/projectconstruction' element={<ProjectInfoCons />} />
+                    <Route path='/' element={<Navigate to="/portfolio" />} />
+                    <Route path='/portfolio' element={<LandingPage />} />
+                    <Route path='/projectsuicidal' element={<ProjectInfoSuic />} />
+                    <Route path='/projectfinanciation' element={<ProjectInfoFinan />} />
+                    <Route path='/projectconstruction' element={<ProjectInfoCons />} />
                 </Routes>
             </AnimatePresence>
         </div>

@@ -3,13 +3,18 @@ import { FaArrowRight } from "react-icons/fa";
 import suic1 from "./imgs/suic1.png";
 import suic2 from "./imgs/suic2.png";
 import suic3 from "./imgs/suic3.png";
+import {useEffect} from "react";
 
 const ProjectInfoSuic = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
-                    href="/portfolio"><FaArrowLeft /><span>BACK</span></a>
+                    href="/"><FaArrowLeft /><span>BACK</span></a>
                 <h1 className={'FontKaisei flex items-center space-x-2'}>| Project Suicidal Care</h1>
             </div>
 
