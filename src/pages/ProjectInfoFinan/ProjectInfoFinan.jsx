@@ -7,12 +7,14 @@ import finan4 from './imgs/finan4.png';
 import finan5 from './imgs/finan5.png';
 import finan6 from './imgs/finan6.png';
 import {useEffect} from "react";
+import Stairs from "../../assets/utils/Stairs.jsx";
 
 const ProjectInfoFinan = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     return (
+          <Stairs>
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
@@ -76,6 +78,7 @@ const ProjectInfoFinan = () => {
                 </div>
             </div>
         </div>
+          </Stairs>
     )
 }
 

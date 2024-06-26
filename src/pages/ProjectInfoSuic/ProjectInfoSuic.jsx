@@ -4,6 +4,7 @@ import suic1 from "./imgs/suic1.png";
 import suic2 from "./imgs/suic2.png";
 import suic3 from "./imgs/suic3.png";
 import {useEffect} from "react";
+import Stairs from "../../assets/utils/Stairs.jsx";
 
 const ProjectInfoSuic = () => {
     useEffect(() => {
@@ -11,6 +12,7 @@ const ProjectInfoSuic = () => {
     }, []);
 
     return (
+        <Stairs>
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
@@ -52,6 +54,7 @@ const ProjectInfoSuic = () => {
                 </div>
             </div>
         </div>
+            </Stairs>
     )
 }
 

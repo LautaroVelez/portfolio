@@ -55,7 +55,6 @@ const Loader = () => {
     }, []);
 
     return (
-        <Stairs>
             <Container fluid className={'LoaderContainer w-screen'}>
                 <div className="h-screen relative align-middle justify-items-center sm:w-screen overflow-x-hidden ">
                     <Row>
@@ -138,7 +137,6 @@ const Loader = () => {
 
                 </div>
             </Container>
-        </Stairs>
     )
         ;
 }

@@ -7,20 +7,22 @@ import WhyMeSection from "../../components/WhyMeSection.jsx";
 import TechnologiesSection from "../../components/TechnologiesSection.jsx";
 import Footer from "../../components/Footer.jsx";
 import Loader from "../../components/Loader.jsx";
+import Stairs from "../../assets/utils/Stairs.jsx";
 
 
 const LandingPage = () => {
 
     return (
         <>
-            <Loader key={Loader}/>
-            <HorizontalScrollSection/>
-            <AboutMeSection/>
-            <WorkSection/>
-            <WhyMeSection/>
-            <TechnologiesSection/>
-            <Footer/>
-
+            <Stairs>
+                <Loader key={Loader}/>
+                <HorizontalScrollSection/>
+                <AboutMeSection/>
+                <WorkSection/>
+                <WhyMeSection/>
+                <TechnologiesSection/>
+                <Footer/>
+            </Stairs>
         </>
     );
 };

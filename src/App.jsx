@@ -7,6 +7,7 @@ import ProjectInfoFinan from "./pages/ProjectInfoFinan/ProjectInfoFinan.jsx";
 import ProjectInfoCons from "./pages/ProjectInfoCons/ProjectInfoCons.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lenis from "lenis";
+import Stairs from "./assets/utils/Stairs.jsx";
 
 export default function App() {
     useEffect(() => {
@@ -25,6 +26,7 @@ export default function App() {
     return (
         <div className='main'>
             <AnimatePresence mode='wait'>
+
                 <Routes location={location} key={location.pathname}>
                     <Route path='/' element={<Navigate to="/portfolio" />} />
                     <Route path='/portfolio' element={<LandingPage />} />
@@ -32,6 +34,7 @@ export default function App() {
                     <Route path='/projectfinanciation' element={<ProjectInfoFinan />} />
                     <Route path='/projectconstruction' element={<ProjectInfoCons />} />
                 </Routes>
+
             </AnimatePresence>
         </div>
     );
