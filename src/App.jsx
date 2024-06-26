@@ -24,7 +24,7 @@ export default function App() {
         <div className='main'>
             <AnimatePresence mode='wait'>
                 <Routes location={location} key={location.pathname}>
-                    <Route path={'/'} element={<LandingPage key={LandingPage}/>}/>
+                    <Route path={'/portfolio'} index element={<LandingPage key={LandingPage}/>}/>
                     <Route path={'/projectSuicidal'} element={<ProjectInfoSuic/>}/>
                     <Route path={'/projectfinanciation'} element={<ProjectInfoFinan/>}/>
                     <Route path={'/projectconstruction'} element={<ProjectInfoCons/>}/>

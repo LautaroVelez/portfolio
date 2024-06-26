@@ -12,7 +12,7 @@ const ProjectInfoFinan = () => {
         <div className="bg-[#f3e6d8] text-black w-full">
             <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
-                   href="/"><FaArrowLeft/><span>BACK</span></a>
+                   href="/portfolio"><FaArrowLeft/><span>BACK</span></a>
                 <h1 className={'FontKaisei flex items-center space-x-2'}>| Project Ministry of Finance</h1>
             </div>
 
