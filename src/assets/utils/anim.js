@@ -1,15 +1,11 @@
 export const expand = {
 
     initial: {
-
         top: 0
-
     },
 
     enter: (i) => ({
-
         top: "100vh",
-
         transition: {
             duration: 0.8,
             delay: 0.09 * i,
