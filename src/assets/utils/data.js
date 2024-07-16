@@ -1,6 +1,7 @@
 import Suicidal from '../images/Suicidal.png'
 import financiation from '../images/landingfinanciation.jpeg';
 import ConstructionSite from '../images/ConstructionSite.png';
+import curriculum from '../images/CURR1.png';
 
 const projects = [
     {
@@ -26,6 +27,14 @@ const projects = [
         color: "#D9D9D9",
         icons: ["React", "Figma", "HTML5", "CSS3", "JavaScript", "Framer Motion"],
             id: 3
+    },
+     {
+        title: "Curriculum Project",
+        src: curriculum,
+        link: "#/projectcv",
+        color: "#D9D9D9",
+        icons: ["React", "JavaScript"],
+            id: 4
     },
 
 ]

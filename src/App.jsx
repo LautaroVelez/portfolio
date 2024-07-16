@@ -8,6 +8,7 @@ import ProjectInfoCons from "./pages/ProjectInfoCons/ProjectInfoCons.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lenis from "lenis";
 import Stairs from "./assets/utils/Stairs.jsx";
+import ProjectInfoCV from "./pages/ProjectInfoCV/ProjectInfoCV.jsx";
 
 export default function App() {
     useEffect(() => {
@@ -33,6 +34,7 @@ export default function App() {
                     <Route path='/projectsuicidal' element={<ProjectInfoSuic />} />
                     <Route path='/projectfinanciation' element={<ProjectInfoFinan />} />
                     <Route path='/projectconstruction' element={<ProjectInfoCons />} />
+                    <Route path='/projectcv' element={<ProjectInfoCV />} />
                 </Routes>
 
             </AnimatePresence>
