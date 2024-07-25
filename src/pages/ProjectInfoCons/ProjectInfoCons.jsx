@@ -13,7 +13,7 @@ const ProjectInfoCons = () => {
     }, []);
     return (
         <Stairs>
-            <div className="bg-[#f3e6d8] text-black w-full">
+            <div className="bg-[#f3e6d8] text-black w-screen">
                 <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
                     <a className="FontKaisei flex items-center space-x-2 font-black"
                        href="/portfolio/"><FaArrowLeft/><span>BACK</span></a>
@@ -32,7 +32,7 @@ const ProjectInfoCons = () => {
                 <div className="m-5">
                     <a
                         href="https://velezconstrucciones.netlify.app"
-                        className="uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex "
+                        className="aLinkks uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex "
                     >
                         <span>Visit Website</span>
                         <FaArrowRight/>

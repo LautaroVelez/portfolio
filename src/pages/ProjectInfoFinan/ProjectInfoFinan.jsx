@@ -15,8 +15,8 @@ const ProjectInfoFinan = () => {
     }, []);
     return (
           <Stairs>
-        <div className="bg-[#f3e6d8] text-black w-full">
-            <div className="p-10 text-left  flex items-center space-x-2 inline-flex sticky top-0">
+        <div className="bg-[#f3e6d8] text-black w-screen">
+            <div className="p-10 text-left  items-center space-x-2 inline-flex sticky top-0">
                 <a className="FontKaisei flex items-center space-x-2 font-black"
                    href="/portfolio/"><FaArrowLeft/><span>BACK</span></a>
                 <h1 className={'FontKaisei flex items-center space-x-2'}>| Project Ministry of Finance</h1>
@@ -32,7 +32,7 @@ const ProjectInfoFinan = () => {
             <div className="m-5">
                 <a
                     href="https://financiation2.onrender.com/"
-                    className="uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex "
+                    className="aLinkks uppercase FontKaisei text-left font-black flex items-center space-x-2 inline-flex "
                 >
                     <span>Visit Website</span>
                     <FaArrowRight/>
