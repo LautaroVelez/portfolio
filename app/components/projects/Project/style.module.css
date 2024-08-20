@@ -1,0 +1,28 @@
+.project{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.project:last-of-type{
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.project:hover{
+    opacity: 0.5;
+}
+
+.project:hover h2{
+    transform: translateX(-10px);
+}
+
+.project:hover p{
+    transform: translateX(10px);
+}
+
+.project h2{
+    transition: all 0.4s;
+}
+
+.project p{
+    transition: all 0.4s;
+}
