@@ -58,7 +58,7 @@ export default function StickyCursor({stickyElement}) {
 
     }
 
-  }, [])
+  }, [manageMouseMove])
 
 
 

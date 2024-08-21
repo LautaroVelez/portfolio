@@ -123,8 +123,8 @@ export default function ProjectPage({params}) {
                 </div>
                 <div className={'flex md:w-[90vw] w-full justify-center items-center mx-auto'}>
                     <div className={'flex justify-center w-[90%]'}>
-                        <img src={`/images/${project.directory}/${project.src}`} alt={project.title}
-                             className={'w-full h-auto object-contain rounded-xl'}/>
+                        <Image src={`/images/${project.directory}/${project.src}`} alt={project.title}
+                             className={' object-contain rounded-xl'} width={1200} height={900}/>
                     </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function ProjectPage({params}) {
             <div className={'md:mt-28 mt-12 w-full h-full flex justify-center relative'}>
                 <div className={'relative w-[80vw] h-full flex flex-wrap justify-center items-center'}>
                     {project.responsive.map(({id, src}) => (
-                        <div className={'md:w-1/2 w-full p-2'} key={id}>
+                        <div className={'w-auto  p-2'} key={id}>
                             <Image src={`/images/${project.directory}/${src}`} priority alt={src} width={600} height={800}
                                    className={' rounded-xl'}/>
                         </div>
