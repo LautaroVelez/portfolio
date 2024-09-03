@@ -109,6 +109,22 @@ const projectsList = [{
         video: 'curr.mp4',
         responsive: [],
         id: '7'
-    },]
+    },{
+        title: 'To-Do List',
+        des: 'Personal Project',
+        src: "todo.png",
+        location: "Córdoba, Argentina",
+        year: "2024",
+        made: 'React, Next.js, TypeScript, Github',
+        link: "https://todo-list-lautarovelezs-projects.vercel.app/",
+        about: "I created this project using TypeScript as part of my journey to learn and master the technology. The main objective was to develop a Todo List application with advanced functionalities, following specific guidelines:\n" +
+            " Add and Delete Tasks, Mark as Complete/Incomplete, Filtering of tasks and persisting even after the page is refreshed, using localStorage." +
+            " To enhance performance, especially with a growing list of tasks, I utilized React.memo and useCallback.\n" +
+            "This project was a great learning experience and helped me deepen my understanding of TypeScript and React. ",
+        directory: 'todo',
+        video: 'todovideo.mp4',
+        responsive: [{id: '1', src: 'todoresponsive.png'}],
+        id: '8'
+    }]
 
 export default projectsList;

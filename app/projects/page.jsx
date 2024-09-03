@@ -7,6 +7,7 @@ import {BreadcrumbItem, Breadcrumbs} from "@nextui-org/breadcrumbs";
 import {Poppins} from "next/font/google";
 import Lenis from "lenis";
 import AlmostFooter from "@/app/components/almostFooter/AlmostFooter";
+import {Button} from "@nextui-org/react";
 
 
 const poppinsThin = Poppins({
@@ -14,6 +15,11 @@ const poppinsThin = Poppins({
 })
 
 export default function Projects() {
+    const filterButtons = ['All  ⁽⁸⁾', "Work ⁽²⁾", "Personal Projects  ⁽⁶⁾"]
+    const [filterList, setFilterList] = useState([])
+    const [typeFilter, setTypeFilter] = useState()
+
+
     useEffect(() => {
         const lenis = new Lenis();
 
@@ -21,10 +27,31 @@ export default function Projects() {
             lenis.raf(time);
             requestAnimationFrame(raf);
         }
-
         requestAnimationFrame(raf);
+        setFilterList(projectsList)
     }, []);
     const [modal, setModal] = useState({active: false, index: 0})
+
+    function handleFilter(filterName) {
+        switch (filterName) {
+            case "All  ⁽⁸⁾":
+                setFilterList(projectsList)
+                setTypeFilter(filterName)
+                break;
+            case "Personal Projects  ⁽⁶⁾":
+                setFilterList(projectsList.filter(project => project.des.includes( "Personal Project")))
+                setTypeFilter(filterName)
+                break;
+            case "Work ⁽²⁾":
+                setFilterList(projectsList.filter(project => project.des === "Desing & Development"))
+                setTypeFilter(filterName)
+                break;
+            default:
+                setFilterList(projectsList)
+                break;
+        }
+    }
+
     return (
         <>
             <div className={'md:pb-28 pb-12'}>
@@ -39,14 +66,23 @@ export default function Projects() {
                     </Breadcrumbs>
 
                 </div>
-                <div className={'md:p-44 p-12 md:flex w-full justify-start'}>
+                <div className={'md:p-44 p-12  w-full justify-start'}>
                     <div
                         className={'md:w-[50vw] w-full md:order-1  items-center order-2 md:text-start text-center flex md:justify-end justify-center'}>
                         <h1 className={`${poppinsThin.className} text-white md:text-[4rem] text-[2rem]`}>Creating next
                             level
                             digital products</h1>
                     </div>
+                    <div className={'mt-12 md:flex md:justify-start w-full justify-center'}>
+                        {filterButtons.map((filterName, index) => (
+                            <Button key={index}
+                                    onClick={()=>handleFilter(filterName)}
+                                    className={`md:w-auto md:h-[10vh] h-[8vh] w-full bg-[#171717] border border-white text-white hover:bg-[#525252] hover:border-[#525252] md:mx-4 md:mt-0 mt-4 ${typeFilter === filterName? "bg-[#525252] border-[#525252]" : ""} "`}
+                                    radius={"full"}
+                                    size={"lg"}>{filterName}</Button>))}
+                    </div>
                 </div>
+
                 <div className='flex  justify-center align-middle'>
                     <div>
                         <div className='md:w-[80vw] w-full text-[#FFFFFF] flex justify-center'>
@@ -58,14 +94,14 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className='md:w-[80vw] w-full flex flex-col text-white align-middle justify-center'>
-                            {projectsList.map((project, index) => {
+                            {filterList.map((project, index) => {
                                 const projectName = project.title.toLowerCase().replace(/\s+/g, '-');
                                 return <Project index={index} title={project.title} setModal={setModal} key={index}
                                                 des={project.des} location={project.location} year={project.year}
                                                 href={`/projects/${project.id}`}/>
                             })}
                         </div>
-                        <Modal modal={modal} projects={projectsList}/>
+                        <Modal modal={modal} projects={filterList}/>
                     </div>
                 </div>
             </div>

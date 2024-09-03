@@ -1,4 +1,4 @@
-'use client'
+                                                                                                                                                'use client'
 import {Poppins, Roboto} from 'next/font/google';
 import {TfiWorld} from "react-icons/tfi";
 import Marquee from "react-fast-marquee";
