@@ -59,3 +59,97 @@ html.lenis, html.lenis body {
   background-color: #222a76;
   opacity: 100%;
 }
+
+.switch{
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.switch input{
+  appearance: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: #1e1e1e;
+  outline: none;
+}
+
+.switch input::before,
+.switch input::after{
+  z-index: 2;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  font-weight: bolder;
+}
+
+.switch input::before{
+  content: ".ESP";
+  left: 40px;
+}
+
+.switch input::after{
+  content: ".ENG";
+  right: 40px;
+}
+
+.switch input:checked{
+  background-color: #171717;
+}
+
+.switch label{
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 4px;
+  border-radius: 20px;
+}
+
+.switch input{
+  transition: 0.25s;
+}
+
+.switch input:checked::after{
+  color: #ffffff;
+  transition: color 0.5s;
+}
+
+.switch input:checked::before{
+  color: #000000;
+  transition: color 0.5s;
+}
+
+.switch input:checked+label{
+  left: 10px;
+  right: 100px;
+  background: #ffffff;
+  transition: left 0.5s, right 0.4s 0.2s;
+}
+
+.switch input:not(:checked){
+  background: #171717;
+  transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before{
+  color: #ffffff;
+  transition: color 0.5s;
+}
+
+
+
+/*eng*/
+.switch input:not(:checked)::after{
+  color: black;
+  transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked)+label{
+  left: 100px;
+  right: 10px;
+  background: #fbfbfb;
+  transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
+}
+
