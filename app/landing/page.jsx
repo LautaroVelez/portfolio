@@ -12,7 +12,7 @@ import Modal from "@/app/components/projects/Modal/Modal";
 import AlmostFooter from "@/app/components/almostFooter/AlmostFooter";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import i18n from "@/i18n"; // Importa useTranslation
+import useProjectsList from "@/app/projects/projectsList"; // Importa useTranslation
 
 const poppinsBold = Poppins({
     weight: '600', subsets: ['latin'],
@@ -25,10 +25,7 @@ const roboto = Roboto({
 });
 
 export default function Page() {
-
-    useEffect(() => {
-        i18n.init(); // Inicializa i18next
-    }, []);
+    const projectsList = useProjectsList();
 
     const { t } = useTranslation('landing'); // Utiliza useTranslation
     const [modal, setModal] = useState({ active: false, index: 0 });

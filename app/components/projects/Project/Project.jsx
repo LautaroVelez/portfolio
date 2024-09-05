@@ -1,12 +1,17 @@
 'use client';
-import React from 'react'
+import React from 'react';
 import styles from './style.module.css';
 import {Poppins} from "next/font/google";
 import Link from "next/link";
+import {useTranslation} from "react-i18next"; // Importa useTranslation
+
 const poppinsThin = Poppins({
     weight: '200', subsets: ['latin'],
 })
+
 export default function Project({index, title, setModal, location, year, des, href}) {
+    const { t } = useTranslation('projects'); // Utiliza useTranslation
+    
     return (
         <Link href={href} className={'block'}>
             <div

@@ -10,6 +10,7 @@ import Lenis from "lenis";
 import {useEffect, useRef} from "react";
 import emailjs from '@emailjs/browser';
 import {BreadcrumbItem, Breadcrumbs} from "@nextui-org/breadcrumbs";
+import {useTranslation} from "react-i18next";
 
 const poppinsBold = Poppins({
     weight: '600', subsets: ['latin'],
@@ -34,22 +35,22 @@ export default function Contact() {
 
         requestAnimationFrame(raf);
     }, []);
-
+    const {t} = useTranslation('contact'); // Utiliza useTranslation
     const stickyElement = useRef(null);
 
     const linkedin = "https://www.linkedin.com/in/lautaro-velez-ba345421b/"
     const github = "https://github.com/LautaroVelez"
 
     function sendEmail(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    emailjs.sendForm('service_d9pdm9r', 'template_6vol9oc', e.target, 'CeVl6Z3uKmdaG3xus')
-      .then((result) => {
-          console.log('email sended')
-      }, (error) => {
-          console.log(error.text);
-      });
-  }
+        emailjs.sendForm('service_d9pdm9r', 'template_6vol9oc', e.target, 'CeVl6Z3uKmdaG3xus')
+            .then((result) => {
+                console.log('email sended')
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
     return (
         <>
@@ -61,7 +62,7 @@ export default function Contact() {
                     }}>
 
                         <BreadcrumbItem href={"/"}>Home</BreadcrumbItem>
-                        <BreadcrumbItem href={"/contact"}>Contact</BreadcrumbItem>
+                        <BreadcrumbItem href={"/contact"}>{t("contact_breadcrum")}</BreadcrumbItem>
                     </Breadcrumbs>
                 </div>
                 <div className={'md:p-44 p-12 md:flex w-full justify-center'}>
@@ -74,15 +75,13 @@ export default function Contact() {
                     </div>
                     <div
                         className={'md:w-[40vw] w-full md:order-1  items-center order-2 md:text-start text-center flex md:justify-end justify-center'}>
-                        <h1 className={`${poppinsThin.className} text-white md:text-[4rem] text-[2rem]`}>Let’s start a
-                            project togheter</h1>
+                        <h1 className={`${poppinsThin.className} text-white md:text-[4rem] text-[2rem]`}>{t("work_together_message")}</h1>
                     </div>
                 </div>
                 <div className={'md:pl-12 p-12 md:flex flex-row w-full justify-center align-center'}>
                     <div className={'md:w-[30vw] flex w-full md:justify-end justify-start md:order-2 order-1 '}>
                         <div className={'flex-row'}>
-                            <p className={`md:text-[1rem] text-[0.7rem] text-[lightgrey] ${poppinsThin.className}`}>(CONTACT
-                                DETAILS)</p>
+                            <p className={`md:text-[1rem] text-[0.7rem] text-[lightgrey] ${poppinsThin.className}`}>{t("contact_details")}</p>
                             <p className={`md:text-[1rem] text-[0.7rem] pt-5 text-white ${poppinsThin.className}`}>lautivelez28@gmail.com</p>
                             <p className={`md:text-[1rem] text-[0.7rem] pt-2 text-white ${poppinsThin.className}`}>+54 9
                                 3512743717</p>
@@ -99,8 +98,7 @@ export default function Contact() {
                                 <Divider orientation={"horizontal"} className={'bg-white'}/>
                                 <div className={'flex text-white items-center p-4 pt-12'}>
                                     <h1 className={`${poppinsThin.className}`}>01</h1>
-                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem] `}>What’s
-                                        your name?</h1>
+                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem] `}>{t("your_name")}</h1>
                                 </div>
                                 <Input type="text" name="from_name" variant={"underlined"} required label="Pepe Dou *"
                                        css={{fontSize: '2rem !important'}}
@@ -111,9 +109,7 @@ export default function Contact() {
 
                                 <div className={'flex text-white items-center p-4'}>
                                     <h1 className={`${poppinsThin.className} `}>02</h1>
-                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>What's
-                                        your
-                                        email?</h1>
+                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>{t("your_email")}</h1>
                                 </div>
                                 <Input type="email" name="reply_to" variant={"underlined"} required
                                        label="Pepe@dou.com *"
@@ -122,9 +118,7 @@ export default function Contact() {
                             <div className={'pt-12'}>
                                 <div className={'flex text-white items-center p-4'}>
                                     <h1 className={`${poppinsThin.className} `}>03</h1>
-                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>What's
-                                        the name of
-                                        your organization?</h1>
+                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>{t("your_organization")}</h1>
                                 </div>
                                 <Input type="text" name="organization" variant={"underlined"} label="Pepe & Dou®"
                                        className={'text-white pt-2 capitalize'} color={"primary"}/>
@@ -133,9 +127,7 @@ export default function Contact() {
 
                                 <div className={'flex text-white items-center p-4'}>
                                     <h1 className={`${poppinsThin.className} `}>04</h1>
-                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>What
-                                        services are you
-                                        looking for?</h1>
+                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>{t("services")}</h1>
                                 </div>
                                 <Input type="text" name="services" variant={"underlined"} required
                                        label="Web design, Web development... *"
@@ -145,8 +137,7 @@ export default function Contact() {
 
                                 <div className={'flex text-white items-center p-4'}>
                                     <h1 className={`${poppinsThin.className} `}>05</h1>
-                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>Your
-                                        message</h1>
+                                    <h1 className={`${poppinsThin.className} pl-4 md:text-[2rem] text-[1rem]`}>{t("your_message")}</h1>
                                 </div>
                                 <Textarea type="text" name="message" variant={'underlined'} size={'lg'} required
                                           label="Hello Lautaro, can you help me with ... *"
@@ -160,8 +151,7 @@ export default function Contact() {
                                 <div className={'pr-12'}>
                                     <MagneticGSAP>
                                         <Button size={"lg"} type={"submit"}
-                                                className={'w-auto md:w-[10vw] md:h-[20vh] h-[15vh] text-white font-bold bg-[#455ce9] rounded-[50%] buttonSend '}>Send
-                                            it!</Button>
+                                                className={'w-auto md:w-[10vw] md:h-[20vh] h-[15vh] text-white font-bold bg-[#455ce9] rounded-[50%] buttonSend '}>{t("send")}</Button>
                                     </MagneticGSAP>
                                 </div>
                             </div>

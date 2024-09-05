@@ -1,0 +1,14 @@
+{
+  "breadcrum_about": "Sobre mi",
+  "hello_there_message": "Hola! Soy Lautaro Velez, un desarrollador y diseñador de Córdoba, Argentina.",
+  "i_enjoy_message": "Disfruto aprendiendo cosas nuevas cada día y superando nuevos retos mientras analizo cómo mejoré a través de ellos.",
+  "improving_message": "Estoy mejorando constantemente mis habilidades de desarrollo practicando diariamente.",
+  "learning_message": "Actualmente, estoy aprendiendo:",
+   "help_message": "Te puedo ayudar con...",
+  "design": "Diseño",
+  "design_message": "Con una sólida trayectoria en el diseño de sitios web, entrego diseños digitales sólidos y fáciles de usar..",
+  "development": "Desarollo",
+  "development_message": "Construyo sitios web escalables desde cero que se adaptan perfectamente al diseño, construidos con React o Angular.",
+  "package": "El paquete completo",
+  "package_message": "Un sitio web completo desde el concepto hasta la implementación, eso es lo que me distingue. Mi gran sentido del diseño y mis habilidades de desarrollo me permiten crear proyectos increíbles."
+}

@@ -3,6 +3,9 @@ import image from "@/public/images/image.png";
 import ButtonContact from "@/app/components/buttons/buttonContact/buttonContact";
 import ButtonEmail from "@/app/components/buttons/buttonEmail/buttonEmail";
 import {Poppins, Roboto} from "next/font/google";
+import {useEffect} from "react";
+import {useTranslation} from "react-i18next";
+
 
 const poppinsBold = Poppins({
     weight: '600', subsets: ['latin'],
@@ -15,6 +18,8 @@ const roboto = Roboto({
 })
 
 const AlmostFooter = () => {
+
+    const { t } = useTranslation('footer');
   return (
       <div className={'md:flex flex-row w-full md:justify-between justify-center md:pt-20 pt-16 md:pb-28 pb-12'}>
           <div
@@ -26,11 +31,11 @@ const AlmostFooter = () => {
                                  className={'rounded-full md:h-auto md:w-[10vw] w-[16vw]'} priority/>
                       </div>
                       <div className={'w-full'}>
-                          <h1 className={`${poppinsThin.className} md:text-[4rem] text-[3rem]`}>Let's work</h1>
+                          <h1 className={`${poppinsThin.className} md:text-[4rem] text-[3rem]`}>{t('work_togheter_message')}</h1>
                       </div>
                   </div>
                   <div>
-                      <h1 className={`${poppinsThin.className} md:text-[4rem] text-[3rem]`}>togheter!</h1>
+                      <h1 className={`${poppinsThin.className} md:text-[4rem] text-[3rem]`}>{t('togheter_message')}</h1>
                   </div>
               </div>
           </div>

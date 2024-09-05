@@ -9,6 +9,8 @@ import AlmostFooter from "@/app/components/almostFooter/AlmostFooter";
 import MagneticGSAP from "@/app/components/utils/MagneticGSAP";
 import {FaArrowRight} from "react-icons/fa6";
 import Image from 'next/image'
+import useProjectsList from "@/app/projects/projectsList";
+import {useTranslation} from "react-i18next";
 
 
 const poppinsThin = Poppins({
@@ -22,6 +24,7 @@ const varela = Varela({
 });
 
 export default function ProjectPage({params}) {
+    const {t} = useTranslation('projects');
     useEffect(() => {
         const lenis = new Lenis();
 
@@ -34,7 +37,9 @@ export default function ProjectPage({params}) {
     }, []);
 
     const {id} = params;
+    const projectsList = useProjectsList();
     const project = projectsList.find(proj => proj.id === id);
+
     if (!project) {
         return (
             <div className={'text-white text-center text-3xl items-center flex justify-center h-[100vh]'}>
@@ -48,7 +53,7 @@ export default function ProjectPage({params}) {
         roleContent = (
             <div className={'md:pt-8 md:px-32 pt-8 px-6'}>
                 <div className={'flex justify-start text-[lightgrey]'}>
-                    <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>(ROLE)</p>
+                    <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>{t("role")}</p>
                 </div>
                 <div>
                     <Divider orientation={"horizontal"} className={'text-white bg-white w-full mt-2'}/>
@@ -72,7 +77,7 @@ export default function ProjectPage({params}) {
                         separator: "text-white",
                     }}>
                         <BreadcrumbItem href={"/"}>Home</BreadcrumbItem>
-                        <BreadcrumbItem href={"/projects"}>Projects</BreadcrumbItem>
+                        <BreadcrumbItem href={"/projects"}>{t("projects_breadcrumb")}</BreadcrumbItem>
                         <BreadcrumbItem href={`/projects/${project.id}`}>{project.title}</BreadcrumbItem>
                     </Breadcrumbs>
                 </div>
@@ -81,7 +86,7 @@ export default function ProjectPage({params}) {
                     <div className={'md:w-[90vw] w-[full] md:flex flex-row pt-12'}>
                         <div className={'md:w-[30%] w-[60vw] flex justify-center'}>
                             <div className={'flex-row w-full '}>
-                                <h1 className={'pl-3'}>(ROLE / SERVICES)</h1>
+                                <h1 className={'pl-3'}>{t("role_services")}</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
 
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
@@ -92,7 +97,7 @@ export default function ProjectPage({params}) {
 
                         <div className={'md:w-[30%] w-[60vw] flex justify-center md:mx-28 md:pt-0 pt-12'}>
                             <div className={'flex-row w-full '}>
-                                <h1 className={'pl-3'}>(MADE WITH)</h1>
+                                <h1 className={'pl-3'}>{t("made_with")}</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
 
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
@@ -103,7 +108,7 @@ export default function ProjectPage({params}) {
 
                         <div className={'md:w-[30%] w-[60vw] flex justify-center md:pt-0 pt-12'}>
                             <div className={'flex-row w-full '}>
-                                <h1 className={'pl-3'}>(LOCATION & YEAR)</h1>
+                                <h1 className={'pl-3'}>{t("location_year")}</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
                                     {project.location}, {project.year}
@@ -117,21 +122,20 @@ export default function ProjectPage({params}) {
                     <MagneticGSAP>
                         <a href={project.link} target="_blank" className={'items-center flex'}>
                             <Button size={"lg"} type={"submit"}
-                                    className={'w-auto md:w-[150px] md:h-[150px] h-[7vh] text-white font-bold items-center flex bg-[#455ce9] md:rounded-[55%] rounded-2xl buttonLink md:translate-y-16 '}>Live
-                                site<FaArrowRight className={'items-center justify-center flex'}/></Button></a>
+                                    className={'w-auto md:w-[150px] md:h-[150px] h-[7vh] text-white font-bold items-center flex bg-[#455ce9] md:rounded-[55%] rounded-2xl buttonLink md:translate-y-16 '}>{t("live_site")}<FaArrowRight className={'items-center justify-center flex'}/></Button></a>
                     </MagneticGSAP>
                 </div>
                 <div className={'flex md:w-[90vw] w-full justify-center items-center mx-auto'}>
                     <div className={'flex justify-center w-[90%]'}>
                         <Image src={`/images/${project.directory}/${project.src}`} alt={project.title}
-                             className={' object-contain rounded-xl'} width={1200} height={900}/>
+                               className={' object-contain rounded-xl'} width={1200} height={900}/>
                     </div>
                 </div>
 
 
                 <div className={'md:pt-8 md:px-32 pt-8 px-6'}>
                     <div className={'flex justify-start text-[lightgrey]'}>
-                        <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>(ABOUT)</p>
+                        <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>{t("about")}</p>
                     </div>
                     <div>
                         <Divider orientation={"horizontal"} className={'text-white bg-white w-full mt-2'}/>
@@ -153,7 +157,8 @@ export default function ProjectPage({params}) {
                 <div className={'relative w-[80vw] h-full flex flex-wrap justify-center items-center'}>
                     {project.responsive.map(({id, src}) => (
                         <div className={'w-auto  p-2'} key={id}>
-                            <Image src={`/images/${project.directory}/${src}`} priority alt={src} width={600} height={800}
+                            <Image src={`/images/${project.directory}/${src}`} priority alt={src} width={600}
+                                   height={800}
                                    className={' rounded-xl'}/>
                         </div>
                     ))}

@@ -1,0 +1,14 @@
+{
+  "breadcrum_about": "About",
+  "hello_there_message": "Hello there! I’m Lautaro Velez, a developer & designer borned in Córdoba, Argentina.",
+  "i_enjoy_message": "I enjoy learning new things every day and overcome new challenges while analyzing how I improved through them.",
+  "improving_message": "I'm constantly improving my coding skills practicing daily.",
+  "learning_message": "Currently, I'm learning:",
+  "help_message": "I can help you with...",
+  "design": "Design",
+  "design_message": "With a solid track record in designing websites, I deliver strong and user-friendly digital designs.",
+  "development": "Development",
+  "development_message": "I build scalable websites from scratch that fit seamlessly with design, build with React or Angular.",
+  "package": "The full package",
+  "package_message": "A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects."
+}

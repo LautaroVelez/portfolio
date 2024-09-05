@@ -7,6 +7,7 @@ import Image from 'next/image'
 import me from '@/public/images/me.jpg'
 import {Divider} from "@nextui-org/react";
 import AlmostFooter from "@/app/components/almostFooter/AlmostFooter";
+import {useTranslation} from "react-i18next";
 
 const poppinsThin = Poppins({
     weight: '200', subsets: ['latin'],
@@ -15,19 +16,21 @@ const poppinsBold = Poppins({
     weight: '600', subsets: ['latin'],
 })
 export default function Page() {
+
     useEffect(() => {
         const lenis = new Lenis();
-
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
         }
-
         requestAnimationFrame(raf);
     }, []);
 
     const learning = <span className={`${poppinsBold.className} pt-3 text-white md:text-[2rem] text-[1rem]`}>Nodejs &
         Angular</span>
+
+    const { t } = useTranslation('about');
+
     return (
 
             <div className={'md:pb-28 pb-20'}>
@@ -38,20 +41,14 @@ export default function Page() {
                     }}>
 
                         <BreadcrumbItem href={"/"}>Home</BreadcrumbItem>
-                        <BreadcrumbItem href={"/about"}>About</BreadcrumbItem>
+                        <BreadcrumbItem href={"/about"}>{t("breadcrum_about")}</BreadcrumbItem>
                     </Breadcrumbs>
                 </div>
                 <div className={'md:flex flex-row w-full p-12 justify-center items-center'}>
                     <div className={'md:mr-12 mr-0 md:text-end text-center  flex md:justify-end justify-center'}>
                         <div className={'md:w-[40vw] w-[70vw] flex-row'}>
-                            <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem]`}>Hello
-                                there!
-                                I’m
-                                Lautaro Velez, a developer & designer borned in Córdoba, Argentina.</h1>
-                            <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem] pt-10`}>
-                                I enjoy learning new things every day and overcome new challenges while analyzing how I
-                                improved
-                                through them.</h1>
+                            <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem]`}>{t("hello_there_message")}</h1>
+                            <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem] pt-10`}>{t("i_enjoy_message")}</h1>
                         </div>
                     </div>
                     <div className={'md:w-[40vw] flex justify-center md:pt-0 pt-10'}>
@@ -60,15 +57,14 @@ export default function Page() {
                 </div>
                 <div className={'text-start flex md:pt-12 pt-6 justify-center '}>
                     <div className={'w-[70vw]'}>
-                        <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem]`}>I'm constantly
-                            improving my coding skills practicing daily.</h1>
+                        <h1 className={`${poppinsThin.className} text-white md:text-[2rem] text-[1rem]`}>{t("improving_message")}</h1>
                         <h1 className={`${poppinsThin.className} text-start md:pt-8 pt-6 text-white md:text-[2rem] text-[1rem]`}>
-                            Currently, I'm learning: {learning}.</h1>
+                            {t("learning_message")} {learning}.</h1>
                     </div>
                 </div>
                 <div className={'md:pl-20 pt-32 pl-0 md:text-start text-center'}>
                     <h1 className={`${poppinsThin.className} text-white md:text-[2.5rem] text-[1.5rem]`}>
-                        I can help you with...</h1>
+                        {t("help_message")}</h1>
                 </div>
 
                 <div className={'flex text-white justify-center '}>
@@ -78,10 +74,9 @@ export default function Page() {
                                 <h1 className={'pl-3'}>01</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[2.5rem] text-[1.5rem]`}>
-                                    Design</h1>
+                                    {t("design")}</h1>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
-                                    With a solid track record in designing websites, I deliver strong and user-friendly
-                                    digital designs.
+                                    {t("design_message")}
                                 </h1>
                             </div>
                         </div>
@@ -91,10 +86,9 @@ export default function Page() {
                                 <h1 className={'pl-3'}>02</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[2.5rem] text-[1.5rem]`}>
-                                    Development</h1>
+                                    {t("development")}</h1>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
-                                    I build scalable websites from scratch that fit seamlessly with design, build with
-                                    React.
+                                    {t("development_message")}
                                 </h1>
                             </div>
                         </div>
@@ -104,11 +98,9 @@ export default function Page() {
                                 <h1 className={'pl-3'}>03</h1>
                                 <Divider orientation={"horizontal"} className={'text-white bg-white w-full'}/>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[2.5rem] text-[1.5rem]`}>
-                                    The full package</h1>
+                                    {t("package")}</h1>
                                 <h1 className={`${poppinsThin.className} pt-6 pl-2 text-white md:text-[1rem] text-[0.7rem]`}>
-                                    A complete website from concept to implementation, that's what makes me stand out.
-                                    My great sense for design and my development skills enable me to create kick-ass
-                                    projects.
+                                    {t("package_message")}
                                 </h1>
                             </div>
                         </div>
