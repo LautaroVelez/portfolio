@@ -105,7 +105,7 @@ export default function Page() {
                 <div className='flex justify-center align-middle'>
                     <div className='md:w-[80vw] w-full flex flex-col align-middle justify-center'>
                         {projectsList.slice(0, 4).map((project, index) => {
-                            return <Project index={index} title={project.title} setModal={setModal} key={index} des={project.des} href={`/projects/${project.id}`}/>
+                            return <Project index={index} title={project.title} setModal={setModal} key={index} made={project.made} href={`/projects/${project.id}`}/>
                         })}
                     </div>
                     <Modal modal={modal} projects={projectsList} />

@@ -9,7 +9,7 @@ const poppinsThin = Poppins({
     weight: '200', subsets: ['latin'],
 })
 
-export default function Project({index, title, setModal, location, year, des, href}) {
+export default function Project({index, title, setModal, location, des, made, href}) {
     const { t } = useTranslation('projects'); // Utiliza useTranslation
     
     return (
@@ -21,8 +21,8 @@ export default function Project({index, title, setModal, location, year, des, hr
             >
                 <h2 className={'md:text-[2.5rem] text-[1rem] md:w-[40%] w-[50%]'}>{title}</h2>
                 <p className={`md:text-[1rem] text-[0.7rem] text-center md:w-[40%] md:block hidden ${poppinsThin.className}`}>{location}</p>
-                <p className={`md:text-[1rem] text-[0.7rem] text-center md:w-[20%] w-[40%] ${poppinsThin.className}`}>{des}</p>
-                <p className={`md:text-[1rem] text-[0.7rem] text-end md:w-[20%] w-[10%] ${poppinsThin.className}`}>{year}</p>
+                <p className={`md:text-[1rem] text-[0.7rem] text-center w-[auto] ${poppinsThin.className}`}>{made}</p>
+                <p className={`md:text-[1rem] text-[0.7rem] text-end md:w-[auto]  w-[40%]  ${poppinsThin.className}`}>{des}</p>
             </div>
         </Link>
     );

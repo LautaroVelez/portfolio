@@ -94,7 +94,7 @@ export default function Projects() {
                                 <p className={'md:text-[1rem] text-[0.7rem] md:w-[40%] w-[50%]'}>{t("client")}</p>
                                 <p className={`md:text-[1rem] text-[0.7rem] text-center md:w-[40%] md:block hidden ${poppinsThin.className}`}>{t("location")}</p>
                                 <p className={`md:text-[1rem] text-[0.7rem] text-center md:w-[20%] w-[40%] ${poppinsThin.className}`}>{t("services")}</p>
-                                <p className={`md:text-[1rem] text-[0.7rem] text-end md:w-[20%] w-[10%] ${poppinsThin.className}`}>{t("year")}</p>
+
                             </div>
                         </div>
                         <div className='md:w-[80vw] w-full flex flex-col text-white align-middle justify-center'>

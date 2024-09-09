@@ -85,6 +85,7 @@ export default function Contact() {
                             <p className={`md:text-[1rem] text-[0.7rem] pt-5 text-white ${poppinsThin.className}`}>lautivelez28@gmail.com</p>
                             <p className={`md:text-[1rem] text-[0.7rem] pt-2 text-white ${poppinsThin.className}`}>+54 9
                                 3512743717</p>
+                            <p className={`md:text-[1rem] text-[0.7rem] mt-6 mb-2 text-[lightgrey] ${poppinsThin.className}`}>{t("otherwise_details")}</p>
                             <a className={`md:text-[1rem] text-[0.7rem] pt-2 text-white block ${poppinsThin.className}  `}
                                href={linkedin}>LinkedIn</a>
                             <a className={` md:text-[1rem] text-[0.7rem] pt-2 text-white block ${poppinsThin.className}`}
