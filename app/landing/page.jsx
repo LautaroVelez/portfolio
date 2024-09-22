@@ -81,21 +81,9 @@ export default function Page() {
                 <h1 className={`text-white lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] mx-4 ${poppinsThin.className}`}>Illustrator</h1>
             </div>
 
-            <div className={'md:pt-40 pt-20 flex text-center w-[50vw] justify-center text-[lightgrey]'}>
-                <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>{t('beyond_the_code')}</p>
-            </div>
 
-            <div className={'pt-12 text-end md:w-[80vw] w-[95vw] justify-center text-white'}>
-                <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('joy_of_creation')}</p>
-                <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('your_baby')}</p>
-                <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('help_offer')}</p>
-            </div>
 
-            <div className={'mt-12 md:w-[80vw] w-full justify-end md:pr-0 pr-6 flex align-center'}>
-                <motion.a href="/about" whileHover={{ scale: 1.09 }}>
-                    <Button size={'lg'} className={`font-bold bg-[#171717] border border-white text-white text-center justify-between md:text-[1rem] text-[0.7rem] md:w-[16vw] w-auto `} radius={"full"} endContent={<MdKeyboardDoubleArrowRight className={`font-bold justify-between text-xl md:w-[5vw] h-[5hv] `}/>}>{t('about_me_button')}</Button>
-                </motion.a>
-            </div>
+
 
             <div className={'md:pt-40 pt-20 flex text-start w-[50vw] justify-center text-[lightgrey]'}>
                 <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>{t('recent_projects')}</p>
@@ -105,19 +93,45 @@ export default function Page() {
                 <div className='flex justify-center align-middle'>
                     <div className='md:w-[80vw] w-full flex flex-col align-middle justify-center'>
                         {projectsList.slice(0, 4).map((project, index) => {
-                            return <Project index={index} title={project.title} setModal={setModal} key={index} made={project.made} href={`/projects/${project.id}`}/>
+                            return <Project index={index} title={project.title} setModal={setModal} key={index}
+                                            made={project.made} href={`/projects/${project.id}`}/>
                         })}
                     </div>
-                    <Modal modal={modal} projects={projectsList} />
+                    <Modal modal={modal} projects={projectsList}/>
                 </div>
 
                 <div className={'w-full justify-center flex pt-20'}>
-                    <motion.a href="/projects" whileHover={{ scale: 1.09 }}>
-                        <Button size={'lg'} className={`font-bold justify-between md:text-[1rem] text-[0.7rem] md:w-[16vw] w-auto `} radius={"full"} endContent={<MdKeyboardDoubleArrowRight className={`font-bold justify-between text-xl md:w-[5vw] h-[5hv] `}/>}>{t('more_work_button')}</Button>
+                    <motion.a href="/projects" whileHover={{scale: 1.09}}>
+                        <Button size={'lg'}
+                                className={`font-bold justify-between md:text-[1rem] text-[0.7rem] md:w-[16vw] w-auto `}
+                                radius={"full"} endContent={<MdKeyboardDoubleArrowRight
+                            className={`font-bold justify-between text-xl md:w-[5vw] h-[5hv] `}/>}>{t('more_work_button')}</Button>
                     </motion.a>
                 </div>
+
+                <div className={'md:pt-40 pt-20 flex text-center w-[50vw] justify-center text-[lightgrey]'}>
+                    <p className={`md:text-[1rem] text-[0.7rem] ${poppinsThin.className}`}>{t('beyond_the_code')}</p>
+                </div>
+
+                <div className={'pt-12 text-end md:w-[80vw] w-[95vw] justify-center text-white'}>
+                    <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('joy_of_creation')}</p>
+                    <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('your_baby')}</p>
+                    <p className={`lg:text-[2rem] md:text-[2rem] sm:text-[0.7rem] ${poppinsThin.className}`}>{t('help_offer')}</p>
+                </div>
+
+
+                <div className={'mt-12 md:w-[80vw] w-full justify-end md:pr-0 pr-6 flex align-center mb-24'}>
+                    <motion.a href="/about" whileHover={{scale: 1.09}}>
+                        <Button size={'lg'}
+                                className={`font-bold bg-[#171717] border border-white text-white text-center justify-between md:text-[1rem] text-[0.7rem] md:w-[16vw] w-auto `}
+                                radius={"full"} endContent={<MdKeyboardDoubleArrowRight
+                            className={`font-bold justify-between text-xl md:w-[5vw] h-[5hv] `}/>}>{t('about_me_button')}</Button>
+                    </motion.a>
+                </div>
+
+
             </div>
-            <AlmostFooter/>
+
         </div>
     );
 }
